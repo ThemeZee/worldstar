@@ -5,15 +5,15 @@
  * This file contains several template functions which are used to print out specific HTML markup
  * in the theme. You can override these template functions within your child theme.
  *
- * @package zeeDynamic
+ * @package Worldstar
  */
 
  
-if ( ! function_exists( 'zeedynamic_site_logo' ) ): 
+if ( ! function_exists( 'worldstar_site_logo' ) ): 
 /**
  * Displays the site logo in the header area
  */
-function zeedynamic_site_logo() {
+function worldstar_site_logo() {
 
 	if ( function_exists( 'the_custom_logo' ) ) {
 		
@@ -25,14 +25,14 @@ function zeedynamic_site_logo() {
 endif;
 
 	
-if ( ! function_exists( 'zeedynamic_site_title' ) ):
+if ( ! function_exists( 'worldstar_site_title' ) ):
 /**
  * Displays the site title in the header area
  */
-function zeedynamic_site_title() {
+function worldstar_site_title() {
 	
 	// Get Theme Options from Database
-	$theme_options = zeedynamic_theme_options();
+	$theme_options = worldstar_theme_options();
 	
 	// Return early if site title is deactivated
 	if( false == $theme_options['site_title'] ) {
@@ -53,20 +53,20 @@ function zeedynamic_site_title() {
 endif;
 
 
-if ( ! function_exists( 'zeedynamic_header_image' ) ):
+if ( ! function_exists( 'worldstar_header_image' ) ):
 /**
  * Displays the custom header image below the navigation menu
  */
-function zeedynamic_header_image() {
+function worldstar_header_image() {
 	
 	// Get theme options from database
-	$theme_options = zeedynamic_theme_options();	
+	$theme_options = worldstar_theme_options();	
 	
 	// Display featured image as header image on static pages
 	if( is_page() && has_post_thumbnail() ) : ?>
 		
 		<div id="headimg" class="header-image featured-image-header">
-			<?php the_post_thumbnail( 'zeedynamic-header-image' ); ?>
+			<?php the_post_thumbnail( 'worldstar-header-image' ); ?>
 		</div>
 	
 	<?php // Display default header image set on Appearance > Header
@@ -101,39 +101,39 @@ function zeedynamic_header_image() {
 endif;
 
 
-if ( ! function_exists( 'zeedynamic_post_content' ) ):
+if ( ! function_exists( 'worldstar_post_content' ) ):
 /**
  * Displays the post content on archive pages
  */
-function zeedynamic_post_content() {
+function worldstar_post_content() {
 	
 	// Get Theme Options from Database
-	$theme_options = zeedynamic_theme_options();
+	$theme_options = worldstar_theme_options();
 	
 	// Return early if no featured image should be displayed
 	if ( 'excerpt' == $theme_options['post_content'] ) {
 		
 		the_excerpt();
-		zeedynamic_more_link();
+		worldstar_more_link();
 	
 	} else {
 		
-		the_content( esc_html__( 'Read more', 'zeedynamic' ) );
+		the_content( esc_html__( 'Read more', 'worldstar' ) );
 		
 	}
 
-} // zeedynamic_post_content()
+} // worldstar_post_content()
 endif;
 
 
-if ( ! function_exists( 'zeedynamic_post_image_single' ) ):
+if ( ! function_exists( 'worldstar_post_image_single' ) ):
 /**
  * Displays the featured image on single posts
  */
-function zeedynamic_post_image_single() {
+function worldstar_post_image_single() {
 	
 	// Get Theme Options from Database
-	$theme_options = zeedynamic_theme_options();
+	$theme_options = worldstar_theme_options();
 	
 	// Display Post Thumbnail if activated
 	if ( true == $theme_options['post_image'] ) :
@@ -142,39 +142,39 @@ function zeedynamic_post_image_single() {
 
 	endif;
 
-} // zeedynamic_post_image_single()
+} // worldstar_post_image_single()
 endif;
 
 
-if ( ! function_exists( 'zeedynamic_entry_meta' ) ):	
+if ( ! function_exists( 'worldstar_entry_meta' ) ):	
 /**
  * Displays the date, author and categories of a post
  */
-function zeedynamic_entry_meta() {
+function worldstar_entry_meta() {
 
 	// Get Theme Options from Database
-	$theme_options = zeedynamic_theme_options();
+	$theme_options = worldstar_theme_options();
 	
 	$postmeta = '';
 	
 	// Display date unless user has deactivated it via settings
 	if ( true == $theme_options['meta_date'] ) {
 		
-		$postmeta .= zeedynamic_meta_date();
+		$postmeta .= worldstar_meta_date();
 		
 	}
 
 	// Display author unless user has deactivated it via settings
 	if ( true == $theme_options['meta_author'] ) {
 	
-		$postmeta .= zeedynamic_meta_author();
+		$postmeta .= worldstar_meta_author();
 	
 	}
 	
 	// Display categories unless user has deactivated it via settings
 	if ( true == $theme_options['meta_category'] ) {
 	
-		$postmeta .= zeedynamic_meta_category();
+		$postmeta .= worldstar_meta_category();
 	
 	}
 		
@@ -184,15 +184,15 @@ function zeedynamic_entry_meta() {
 			
 	}
 
-} // zeedynamic_entry_meta()
+} // worldstar_entry_meta()
 endif;
 
 
-if ( ! function_exists( 'zeedynamic_meta_date' ) ):
+if ( ! function_exists( 'worldstar_meta_date' ) ):
 /**
  * Displays the post date
  */
-function zeedynamic_meta_date() { 
+function worldstar_meta_date() { 
 
 	$time_string = sprintf( '<a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date published updated" datetime="%3$s">%4$s</time></a>',
 		esc_url( get_permalink() ),
@@ -203,48 +203,48 @@ function zeedynamic_meta_date() {
 
 	return '<span class="meta-date">' . $time_string . '</span>';
 
-}  // zeedynamic_meta_date()
+}  // worldstar_meta_date()
 endif;
 
 
-if ( ! function_exists( 'zeedynamic_meta_author' ) ):
+if ( ! function_exists( 'worldstar_meta_author' ) ):
 /**
  * Displays the post author
  */
-function zeedynamic_meta_author() {  
+function worldstar_meta_author() {  
 	
 	$author_string = sprintf( '<span class="author vcard"><a class="url fn n" href="%1$s" title="%2$s" rel="author">%3$s</a></span>', 
 		esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-		esc_attr( sprintf( esc_html__( 'View all posts by %s', 'zeedynamic' ), get_the_author() ) ),
+		esc_attr( sprintf( esc_html__( 'View all posts by %s', 'worldstar' ), get_the_author() ) ),
 		esc_html( get_the_author() )
 	);
 	
 	return '<span class="meta-author"> ' . $author_string . '</span>';
 
-}  // zeedynamic_meta_author()
+}  // worldstar_meta_author()
 endif;
 
 
-if ( ! function_exists( 'zeedynamic_meta_category' ) ):
+if ( ! function_exists( 'worldstar_meta_category' ) ):
 /**
  * Displays the category of posts
  */	
-function zeedynamic_meta_category() { 
+function worldstar_meta_category() { 
 
 	return '<span class="meta-category"> ' . get_the_category_list(', ') . '</span>';
 	
-} // zeedynamic_meta_category()
+} // worldstar_meta_category()
 endif;
 
 
-if ( ! function_exists( 'zeedynamic_entry_tags' ) ):
+if ( ! function_exists( 'worldstar_entry_tags' ) ):
 /**
  * Displays the post tags on single post view
  */
-function zeedynamic_entry_tags() {
+function worldstar_entry_tags() {
 	
 	// Get Theme Options from Database
-	$theme_options = zeedynamic_theme_options();
+	$theme_options = worldstar_theme_options();
 	
 	// Get Tags
 	$tag_list = get_the_tag_list('', '');
@@ -260,31 +260,31 @@ function zeedynamic_entry_tags() {
 <?php 
 	endif;
 
-} // zeedynamic_entry_tags()
+} // worldstar_entry_tags()
 endif;
 
 
-if ( ! function_exists( 'zeedynamic_more_link' ) ):
+if ( ! function_exists( 'worldstar_more_link' ) ):
 /**
  * Displays the more link on posts
  */
-function zeedynamic_more_link() { ?>
+function worldstar_more_link() { ?>
 
-	<a href="<?php echo esc_url( get_permalink() ) ?>" class="more-link"><?php esc_html_e( 'Read more', 'zeedynamic' ); ?></a>
+	<a href="<?php echo esc_url( get_permalink() ) ?>" class="more-link"><?php esc_html_e( 'Read more', 'worldstar' ); ?></a>
 
 <?php
 }
 endif;
 
 
-if ( ! function_exists( 'zeedynamic_post_navigation' ) ):
+if ( ! function_exists( 'worldstar_post_navigation' ) ):
 /**
  * Displays Single Post Navigation
  */	
-function zeedynamic_post_navigation() { 
+function worldstar_post_navigation() { 
 	
 	// Get Theme Options from Database
-	$theme_options = zeedynamic_theme_options();
+	$theme_options = worldstar_theme_options();
 	
 	if ( true == $theme_options['post_navigation'] ) {
 
@@ -296,11 +296,11 @@ function zeedynamic_post_navigation() {
 endif;
 
 
-if ( ! function_exists( 'zeedynamic_breadcrumbs' ) ):
+if ( ! function_exists( 'worldstar_breadcrumbs' ) ):
 /**
  * Displays ThemeZee Breadcrumbs plugin
  */	
-function zeedynamic_breadcrumbs() { 
+function worldstar_breadcrumbs() { 
 	
 	if ( function_exists( 'themezee_breadcrumbs' ) ) {
 
@@ -314,11 +314,11 @@ function zeedynamic_breadcrumbs() {
 endif;
 
 
-if ( ! function_exists( 'zeedynamic_related_posts' ) ):
+if ( ! function_exists( 'worldstar_related_posts' ) ):
 /**
  * Displays ThemeZee Related Posts plugin
  */	
-function zeedynamic_related_posts() { 
+function worldstar_related_posts() { 
 	
 	if ( function_exists( 'themezee_related_posts' ) ) {
 
@@ -333,11 +333,11 @@ function zeedynamic_related_posts() {
 endif;
 
 
-if ( ! function_exists( 'zeedynamic_pagination' ) ):
+if ( ! function_exists( 'worldstar_pagination' ) ):
 /**
  * Displays pagination on archive pages
  */	
-function zeedynamic_pagination() { 
+function worldstar_pagination() { 
 	
 	global $wp_query;
 
@@ -363,22 +363,22 @@ function zeedynamic_pagination() {
 	<?php
 	endif;
 	
-} // zeedynamic_pagination()
+} // worldstar_pagination()
 endif;
 
 
 /**
  * Displays credit link on footer line
  */	
-function zeedynamic_footer_text() { ?>
+function worldstar_footer_text() { ?>
 
 	<span class="credit-link">
-		<?php printf( esc_html__( 'Powered by %1$s and %2$s.', 'zeedynamic' ), 
+		<?php printf( esc_html__( 'Powered by %1$s and %2$s.', 'worldstar' ), 
 			'<a href="http://wordpress.org" title="WordPress">WordPress</a>',
-			'<a href="https://themezee.com/themes/zeedynamic/" title="zeeDynamic WordPress Theme">zeeDynamic</a>'
+			'<a href="https://themezee.com/themes/worldstar/" title="Worldstar WordPress Theme">Worldstar</a>'
 		); ?>
 	</span>
 
 <?php
 }
-add_action( 'zeedynamic_footer_text', 'zeedynamic_footer_text' );
+add_action( 'worldstar_footer_text', 'worldstar_footer_text' );

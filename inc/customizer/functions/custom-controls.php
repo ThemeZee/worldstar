@@ -2,7 +2,7 @@
 /**
  * Custom Controls for the Customizer
  *
- * @package zeeDynamic
+ * @package Worldstar
  */
 
 
@@ -15,7 +15,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 	 * Displays a bold label text. Used to create headlines for radio buttons and description sections.
 	 *
 	 */
-	class zeeDynamic_Customize_Header_Control extends WP_Customize_Control {
+	class Worldstar_Customize_Header_Control extends WP_Customize_Control {
 
 		public function render_content() {  ?>
 			
@@ -31,7 +31,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 	 * Displays a description text in gray italic font
 	 *
 	 */
-	class zeeDynamic_Customize_Description_Control extends WP_Customize_Control {
+	class Worldstar_Customize_Description_Control extends WP_Customize_Control {
 
 		public function render_content() {  ?>
 			
@@ -45,7 +45,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 	 * Creates a category dropdown control for the Customizer
 	 *
 	 */
-	class zeeDynamic_Customize_Category_Dropdown_Control extends WP_Customize_Control {
+	class Worldstar_Customize_Category_Dropdown_Control extends WP_Customize_Control {
 		
 		public function render_content() {
 				
@@ -58,7 +58,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 						<span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
 						
 						<select <?php $this->link(); ?>>
-							<option value="0"><?php esc_html_e( 'All Categories', 'zeedynamic' ); ?></option>
+							<option value="0"><?php esc_html_e( 'All Categories', 'worldstar' ); ?></option>
 						<?php
 							foreach ( $categories as $category ) :
 								
@@ -85,21 +85,21 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 	 * Displays the upgrade teasers in thhe Pro Version / More Features section.
 	 *
 	 */
-	class zeeDynamic_Customize_Upgrade_Control extends WP_Customize_Control {
+	class Worldstar_Customize_Upgrade_Control extends WP_Customize_Control {
 	
 		public function render_content() {  ?>
 			
 			<div class="upgrade-pro-version">
 			
-				<span class="customize-control-title"><?php esc_html_e( 'Pro Version', 'zeedynamic' ); ?></span>
+				<span class="customize-control-title"><?php esc_html_e( 'Pro Version', 'worldstar' ); ?></span>
 				
 				<span class="textfield">
-					<?php printf( esc_html__( 'Purchase the Pro Version of %s to get additional features and advanced customization options.', 'zeedynamic' ), 'Anderson'); ?>
+					<?php printf( esc_html__( 'Purchase the Pro Version of %s to get additional features and advanced customization options.', 'worldstar' ), 'Anderson'); ?>
 				</span>
 				
 				<p>
-					<a href="<?php echo esc_url( __( 'https://themezee.com/addons/zeedynamic-pro/', 'zeedynamic' ) ); ?>?utm_source=customizer&utm_medium=button&utm_campaign=zeedynamic&utm_content=pro-version" target="_blank" class="button button-secondary">
-						<?php printf( esc_html__( 'Learn more about %s Pro', 'zeedynamic' ), 'zeeDynamic'); ?>
+					<a href="<?php echo esc_url( __( 'https://themezee.com/addons/worldstar-pro/', 'worldstar' ) ); ?>?utm_source=customizer&utm_medium=button&utm_campaign=worldstar&utm_content=pro-version" target="_blank" class="button button-secondary">
+						<?php printf( esc_html__( 'Learn more about %s Pro', 'worldstar' ), 'Worldstar'); ?>
 					</a>
 				</p>
 				
@@ -107,18 +107,18 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 			
 			<div class="upgrade-plugins">
 			
-				<span class="customize-control-title"><?php esc_html_e( 'ThemeZee Plugins', 'zeedynamic' ); ?></span>
+				<span class="customize-control-title"><?php esc_html_e( 'ThemeZee Plugins', 'worldstar' ); ?></span>
 				
 				<span class="textfield">
-					<?php esc_html_e( 'Extend the functionality of your WordPress website with our customized plugins.', 'zeedynamic' ); ?>
+					<?php esc_html_e( 'Extend the functionality of your WordPress website with our customized plugins.', 'worldstar' ); ?>
 				</span>
 				
 				<p>
-					<a href="<?php echo esc_url( __( 'https://themezee.com/plugins/', 'zeedynamic' ) ); ?>?utm_source=customizer&utm_medium=button&utm_campaign=zeedynamic&utm_content=plugins" target="_blank" class="button button-secondary">
-						<?php esc_html_e( 'Browse Plugins', 'zeedynamic' ); ?>
+					<a href="<?php echo esc_url( __( 'https://themezee.com/plugins/', 'worldstar' ) ); ?>?utm_source=customizer&utm_medium=button&utm_campaign=worldstar&utm_content=plugins" target="_blank" class="button button-secondary">
+						<?php esc_html_e( 'Browse Plugins', 'worldstar' ); ?>
 					</a>
 					<a href="<?php echo admin_url( 'plugin-install.php?tab=search&type=author&s=themezee' ); ?>" class="button button-primary">
-						<?php esc_html_e( 'Install now', 'zeedynamic' ); ?>
+						<?php esc_html_e( 'Install now', 'worldstar' ); ?>
 					</a>
 				</p>
 			

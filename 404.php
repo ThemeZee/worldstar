@@ -2,7 +2,7 @@
 /**
  * The template for displaying 404 pages (not found).
  *
- * @package zeeDynamic
+ * @package Worldstar
  */
 
 get_header(); ?>
@@ -14,12 +14,12 @@ get_header(); ?>
 			
 				<header class="entry-header">
 		
-					<h1 class="page-title"><?php esc_html_e( '404: Page not found', 'zeedynamic' ); ?></h1>
+					<h1 class="page-title"><?php esc_html_e( '404: Page not found', 'worldstar' ); ?></h1>
 					
 				</header><!-- .entry-header -->
 				
 				<div class="entry-content clearfix">
-					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try a search or one of the links below?', 'zeedynamic' ); ?></p>
+					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try a search or one of the links below?', 'worldstar' ); ?></p>
 					
 					<?php get_search_form(); ?>
 

@@ -2,7 +2,7 @@
 /**
  * The template for displaying single posts
  *
- * @package zeeDynamic
+ * @package Worldstar
  */
 ?>
 
@@ -12,11 +12,11 @@
 			
 			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 			
-			<?php zeedynamic_entry_meta(); ?>
+			<?php worldstar_entry_meta(); ?>
 
 		</header><!-- .entry-header -->
 		
-		<?php zeedynamic_post_image_single(); ?>
+		<?php worldstar_post_image_single(); ?>
 
 		<div class="entry-content clearfix">
 			<?php the_content(); ?>
@@ -26,8 +26,8 @@
 		
 		<footer class="entry-footer">
 			
-			<?php zeedynamic_entry_tags(); ?>
-			<?php zeedynamic_post_navigation(); ?>
+			<?php worldstar_entry_tags(); ?>
+			<?php worldstar_post_navigation(); ?>
 			
 		</footer><!-- .entry-footer -->
 

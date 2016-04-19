@@ -2,7 +2,7 @@
 /**
  * The template for displaying all single posts.
  *
- * @package zeeDynamic
+ * @package Worldstar
  */
 
 get_header(); ?>
@@ -14,7 +14,7 @@ get_header(); ?>
 
 			get_template_part( 'template-parts/content', 'single' );
 			
-			zeedynamic_related_posts();
+			worldstar_related_posts();
 		
 			comments_template();
 

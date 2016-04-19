@@ -1,19 +1,19 @@
 /*
-Theme Name: zeeDynamic
-Theme URI: https://themezee.com/themes/zeedynamic/
+Theme Name: Worldstar
+Theme URI: https://themezee.com/themes/worldstar/
 Author: ThemeZee
 Author URI: https://themezee.com
-Description: zeeDynamic is a fully responsive WordPress theme with strong colors and bold fonts. The theme fits perfectly for any news, magazine or blog website. The highlight of zeeDynamic is the flexible magazine homepage template and the stunning featured post slider. Of course the theme supports the newest WordPress core features.
+Description: Worldstar is a fully responsive WordPress theme with strong colors and bold fonts. The theme fits perfectly for any news, magazine or blog website. The highlight of Worldstar is the flexible magazine homepage template and the stunning featured post slider. Of course the theme supports the newest WordPress core features.
 Version: 1.1.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: zeedynamic
+Text Domain: worldstar
 Tags: two-columns, light, purple, custom-background, custom-header, custom-menu, editor-style, featured-image-header, featured-images, flexible-header, custom-colors, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, fluid-layout, responsive-layout, one-column, left-sidebar, right-sidebar, three-columns, black, red, blue, silver, white, green, gray
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 
-zeeDynamic is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
+Worldstar is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
 
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
@@ -1155,7 +1155,7 @@ textarea {
 }
 
 /* Magazine Posts Columns Widget */
-.zeedynamic-magazine-posts-columns {
+.worldstar-magazine-posts-columns {
 	padding: 0;
 }
 

@@ -3,15 +3,15 @@
  *
  * Adds the Flexslider Plugin for the Featured Post Slideshow
  *
- * @package zeeDynamic
+ * @package Worldstar
  */
 
 jQuery(document).ready(function($) {
 
 	/* Add flexslider to #post-slider div */ 
 	$("#post-slider").flexslider({
-		animation: zeedynamic_slider_params.animation,
-		slideshowSpeed: zeedynamic_slider_params.speed,
+		animation: worldstar_slider_params.animation,
+		slideshowSpeed: worldstar_slider_params.speed,
 		namespace: "zeeflex-",
 		selector: ".zeeslides > li",
 		smoothHeight: true,

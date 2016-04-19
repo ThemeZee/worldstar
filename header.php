@@ -4,7 +4,7 @@
  *
  * Displays all of the <head> section and everything up till <div id="content">
  *
- * @package zeeDynamic
+ * @package Worldstar
  */
  
 ?><!DOCTYPE html>
@@ -23,9 +23,9 @@
 
 	<div id="page" class="hfeed site">
 		
-		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'zeedynamic' ); ?></a>
+		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'worldstar' ); ?></a>
 		
-		<div id="header-top" class="header-bar-wrap"><?php do_action( 'zeedynamic_header_bar' ); ?></div>
+		<div id="header-top" class="header-bar-wrap"><?php do_action( 'worldstar_header_bar' ); ?></div>
 		
 		<header id="masthead" class="site-header clearfix" role="banner">
 			
@@ -33,8 +33,8 @@
 						
 				<div id="logo" class="site-branding clearfix">
 				
-					<?php zeedynamic_site_logo(); ?>
-					<?php zeedynamic_site_title(); ?>
+					<?php worldstar_site_logo(); ?>
+					<?php worldstar_site_title(); ?>
 				
 				</div><!-- .site-branding -->
 				
@@ -62,7 +62,7 @@
 							'container' => false, 
 							'menu_class' => 'main-navigation-menu', 
 							'echo' => true, 
-							'fallback_cb' => 'zeedynamic_default_menu')
+							'fallback_cb' => 'worldstar_default_menu')
 						);
 					?>
 				</nav><!-- #main-navigation -->
@@ -71,8 +71,8 @@
 		
 		</header><!-- #masthead -->
 		
-		<?php zeedynamic_breadcrumbs(); ?>
+		<?php worldstar_breadcrumbs(); ?>
 		
 		<div id="content" class="site-content container clearfix">
 		
-			<?php zeedynamic_header_image(); ?>
+			<?php worldstar_header_image(); ?>

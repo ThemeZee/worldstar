@@ -4,13 +4,13 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package zeeDynamic
+ * @package Worldstar
  */
  
 get_header(); 
 
 // Get Theme Options from Database
-$theme_options = zeedynamic_theme_options();
+$theme_options = worldstar_theme_options();
 ?>
 
 	<section id="primary" class="content-area">
@@ -18,7 +18,7 @@ $theme_options = zeedynamic_theme_options();
 					
 			<header class="page-header">
 				
-				<h1 class="archive-title"><?php printf( esc_html__( 'Search Results for: %s', 'zeedynamic' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+				<h1 class="archive-title"><?php printf( esc_html__( 'Search Results for: %s', 'worldstar' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 				
 			</header><!-- .page-header -->
 			
@@ -40,7 +40,7 @@ $theme_options = zeedynamic_theme_options();
 			endwhile;
 
 			// Display Pagination	
-			zeedynamic_pagination();
+			worldstar_pagination();
 
 		else : ?>
 
@@ -48,13 +48,13 @@ $theme_options = zeedynamic_theme_options();
 				
 				<header class="entry-header">
 		
-					<h1 class="page-title"><?php esc_html_e( 'No matches', 'zeedynamic' ); ?></h1>
+					<h1 class="page-title"><?php esc_html_e( 'No matches', 'worldstar' ); ?></h1>
 					
 				</header><!-- .entry-header -->
 				
 				<div class="entry-content">
 					
-					<p><?php esc_html_e( 'Please try again, or use the navigation menus to find what you search for.', 'zeedynamic' ); ?></p>
+					<p><?php esc_html_e( 'Please try again, or use the navigation menus to find what you search for.', 'worldstar' ); ?></p>
 					
 					<?php get_search_form(); ?>
 				

@@ -2,7 +2,7 @@
 /**
  * The template for displaying articles in the slideshow loop
  *
- * @package zeeDynamic
+ * @package Worldstar
  */
 ?>
 

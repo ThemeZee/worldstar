@@ -4,13 +4,13 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package zeeDynamic
+ * @package Worldstar
  */
  
 get_header(); 
 
 // Get Theme Options from Database
-$theme_options = zeedynamic_theme_options();
+$theme_options = worldstar_theme_options();
 ?>
 		
 	<section id="primary" class="content-area">
@@ -43,7 +43,7 @@ $theme_options = zeedynamic_theme_options();
 				endwhile;
 
 				// Display Pagination	
-				zeedynamic_pagination();
+				worldstar_pagination();
 
 			endif; ?>
 			

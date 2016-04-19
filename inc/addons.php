@@ -2,17 +2,17 @@
 /**
  * Add Support for Theme Addons
  *
- * @package zeeDynamic
+ * @package Worldstar
  */
 
 
 // Register support for ThemeZee Addons
-add_action( 'after_setup_theme', 'zeedynamic_theme_addons_setup' );
+add_action( 'after_setup_theme', 'worldstar_theme_addons_setup' );
 
-function zeedynamic_theme_addons_setup() {
+function worldstar_theme_addons_setup() {
 
 	// Add Theme Support for Anderson Pro Plugin
-	add_theme_support( 'zeedynamic-pro' );
+	add_theme_support( 'worldstar-pro' );
 	
 	// Add Theme Support for ThemeZee Plugins
 	add_theme_support( 'themezee-widget-bundle' );
@@ -23,16 +23,16 @@ function zeedynamic_theme_addons_setup() {
 	add_theme_support( 'infinite-scroll', array(
 		'type' 		=> 'click',
 		'container' => 'main',
-		'render'    => 'zeedynamic_infinite_scroll_render',
+		'render'    => 'worldstar_infinite_scroll_render',
 	) );
 	
 }
 
 
 // Load addon stylesheets and scripts
-add_action( 'wp_enqueue_scripts', 'zeedynamic_theme_addons_scripts' );
+add_action( 'wp_enqueue_scripts', 'worldstar_theme_addons_scripts' );
 
-function zeedynamic_theme_addons_scripts() {
+function worldstar_theme_addons_scripts() {
 
 	// Load widget bundle styles if widgets are active
 	if ( is_active_widget('TZWB_Facebook_Likebox_Widget', false, 'tzwb-facebook-likebox')
@@ -59,9 +59,9 @@ function zeedynamic_theme_addons_scripts() {
 
 
 // Add custom Image Sizes for addons
-add_action( 'after_setup_theme', 'zeedynamic_theme_addons_image_sizes' );
+add_action( 'after_setup_theme', 'worldstar_theme_addons_image_sizes' );
 
-function zeedynamic_theme_addons_image_sizes() {
+function worldstar_theme_addons_image_sizes() {
 
 	// Add Widget Bundle Thumbnail
 	add_image_size( 'tzwb-thumbnail', 80, 64, true );
@@ -75,14 +75,14 @@ function zeedynamic_theme_addons_image_sizes() {
 /**
  * Custom render function for Infinite Scroll.
  */
-function zeedynamic_infinite_scroll_render() {
+function worldstar_infinite_scroll_render() {
 
 	// Get Theme Options from Database
-	$theme_options = zeedynamic_theme_options();
+	$theme_options = worldstar_theme_options();
 	
 	while ( have_posts() ) {
 		the_post();
 		get_template_part( 'template-parts/content', $theme_options['post_layout'] );
 	}
 	
-} // zeedynamic_infinite_scroll_render()
+} // worldstar_infinite_scroll_render()

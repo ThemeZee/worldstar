@@ -4,24 +4,24 @@
  *
  * Contains all content after the main content area and sidebar
  *
- * @package zeeDynamic
+ * @package Worldstar
  */
  
 ?>
 	
 	</div><!-- #content -->
 	
-	<?php do_action( 'zeedynamic_before_footer' ); ?>
+	<?php do_action( 'worldstar_before_footer' ); ?>
 
 	<div id="footer" class="footer-wrap">
 	
 		<footer id="colophon" class="site-footer clearfix" role="contentinfo">
 
 			<div id="footer-text" class="site-info">
-				<?php do_action( 'zeedynamic_footer_text' ); ?>
+				<?php do_action( 'worldstar_footer_text' ); ?>
 			</div><!-- .site-info -->
 			
-			<?php do_action( 'zeedynamic_footer_menu' ); ?>
+			<?php do_action( 'worldstar_footer_menu' ); ?>
 
 		</footer><!-- #colophon -->
 		

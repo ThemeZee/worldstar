@@ -1,12 +1,12 @@
 <?php
 /**
- * zeeDynamic back compat functionality
+ * Worldstar back compat functionality
  *
- * Prevents zeeDynamic from running on WordPress versions prior to 4.2,
+ * Prevents Worldstar from running on WordPress versions prior to 4.2,
  * since this theme is not meant to be backward compatible beyond that and
  * relies on many newer functions and markup changes introduced in 4.2.
  *
- * @package zeeDynamic
+ * @package Worldstar
  *
  * Original Code: Twenty Fifteen http://wordpress.org/themes/twentyfifteen
  * Original Copyright: the WordPress team and contributors.
@@ -18,26 +18,26 @@
 
  
 /**
- * Prevent switching to zeeDynamic on old versions of WordPress. Switches to the default theme.
+ * Prevent switching to Worldstar on old versions of WordPress. Switches to the default theme.
  *
  */
-function zeedynamic_compat_switch_theme() {
+function worldstar_compat_switch_theme() {
 	switch_theme( WP_DEFAULT_THEME, WP_DEFAULT_THEME );
 	unset( $_GET['activated'] );
-	add_action( 'admin_notices', 'zeedynamic_compat_upgrade_notice' );
+	add_action( 'admin_notices', 'worldstar_compat_upgrade_notice' );
 }
-add_action( 'after_switch_theme', 'zeedynamic_compat_switch_theme' );
+add_action( 'after_switch_theme', 'worldstar_compat_switch_theme' );
 
 
 /**
  * Add message for unsuccessful theme switch.
  *
  * Prints an update nag after an unsuccessful attempt to switch to
- * zeeDynamic on WordPress versions prior to 4.2.
+ * Worldstar on WordPress versions prior to 4.2.
  *
  */
-function zeedynamic_compat_upgrade_notice() {
-	$message = sprintf( esc_html__( '%$1s requires at least WordPress version 4.2. You are running version %$2s. Please upgrade and try again.', 'zeedynamic' ), 'zeeDynamic', $GLOBALS['wp_version'] );
+function worldstar_compat_upgrade_notice() {
+	$message = sprintf( esc_html__( '%$1s requires at least WordPress version 4.2. You are running version %$2s. Please upgrade and try again.', 'worldstar' ), 'Worldstar', $GLOBALS['wp_version'] );
 	printf( '<div class="error"><p>%s</p></div>', $message );
 }
 
@@ -45,20 +45,20 @@ function zeedynamic_compat_upgrade_notice() {
 /**
  * Prevent the Customizer from being loaded on WordPress versions prior to 4.2.
  */
-function zeedynamic_compat_customize() {
-	wp_die( sprintf( esc_html__( 'zeeDynamic requires at least WordPress version 4.2. You are running version %s. Please upgrade and try again.', 'zeedynamic' ), $GLOBALS['wp_version'] ), '', array(
+function worldstar_compat_customize() {
+	wp_die( sprintf( esc_html__( 'Worldstar requires at least WordPress version 4.2. You are running version %s. Please upgrade and try again.', 'worldstar' ), $GLOBALS['wp_version'] ), '', array(
 		'back_link' => true,
 	) );
 }
-add_action( 'load-customize.php', 'zeedynamic_compat_customize' );
+add_action( 'load-customize.php', 'worldstar_compat_customize' );
 
 
 /**
  * Prevent the Theme Preview from being loaded on WordPress versions prior to 4.2.
  */
-function zeedynamic_compat_preview() {
+function worldstar_compat_preview() {
 	if ( isset( $_GET['preview'] ) ) {
-		wp_die( sprintf( esc_html__( 'zeeDynamic requires at least WordPress version 4.2. You are running version %s. Please upgrade and try again.', 'zeedynamic' ), $GLOBALS['wp_version'] ) );
+		wp_die( sprintf( esc_html__( 'Worldstar requires at least WordPress version 4.2. You are running version %s. Please upgrade and try again.', 'worldstar' ), $GLOBALS['wp_version'] ) );
 	}
 }
-add_action( 'template_redirect', 'zeedynamic_compat_preview' );
+add_action( 'template_redirect', 'worldstar_compat_preview' );

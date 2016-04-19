@@ -4,7 +4,7 @@
  *
  * Description: A custom page template which displays the post slider and page content
  *
- * @package zeeDynamic
+ * @package Worldstar
  */
 
 get_header(); 

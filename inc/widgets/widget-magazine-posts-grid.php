@@ -5,10 +5,10 @@
  * Display the latest posts from a selected category in a grid layout. 
  * Intented to be used in the Magazine Homepage widget area to built a magazine layouted page.
  *
- * @package zeeDynamic
+ * @package Worldstar
  */
 
-class zeeDynamic_Magazine_Posts_Grid_Widget extends WP_Widget {
+class Worldstar_Magazine_Posts_Grid_Widget extends WP_Widget {
 	
 	/**
 	 * Widget Constructor
@@ -17,11 +17,11 @@ class zeeDynamic_Magazine_Posts_Grid_Widget extends WP_Widget {
 		
 		// Setup Widget
 		parent::__construct(
-			'zeedynamic-magazine-posts-grid', // ID
-			sprintf( esc_html__( 'Magazine Posts: Grid (%s)', 'zeedynamic' ), wp_get_theme()->Name ), // Name
+			'worldstar-magazine-posts-grid', // ID
+			sprintf( esc_html__( 'Magazine Posts: Grid (%s)', 'worldstar' ), wp_get_theme()->Name ), // Name
 			array( 
-				'classname' => 'zeedynamic_magazine_posts_grid', 
-				'description' => esc_html__( 'Displays your posts from a selected category in a grid layout. Please use this widget ONLY in the Magazine Homepage widget area.', 'zeedynamic' ) 
+				'classname' => 'worldstar_magazine_posts_grid', 
+				'description' => esc_html__( 'Displays your posts from a selected category in a grid layout. Please use this widget ONLY in the Magazine Homepage widget area.', 'worldstar' ) 
 			) // Args
 		);
 		
@@ -67,7 +67,7 @@ class zeeDynamic_Magazine_Posts_Grid_Widget extends WP_Widget {
 				
 		// Get Widget Object Cache
 		if ( ! $this->is_preview() ) {
-			$cache = wp_cache_get( 'widget_zeedynamic_magazine_posts_grid', 'widget' );
+			$cache = wp_cache_get( 'widget_worldstar_magazine_posts_grid', 'widget' );
 		}
 		if ( ! is_array( $cache ) ) {
 			$cache = array();
@@ -106,7 +106,7 @@ class zeeDynamic_Magazine_Posts_Grid_Widget extends WP_Widget {
 		// Set Cache
 		if ( ! $this->is_preview() ) {
 			$cache[ $this->id ] = ob_get_flush();
-			wp_cache_set( 'widget_zeedynamic_magazine_posts_grid', $cache, 'widget' );
+			wp_cache_set( 'widget_worldstar_magazine_posts_grid', $cache, 'widget' );
 		} else {
 			ob_end_flush();
 		}
@@ -161,7 +161,7 @@ class zeeDynamic_Magazine_Posts_Grid_Widget extends WP_Widget {
 		if( $posts_query->have_posts() ) :
 		
 			// Limit the number of words for the excerpt
-			add_filter('excerpt_length', 'zeedynamic_magazine_posts_excerpt_length');
+			add_filter('excerpt_length', 'worldstar_magazine_posts_excerpt_length');
 			
 			// Display Posts
 			while( $posts_query->have_posts() ) :
@@ -177,7 +177,7 @@ class zeeDynamic_Magazine_Posts_Grid_Widget extends WP_Widget {
 						
 							<header class="entry-header">
 			
-								<a href="<?php the_permalink() ?>" rel="bookmark"><?php the_post_thumbnail( 'zeedynamic-thumbnail-large' ); ?></a>
+								<a href="<?php the_permalink() ?>" rel="bookmark"><?php the_post_thumbnail( 'worldstar-thumbnail-large' ); ?></a>
 
 								<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 							
@@ -189,7 +189,7 @@ class zeeDynamic_Magazine_Posts_Grid_Widget extends WP_Widget {
 							
 							<div class="entry-content clearfix">
 								<?php the_excerpt(); ?>
-								<?php zeedynamic_more_link(); ?>
+								<?php worldstar_more_link(); ?>
 							</div><!-- .entry-content -->
 							
 						<?php endif; ?>
@@ -210,7 +210,7 @@ class zeeDynamic_Magazine_Posts_Grid_Widget extends WP_Widget {
 			<?php endif;
 			
 			// Remove excerpt filter
-			remove_filter('excerpt_length', 'zeedynamic_magazine_posts_excerpt_length');
+			remove_filter('excerpt_length', 'worldstar_magazine_posts_excerpt_length');
 			
 		endif;
 		
@@ -242,7 +242,7 @@ class zeeDynamic_Magazine_Posts_Grid_Widget extends WP_Widget {
 		if( $posts_query->have_posts() ) :
 		
 			// Limit the number of words for the excerpt
-			add_filter( 'excerpt_length', 'zeedynamic_magazine_posts_excerpt_length' );
+			add_filter( 'excerpt_length', 'worldstar_magazine_posts_excerpt_length' );
 			
 			// Display Posts
 			while( $posts_query->have_posts() ) :
@@ -258,7 +258,7 @@ class zeeDynamic_Magazine_Posts_Grid_Widget extends WP_Widget {
 						
 							<header class="entry-header">
 			
-								<a href="<?php the_permalink() ?>" rel="bookmark"><?php the_post_thumbnail( 'zeedynamic-thumbnail-medium' ); ?></a>
+								<a href="<?php the_permalink() ?>" rel="bookmark"><?php the_post_thumbnail( 'worldstar-thumbnail-medium' ); ?></a>
 
 								<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 							
@@ -270,7 +270,7 @@ class zeeDynamic_Magazine_Posts_Grid_Widget extends WP_Widget {
 							
 							<div class="entry-content clearfix">
 								<?php the_excerpt(); ?>
-								<?php zeedynamic_more_link(); ?>
+								<?php worldstar_more_link(); ?>
 							</div><!-- .entry-content -->
 							
 						<?php endif; ?>
@@ -291,7 +291,7 @@ class zeeDynamic_Magazine_Posts_Grid_Widget extends WP_Widget {
 			<?php endif;
 			
 			// Remove excerpt filter
-			remove_filter( 'excerpt_length', 'zeedynamic_magazine_posts_excerpt_length' );
+			remove_filter( 'excerpt_length', 'worldstar_magazine_posts_excerpt_length' );
 			
 		endif;
 		
@@ -310,13 +310,13 @@ class zeeDynamic_Magazine_Posts_Grid_Widget extends WP_Widget {
 		
 		if( true == $settings['meta_date'] ) {
 		
-			$postmeta .= zeedynamic_meta_date();
+			$postmeta .= worldstar_meta_date();
 			
 		}
 		
 		if( true == $settings['meta_author'] ) {
 		
-			$postmeta .= zeedynamic_meta_author();
+			$postmeta .= worldstar_meta_author();
 			
 		}
 		
@@ -343,7 +343,7 @@ class zeeDynamic_Magazine_Posts_Grid_Widget extends WP_Widget {
 			if( $settings['category'] > 0 ) : 
 			
 				// Set Link URL and Title for Category
-				$link_title = sprintf( esc_html__( 'View all posts from category %s', 'zeedynamic' ), get_cat_name( $settings['category'] ) );
+				$link_title = sprintf( esc_html__( 'View all posts from category %s', 'worldstar' ), get_cat_name( $settings['category'] ) );
 				$link_url = esc_url( get_category_link( $settings['category'] ) );
 				
 				// Display Widget Title with link to category archive
@@ -399,16 +399,16 @@ class zeeDynamic_Magazine_Posts_Grid_Widget extends WP_Widget {
 		?>
 		
 		<p>
-			<label for="<?php echo $this->get_field_id('title'); ?>"><?php esc_html_e( 'Title:', 'zeedynamic' ); ?>
+			<label for="<?php echo $this->get_field_id('title'); ?>"><?php esc_html_e( 'Title:', 'worldstar' ); ?>
 				<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $settings['title']; ?>" />
 			</label>
 		</p>
 
 		<p>
-			<label for="<?php echo $this->get_field_id('category'); ?>"><?php esc_html_e( 'Category:', 'zeedynamic' ); ?></label><br/>
+			<label for="<?php echo $this->get_field_id('category'); ?>"><?php esc_html_e( 'Category:', 'worldstar' ); ?></label><br/>
 			<?php // Display Category Select
 				$args = array(
-					'show_option_all'    => esc_html__( 'All Categories', 'zeedynamic' ),
+					'show_option_all'    => esc_html__( 'All Categories', 'worldstar' ),
 					'show_count' 		 => true,
 					'hide_empty'		 => false,
 					'selected'           => $settings['category'],
@@ -420,15 +420,15 @@ class zeeDynamic_Magazine_Posts_Grid_Widget extends WP_Widget {
 		</p>
 		
 		<p>
-			<label for="<?php echo $this->get_field_id('layout'); ?>"><?php esc_html_e( 'Grid Layout:', 'zeedynamic' ); ?></label><br/>
+			<label for="<?php echo $this->get_field_id('layout'); ?>"><?php esc_html_e( 'Grid Layout:', 'worldstar' ); ?></label><br/>
 			<select id="<?php echo $this->get_field_id('layout'); ?>" name="<?php echo $this->get_field_name('layout'); ?>">
-				<option <?php selected( $settings['layout'], 'two-columns' ); ?> value="two-columns" ><?php esc_html_e( 'Two Columns Grid', 'zeedynamic' ); ?></option>
-				<option <?php selected( $settings['layout'], 'three-columns' ); ?> value="three-columns" ><?php esc_html_e( 'Three Columns Grid', 'zeedynamic' ); ?></option>
+				<option <?php selected( $settings['layout'], 'two-columns' ); ?> value="two-columns" ><?php esc_html_e( 'Two Columns Grid', 'worldstar' ); ?></option>
+				<option <?php selected( $settings['layout'], 'three-columns' ); ?> value="three-columns" ><?php esc_html_e( 'Three Columns Grid', 'worldstar' ); ?></option>
 			</select>
 		</p>
 		
 		<p>
-			<label for="<?php echo $this->get_field_id('number'); ?>"><?php esc_html_e( 'Number of posts:', 'zeedynamic' ); ?>
+			<label for="<?php echo $this->get_field_id('number'); ?>"><?php esc_html_e( 'Number of posts:', 'worldstar' ); ?>
 				<input id="<?php echo $this->get_field_id('number'); ?>" name="<?php echo $this->get_field_name('number'); ?>" type="text" value="<?php echo $settings['number']; ?>" size="3" />
 			</label>
 		</p>
@@ -436,21 +436,21 @@ class zeeDynamic_Magazine_Posts_Grid_Widget extends WP_Widget {
 		<p>
 			<label for="<?php echo $this->get_field_id('excerpt'); ?>">
 				<input class="checkbox" type="checkbox" <?php checked( $settings['excerpt'] ) ; ?> id="<?php echo $this->get_field_id('excerpt'); ?>" name="<?php echo $this->get_field_name('excerpt'); ?>" />
-				<?php esc_html_e( 'Display post excerpt', 'zeedynamic' ); ?>
+				<?php esc_html_e( 'Display post excerpt', 'worldstar' ); ?>
 			</label>
 		</p>
 		
 		<p>
 			<label for="<?php echo $this->get_field_id( 'meta_date' ); ?>">
 				<input class="checkbox" type="checkbox" <?php checked( $settings['meta_date'] ) ; ?> id="<?php echo $this->get_field_id( 'meta_date' ); ?>" name="<?php echo $this->get_field_name( 'meta_date' ); ?>" />
-				<?php esc_html_e( 'Display post date', 'zeedynamic' ); ?>
+				<?php esc_html_e( 'Display post date', 'worldstar' ); ?>
 			</label>
 		</p>
 		
 		<p>
 			<label for="<?php echo $this->get_field_id( 'meta_author' ); ?>">
 				<input class="checkbox" type="checkbox" <?php checked( $settings['meta_author'] ) ; ?> id="<?php echo $this->get_field_id( 'meta_author' ); ?>" name="<?php echo $this->get_field_name( 'meta_author' ); ?>" />
-				<?php esc_html_e( 'Display post author', 'zeedynamic' ); ?>
+				<?php esc_html_e( 'Display post author', 'worldstar' ); ?>
 			</label>
 		</p>
 <?php
@@ -462,17 +462,17 @@ class zeeDynamic_Magazine_Posts_Grid_Widget extends WP_Widget {
 	 */
 	public function delete_widget_cache() {
 		
-		wp_cache_delete( 'widget_zeedynamic_magazine_posts_grid', 'widget' );
+		wp_cache_delete( 'widget_worldstar_magazine_posts_grid', 'widget' );
 		
 	}
 	
 }
 
 // Register Widget
-add_action( 'widgets_init', 'zeedynamic_register_magazine_posts_grid_widget' );
+add_action( 'widgets_init', 'worldstar_register_magazine_posts_grid_widget' );
 
-function zeedynamic_register_magazine_posts_grid_widget() {
+function worldstar_register_magazine_posts_grid_widget() {
 
-	register_widget( 'zeeDynamic_Magazine_Posts_Grid_Widget' );
+	register_widget( 'Worldstar_Magazine_Posts_Grid_Widget' );
 	
 }

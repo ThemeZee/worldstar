@@ -5,10 +5,10 @@
  * Display the latest posts from two categories in a 2-column layout. 
  * Intented to be used in the Magazine Homepage widget area to built a magazine layouted page.
  *
- * @package zeeDynamic
+ * @package Worldstar
  */
 
-class zeeDynamic_Magazine_Posts_Columns_Widget extends WP_Widget {
+class Worldstar_Magazine_Posts_Columns_Widget extends WP_Widget {
 
 	/**
 	 * Widget Constructor
@@ -17,11 +17,11 @@ class zeeDynamic_Magazine_Posts_Columns_Widget extends WP_Widget {
 		
 		// Setup Widget
 		parent::__construct(
-			'zeedynamic-magazine-posts-columns', // ID
-			sprintf( esc_html__( 'Magazine Posts: 2 Columns (%s)', 'zeedynamic' ), wp_get_theme()->Name ), // Name
+			'worldstar-magazine-posts-columns', // ID
+			sprintf( esc_html__( 'Magazine Posts: 2 Columns (%s)', 'worldstar' ), wp_get_theme()->Name ), // Name
 			array( 
-				'classname' => 'zeedynamic_magazine_posts_columns', 
-				'description' => esc_html__( 'Displays your posts from two selected categories. Please use this widget ONLY in the Magazine Homepage widget area.', 'zeedynamic' ) 
+				'classname' => 'worldstar_magazine_posts_columns', 
+				'description' => esc_html__( 'Displays your posts from two selected categories. Please use this widget ONLY in the Magazine Homepage widget area.', 'worldstar' ) 
 			) // Args
 		);
 
@@ -68,7 +68,7 @@ class zeeDynamic_Magazine_Posts_Columns_Widget extends WP_Widget {
 				
 		// Get Widget Object Cache
 		if ( ! $this->is_preview() ) {
-			$cache = wp_cache_get( 'widget_zeedynamic_magazine_posts_columns', 'widget' );
+			$cache = wp_cache_get( 'widget_worldstar_magazine_posts_columns', 'widget' );
 		}
 		if ( ! is_array( $cache ) ) {
 			$cache = array();
@@ -104,7 +104,7 @@ class zeeDynamic_Magazine_Posts_Columns_Widget extends WP_Widget {
 		// Set Cache
 		if ( ! $this->is_preview() ) {
 			$cache[ $this->id ] = ob_get_flush();
-			wp_cache_set( 'widget_zeedynamic_magazine_posts_columns', $cache, 'widget' );
+			wp_cache_set( 'widget_worldstar_magazine_posts_columns', $cache, 'widget' );
 		} else {
 			ob_end_flush();
 		}
@@ -182,7 +182,7 @@ class zeeDynamic_Magazine_Posts_Columns_Widget extends WP_Widget {
 		if( $posts_query->have_posts() ) :
 		
 			// Limit the number of words for the excerpt
-			add_filter('excerpt_length', 'zeedynamic_magazine_posts_excerpt_length');
+			add_filter('excerpt_length', 'worldstar_magazine_posts_excerpt_length');
 		
 			// Display Posts
 			while( $posts_query->have_posts() ) :
@@ -195,7 +195,7 @@ class zeeDynamic_Magazine_Posts_Columns_Widget extends WP_Widget {
 
 						<header class="entry-header">
 			
-							<a href="<?php the_permalink() ?>" rel="bookmark"><?php the_post_thumbnail( 'zeedynamic-thumbnail-large' ); ?></a>
+							<a href="<?php the_permalink() ?>" rel="bookmark"><?php the_post_thumbnail( 'worldstar-thumbnail-large' ); ?></a>
 
 							<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 							
@@ -205,7 +205,7 @@ class zeeDynamic_Magazine_Posts_Columns_Widget extends WP_Widget {
 							
 						<div class="entry-content">
 							<?php the_excerpt(); ?>
-							<?php zeedynamic_more_link(); ?>
+							<?php worldstar_more_link(); ?>
 						</div><!-- .entry-content -->
 
 					</article>
@@ -215,7 +215,7 @@ class zeeDynamic_Magazine_Posts_Columns_Widget extends WP_Widget {
 					<article id="post-<?php the_ID(); ?>" <?php post_class( 'small-post clearfix' ); ?>>
 
 						<?php if ( has_post_thumbnail() ) : ?>
-							<a href="<?php the_permalink() ?>" rel="bookmark"><?php the_post_thumbnail( 'zeedynamic-thumbnail-small' ); ?></a>
+							<a href="<?php the_permalink() ?>" rel="bookmark"><?php the_post_thumbnail( 'worldstar-thumbnail-small' ); ?></a>
 						<?php endif; ?>
 						
 						<div class="small-post-content">
@@ -234,7 +234,7 @@ class zeeDynamic_Magazine_Posts_Columns_Widget extends WP_Widget {
 			endwhile;
 			
 			// Remove excerpt filter
-			remove_filter( 'excerpt_length', 'zeedynamic_magazine_posts_excerpt_length' );
+			remove_filter( 'excerpt_length', 'worldstar_magazine_posts_excerpt_length' );
 
 		endif;
 		
@@ -253,13 +253,13 @@ class zeeDynamic_Magazine_Posts_Columns_Widget extends WP_Widget {
 		
 		if( true == $settings['meta_date'] ) {
 		
-			$postmeta .= zeedynamic_meta_date();
+			$postmeta .= worldstar_meta_date();
 			
 		}
 		
 		if( true == $settings['meta_author'] ) {
 		
-			$postmeta .= zeedynamic_meta_author();
+			$postmeta .= worldstar_meta_author();
 			
 		}
 		
@@ -286,7 +286,7 @@ class zeeDynamic_Magazine_Posts_Columns_Widget extends WP_Widget {
 			if( $category_id > 0 ) : 
 			
 				// Set Link URL and Title for Category
-				$link_title = sprintf( esc_html__( 'View all posts from category %s', 'zeedynamic' ), get_cat_name( $category_id ) );
+				$link_title = sprintf( esc_html__( 'View all posts from category %s', 'worldstar' ), get_cat_name( $category_id ) );
 				$link_url = esc_url( get_category_link( $category_id ) );
 				
 				// Display Widget Title with link to category archive
@@ -343,16 +343,16 @@ class zeeDynamic_Magazine_Posts_Columns_Widget extends WP_Widget {
 		?>
 		
 		<p>
-			<label for="<?php echo $this->get_field_id('category_one_title'); ?>"><?php esc_html_e( 'Left Category Title:', 'zeedynamic' ); ?>
+			<label for="<?php echo $this->get_field_id('category_one_title'); ?>"><?php esc_html_e( 'Left Category Title:', 'worldstar' ); ?>
 				<input class="widefat" id="<?php echo $this->get_field_id('category_one_title'); ?>" name="<?php echo $this->get_field_name('category_one_title'); ?>" type="text" value="<?php echo $settings['category_one_title']; ?>" />
 			</label>
 		</p>
 
 		<p>
-			<label for="<?php echo $this->get_field_id('category_one'); ?>"><?php esc_html_e( 'Left Category:', 'zeedynamic' ); ?></label><br/>
+			<label for="<?php echo $this->get_field_id('category_one'); ?>"><?php esc_html_e( 'Left Category:', 'worldstar' ); ?></label><br/>
 			<?php // Display Category One Select
 				$args = array(
-					'show_option_all'    => esc_html__( 'All Categories', 'zeedynamic' ),
+					'show_option_all'    => esc_html__( 'All Categories', 'worldstar' ),
 					'show_count' 		 => true,
 					'hide_empty'		 => false,
 					'selected'           => $settings['category_one'],
@@ -364,16 +364,16 @@ class zeeDynamic_Magazine_Posts_Columns_Widget extends WP_Widget {
 		</p>
 		
 				<p>
-			<label for="<?php echo $this->get_field_id('category_two_title'); ?>"><?php esc_html_e( 'Right Category Title:', 'zeedynamic' ); ?>
+			<label for="<?php echo $this->get_field_id('category_two_title'); ?>"><?php esc_html_e( 'Right Category Title:', 'worldstar' ); ?>
 				<input class="widefat" id="<?php echo $this->get_field_id('category_two_title'); ?>" name="<?php echo $this->get_field_name('category_two_title'); ?>" type="text" value="<?php echo $settings['category_two_title']; ?>" />
 			</label>
 		</p>
 		
 		<p>
-			<label for="<?php echo $this->get_field_id('category_two'); ?>"><?php esc_html_e( 'Right Category:', 'zeedynamic' ); ?></label><br/>
+			<label for="<?php echo $this->get_field_id('category_two'); ?>"><?php esc_html_e( 'Right Category:', 'worldstar' ); ?></label><br/>
 			<?php // Display Category One Select
 				$args = array(
-					'show_option_all'    => esc_html__( 'All Categories', 'zeedynamic' ),
+					'show_option_all'    => esc_html__( 'All Categories', 'worldstar' ),
 					'show_count' 		 => true,
 					'hide_empty'		 => false,
 					'selected'           => $settings['category_two'],
@@ -385,7 +385,7 @@ class zeeDynamic_Magazine_Posts_Columns_Widget extends WP_Widget {
 		</p>
 		
 		<p>
-			<label for="<?php echo $this->get_field_id('number'); ?>"><?php esc_html_e( 'Number of posts:', 'zeedynamic' ); ?>
+			<label for="<?php echo $this->get_field_id('number'); ?>"><?php esc_html_e( 'Number of posts:', 'worldstar' ); ?>
 				<input id="<?php echo $this->get_field_id('number'); ?>" name="<?php echo $this->get_field_name('number'); ?>" type="text" value="<?php echo (int)$settings['number']; ?>" size="3" />
 			</label>
 		</p>
@@ -393,21 +393,21 @@ class zeeDynamic_Magazine_Posts_Columns_Widget extends WP_Widget {
 		<p>
 			<label for="<?php echo $this->get_field_id('highlight_post'); ?>">
 				<input class="checkbox" type="checkbox" <?php checked( $settings['highlight_post'] ) ; ?> id="<?php echo $this->get_field_id('highlight_post'); ?>" name="<?php echo $this->get_field_name('highlight_post'); ?>" />
-				<?php esc_html_e( 'Highlight first post (big image + excerpt)', 'zeedynamic' ); ?>
+				<?php esc_html_e( 'Highlight first post (big image + excerpt)', 'worldstar' ); ?>
 			</label>
 		</p>
 		
 		<p>
 			<label for="<?php echo $this->get_field_id( 'meta_date' ); ?>">
 				<input class="checkbox" type="checkbox" <?php checked( $settings['meta_date'] ) ; ?> id="<?php echo $this->get_field_id( 'meta_date' ); ?>" name="<?php echo $this->get_field_name( 'meta_date' ); ?>" />
-				<?php esc_html_e( 'Display post date', 'zeedynamic' ); ?>
+				<?php esc_html_e( 'Display post date', 'worldstar' ); ?>
 			</label>
 		</p>
 		
 		<p>
 			<label for="<?php echo $this->get_field_id( 'meta_author' ); ?>">
 				<input class="checkbox" type="checkbox" <?php checked( $settings['meta_author'] ) ; ?> id="<?php echo $this->get_field_id( 'meta_author' ); ?>" name="<?php echo $this->get_field_name( 'meta_author' ); ?>" />
-				<?php esc_html_e( 'Display post author', 'zeedynamic' ); ?>
+				<?php esc_html_e( 'Display post author', 'worldstar' ); ?>
 			</label>
 		</p>
 		
@@ -420,17 +420,17 @@ class zeeDynamic_Magazine_Posts_Columns_Widget extends WP_Widget {
 	 */
 	public function delete_widget_cache() {
 		
-		wp_cache_delete( 'widget_zeedynamic_magazine_posts_columns', 'widget' );
+		wp_cache_delete( 'widget_worldstar_magazine_posts_columns', 'widget' );
 		
 	}
 	
 }
 
 // Register Widget
-add_action( 'widgets_init', 'zeedynamic_register_magazine_posts_columns_widget' );
+add_action( 'widgets_init', 'worldstar_register_magazine_posts_columns_widget' );
 
-function zeedynamic_register_magazine_posts_columns_widget() {
+function worldstar_register_magazine_posts_columns_widget() {
 
-	register_widget( 'zeeDynamic_Magazine_Posts_Columns_Widget' );
+	register_widget( 'Worldstar_Magazine_Posts_Columns_Widget' );
 	
 }

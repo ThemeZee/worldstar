@@ -1,5 +1,5 @@
 ===================================
-zeeDynamic Changelog
+Worldstar Changelog
 ===================================
 
 Version 1.1.1

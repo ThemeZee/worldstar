@@ -4,7 +4,7 @@
  *
  * Uses sane defaults in case the user has not configured any theme options yet.
  *
- * @package zeeDynamic
+ * @package Worldstar
  */
 
 
@@ -13,16 +13,16 @@
  *
  * @return array
  */
-function zeedynamic_theme_options() {
+function worldstar_theme_options() {
     
 	// Merge Theme Options Array from Database with Default Options Array
 	$theme_options = wp_parse_args( 
 		
 		// Get saved theme options from WP database
-		get_option( 'zeedynamic_theme_options', array() ), 
+		get_option( 'worldstar_theme_options', array() ), 
 		
 		// Merge with Default Options if setting was not saved yet
-		zeedynamic_default_options() 
+		worldstar_default_options() 
 		
 	);
 
@@ -37,14 +37,14 @@ function zeedynamic_theme_options() {
  *
  * @return array
  */
-function zeedynamic_default_options() {
+function worldstar_default_options() {
 
 	$default_options = array(
 		'site_title'						=> true,
 		'custom_header_link'				=> '',
 		'custom_header_hide'				=> false,
 		'layout' 							=> 'right-sidebar',
-		'blog_title'						=> esc_html__( 'Latest Posts', 'zeedynamic' ),
+		'blog_title'						=> esc_html__( 'Latest Posts', 'worldstar' ),
 		'post_layout'						=> 'index',
 		'post_content' 						=> 'excerpt',
 		'excerpt_length' 					=> 35,
