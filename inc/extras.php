@@ -35,6 +35,11 @@ function worldstar_body_classes( $classes ) {
 		$classes[] = 'sidebar-left';
 	}
 	
+	// Add Post Columns classes
+	if ( 'two-columns' == $theme_options['post_layout'] ) {
+		$classes[] = 'post-layout-columns';
+	}
+	
 	return $classes;
 }
 add_filter( 'body_class', 'worldstar_body_classes' );

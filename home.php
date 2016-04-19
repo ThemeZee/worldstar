@@ -35,17 +35,19 @@ $theme_options = worldstar_theme_options();
 		
 			<?php endif; ?>
 			
-		 
-			<?php if (have_posts()) : while (have_posts()) : the_post();
-		
-				get_template_part( 'template-parts/content', $theme_options['post_layout'] );
-		
-				endwhile;
+			<div id="homepage-posts" class="post-wrapper clearfix">
+					
+				<?php if (have_posts()) : while (have_posts()) : the_post();
+			
+					get_template_part( 'template-parts/content' );
+			
+					endwhile;
 
-				// Display Pagination	
-				worldstar_pagination();
-
-			endif; ?>
+				endif; ?>
+			
+			</div>
+			
+			<?php worldstar_pagination(); ?>
 			
 		</main><!-- #main -->
 	</section><!-- #primary -->

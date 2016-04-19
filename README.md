@@ -88,11 +88,11 @@ F) Licenses of bundled resources
 	License: Distributed under the terms of the GPLv2 (https://www.gnu.org/licenses/gpl-2.0.html)
 	Copyright: 2015 WooThemes, http://www.woothemes.com
 	
-	5. Francois One Font - https://www.google.com/fonts/specimen/Francois One
+	5. Oswald Font - https://www.google.com/fonts/specimen/Oswald
 	License: Distributed under the terms of the Apache License 2.0 (http://www.apache.org/licenses/LICENSE-2.0.html)
 	Copyright: 2013 Steve Matteson
 	
-	6. Francois One Font - https://www.google.com/fonts/specimen/Open+Sans
+	6. Oswald Font - https://www.google.com/fonts/specimen/Open+Sans
 	License: Distributed under the terms of the Apache License 2.0 (http://www.apache.org/licenses/LICENSE-2.0.html)
 	Copyright: 2014 Steve Matteson
 	

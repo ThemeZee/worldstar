@@ -109,7 +109,7 @@ html[xmlns] .zeeflexslider .zeeslides {
 	padding: 1em 1.5em;
 	color: #fff;
 	background: #333;
-	border-top: 10px solid #e84747;
+	border-top: 10px solid #1199aa;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 	-webkit-box-sizing: border-box;
@@ -153,7 +153,7 @@ html[xmlns] .zeeflexslider .zeeslides {
 	margin: 0;
 	width: 40px;
 	height: 40px;
-	background: #e84747;
+	background: #1199aa;
 	text-align: left;
 	color #fff;
 	font-size: 0;
@@ -227,11 +227,11 @@ html[xmlns] .zeeflexslider .zeeslides {
 }
 
 .post-slider-controls .zeeflex-control-nav li a:hover {
-	background: #e84747;
+	background: #1199aa;
 }
 
 .post-slider-controls .zeeflex-control-nav li a.zeeflex-active {
-	background: #e84747;
+	background: #1199aa;
 	cursor: default;
 }
 

@@ -25,7 +25,7 @@ function worldstar_customize_register_post_settings( $wp_customize ) {
 	
 	// Add Post Layout Settings for archive posts
 	$wp_customize->add_setting( 'worldstar_theme_options[post_layout]', array(
-        'default'           => 'index',
+        'default'           => 'two-columns',
 		'type'           	=> 'option',
         'transport'         => 'refresh',
         'sanitize_callback' => 'worldstar_sanitize_select'
@@ -38,8 +38,8 @@ function worldstar_customize_register_post_settings( $wp_customize ) {
         'type'     => 'select',
 		'priority' => 1,
         'choices'  => array(
-            'small-image' => esc_html__( 'Show featured image beside content', 'worldstar' ),
-            'index' => esc_html__( 'Show featured image below title', 'worldstar' )
+            'one-column' => esc_html__( 'One Column', 'worldstar' ),
+            'two-columns' => esc_html__( 'Two Columns', 'worldstar' ),
 			)
 		)
 	);
@@ -67,7 +67,7 @@ function worldstar_customize_register_post_settings( $wp_customize ) {
 	
 	// Add Setting and Control for Excerpt Length
 	$wp_customize->add_setting( 'worldstar_theme_options[excerpt_length]', array(
-        'default'           => 35,
+        'default'           => 20,
 		'type'           	=> 'option',
         'transport'         => 'refresh',
         'sanitize_callback' => 'absint'

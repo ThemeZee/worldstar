@@ -8,15 +8,17 @@
 
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		
+		<?php worldstar_post_image_single(); ?>
+				
 		<header class="entry-header">
+			
+			<?php worldstar_entry_categories(); ?>
 			
 			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 			
 			<?php worldstar_entry_meta(); ?>
 
 		</header><!-- .entry-header -->
-		
-		<?php worldstar_post_image_single(); ?>
 
 		<div class="entry-content clearfix">
 			<?php the_content(); ?>

@@ -36,7 +36,7 @@ function worldstar_setup() {
 	add_theme_support( 'post-thumbnails' );
 	
 	// Set detfault Post Thumbnail size
-	set_post_thumbnail_size( 820, 360, true );
+	set_post_thumbnail_size( 820, 410, true );
 
 	// Register Navigation Menu
 	register_nav_menu( 'primary', esc_html__( 'Main Navigation', 'worldstar' ) );
@@ -166,7 +166,7 @@ add_action( 'wp_enqueue_scripts', 'worldstar_scripts' );
 function worldstar_google_fonts_url() {
     
 	// Set default Fonts
-	$font_families = array( 'Droid Sans:400,400italic,700,700italic', 'Francois One:400,400italic,700,700italic' );
+	$font_families = array( 'Open Sans:400,400italic,700,700italic', 'Oswald:400,400italic,700,700italic' );
 
 	// Build Fonts URL
 	$query_args = array(
@@ -186,9 +186,6 @@ function worldstar_add_image_sizes() {
 	
 	// Add Custom Header Image Size
 	add_image_size( 'worldstar-header-image', 1230, 410, true );
-	
-	// Add Image Size for Archives
-	add_image_size( 'worldstar-thumbnail-archive', 350, 280, true );
 	
 	// Add different thumbnail sizes for widgets and post layouts
 	add_image_size( 'worldstar-thumbnail-small', 100, 80, true );

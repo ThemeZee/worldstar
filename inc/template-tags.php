@@ -148,7 +148,7 @@ endif;
 
 if ( ! function_exists( 'worldstar_entry_meta' ) ):	
 /**
- * Displays the date, author and categories of a post
+ * Displays the date, author and comments of a post
  */
 function worldstar_entry_meta() {
 
@@ -171,10 +171,10 @@ function worldstar_entry_meta() {
 	
 	}
 	
-	// Display categories unless user has deactivated it via settings
-	if ( true == $theme_options['meta_category'] ) {
+	// Display comments unless user has deactivated it via settings
+	if ( true == $theme_options['meta_comments'] ) {
 	
-		$postmeta .= worldstar_meta_category();
+		$postmeta .= worldstar_meta_comments();
 	
 	}
 		
@@ -225,15 +225,47 @@ function worldstar_meta_author() {
 endif;
 
 
-if ( ! function_exists( 'worldstar_meta_category' ) ):
+if ( ! function_exists( 'worldstar_meta_comments' ) ):
+/**
+ * Displays the post comments
+ */
+function worldstar_meta_comments() {  
+	
+	ob_start();
+	comments_popup_link( '0', '1', '%' );
+	$comments_string = ob_get_contents();
+	ob_end_clean();
+	
+	return '<span class="meta-comments"> ' . $comments_string . '</span>';
+
+}  // worldstar_meta_comments()
+endif;
+
+
+if ( ! function_exists( 'worldstar_entry_categories' ) ):
 /**
  * Displays the category of posts
  */	
-function worldstar_meta_category() { 
-
-	return '<span class="meta-category"> ' . get_the_category_list(', ') . '</span>';
+function worldstar_entry_categories() { 
 	
-} // worldstar_meta_category()
+	// Get Theme Options from Database
+	$theme_options = worldstar_theme_options();
+	
+	// Display categories unless user has deactivated it via settings
+	if ( true == $theme_options['meta_category'] ) : ?>
+	
+		<div class="entry-categories clearfix">
+			
+			<span class="meta-category">
+				<?php echo get_the_category_list(' '); ?>
+			</span>
+			
+		</div><!-- .entry-categories -->
+		
+	<?php
+	endif;
+	
+} // worldstar_entry_categories()
 endif;
 
 
@@ -253,9 +285,11 @@ function worldstar_entry_tags() {
 	if ( $tag_list && $theme_options['meta_tags'] ) : ?>
 	
 		<div class="entry-tags clearfix">
+			
 			<span class="meta-tags">
 				<?php echo $tag_list; ?>
 			</span>
+		
 		</div><!-- .entry-tags -->
 <?php 
 	endif;

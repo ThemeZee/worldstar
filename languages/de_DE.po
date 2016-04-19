@@ -535,14 +535,14 @@ msgstr "Zeige Beitragsauszug"
 #~ msgid "Continue reading &raquo;"
 #~ msgstr "Weiterlesen &raquo;"
 
-#~ msgid "https://themezee.com/themes/tortuga/"
-#~ msgstr "https://themezee.com/de/themes/tortuga/"
+#~ msgid "https://themezee.com/themes/worldstar/"
+#~ msgstr "https://themezee.com/de/themes/worldstar/"
 
-#~ msgid "https://themezee.com/docs/tortuga-documentation/"
-#~ msgstr "https://themezee.com/de/docs/tortuga-dokumentation/"
+#~ msgid "https://themezee.com/docs/worldstar-documentation/"
+#~ msgstr "https://themezee.com/de/docs/worldstar-dokumentation/"
 
-#~ msgid "https://themezee.com/addons/tortuga-pro/"
-#~ msgstr "https://themezee.com/de/addons/tortuga-pro/"
+#~ msgid "https://themezee.com/addons/worldstar-pro/"
+#~ msgstr "https://themezee.com/de/addons/worldstar-pro/"
 
 #~ msgid "Blog Description"
 #~ msgstr "Blog Beschreibung"
