@@ -1,0 +1,38 @@
+===================================
+zeeDynamic Changelog
+===================================
+
+Version 1.1.1
+-----------------------------------
+[added] support for new custom logo feature from WordPress 4.5
+
+Version 1.1.0
+-----------------------------------
+[moved] all theme settings to Customizer
+[created] theme layout based on Underscores
+[updated] screenshot with new images
+
+Version 1.0.4
+-----------------------------------
+[added] new theme options layout
+[added] span tags to frontpage category titles
+[changed] embed google fonts with protocal relative url
+[fixed] center aligned images
+[fixed] frontpage template load more button issue
+
+Version 1.0.3
+-----------------------------------
+[added] featured image header for pages
+[fixed] logo and widget overflow issue
+
+Version 1.0.2
+-----------------------------------
+[added] unique name for theme options array in the database
+
+Version 1.0.1
+-----------------------------------
+[fixed] undefined variables in template-tags.php
+
+Version 1.0
+-----------------------------------
+Final Version
