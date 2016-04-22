@@ -47,7 +47,7 @@ function worldstar_setup() {
 	) );
 
 	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'worldstar_custom_background_args', array( 'default-color' => 'e5e5e5' ) ) );
+	add_theme_support( 'custom-background', apply_filters( 'worldstar_custom_background_args', array( 'default-color' => 'efefef' ) ) );
 	
 	// Set up the WordPress core custom logo feature
 	add_theme_support( 'custom-logo', apply_filters( 'worldstar_custom_logo_args', array(

@@ -374,7 +374,7 @@ html {
 }
 
 body {
-	background: #f5f5f5; /* Fallback for when there is no custom background color defined. */
+	background: #efefef; /* Fallback for when there is no custom background color defined. */
 }
 
 blockquote {
@@ -466,13 +466,13 @@ td {
 }
 
 a {
-	color: #1199aa;
+	color: #33bbdd;
 	text-decoration: none;
 }
 
 a:link,
 a:visited {
-	color: #1199aa;
+	color: #33bbdd;
 }
 
 a:hover,
@@ -502,7 +502,7 @@ input[type="submit"] {
 	font-size: 14px;
 	font-size: 0.875rem;
 	color: #fff;
-	background: #1199aa;
+	background: #33bbdd;
 	border: none;
 	text-transform: uppercase;
 	text-decoration: none;
@@ -691,7 +691,7 @@ textarea {
 	display: inline-block;
 	margin: 0 0.3em;
 	padding: 0;
-	color: #1199aa;
+	color: #33bbdd;
 	font-family: 'Oswald', Tahoma, Arial;
 	font-size: 32px;
 	font-size: 2rem;
@@ -701,7 +701,7 @@ textarea {
 
 .site-title a:link, 
 .site-title a:visited {
-	color: #1199aa;
+	color: #33bbdd;
 	-webkit-transition: all 0.2s ease;
 	-moz-transition: all 0.2s ease;
 	-ms-transition: all 0.2s ease;
@@ -836,7 +836,7 @@ textarea {
 	padding: 0;
 	list-style-type: none;
 	list-style-position: outside;
-	background: #1199aa;
+	background: #33bbdd;
 }
 
 .main-navigation-menu ul li{
@@ -1280,7 +1280,7 @@ textarea {
 
 .entry-title a:hover, 
 .entry-title a:active {
-	color: #1199aa;
+	color: #33bbdd;
 }
 
 .type-post .wp-post-image {
@@ -1303,7 +1303,7 @@ textarea {
 	font-size: 14px;
 	font-size: 0.875rem;
 	color: #fff;
-	background: #1199aa;
+	background: #33bbdd;
 	text-transform: uppercase;
 	text-decoration: none;
 	-webkit-border-radius: 0.3em;
@@ -1426,7 +1426,7 @@ textarea {
 	padding: 0.05em 0.6em;
 	text-decoration: none;
 	color: #fff;
-	background: #1199aa;
+	background: #33bbdd;
 	font-size: 12px;
 	font-size: 0.75rem;
 	-webkit-border-radius: 0.3em;
@@ -1477,7 +1477,7 @@ textarea {
 	padding: 0.15em 0.6em;
 	text-decoration: none;
 	color: #fff;
-	background: #1199aa;
+	background: #33bbdd;
 	border: none;
 	font-size: 12px !important;
 	font-size: 0.75rem !important;
@@ -1559,7 +1559,7 @@ textarea {
 
 .post-pagination a:hover,
 .post-pagination .current {
-	background: #1199aa;
+	background: #33bbdd;
 }
 
 /* Infinite Scroll Pagination */
@@ -1575,7 +1575,7 @@ textarea {
 	font-size: 13px;
 	font-size: 0.8125rem;
 	color: #fff;
-	background: #1199aa;
+	background: #33bbdd;
 	text-transform: uppercase;
 	text-decoration: none;
 }
@@ -2078,7 +2078,7 @@ object {
 	.main-navigation-toggle:focus,
 	.main-navigation-toggle:active {
 		cursor: pointer;
-		background: #1199aa;
+		background: #33bbdd;
 	}
 	
 	.main-navigation-toggle:after {
