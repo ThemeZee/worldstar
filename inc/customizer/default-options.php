@@ -56,12 +56,10 @@ function worldstar_default_options() {
 		'post_image'						=> true,
 		'meta_tags'							=> true,
 		'post_navigation'					=> true,
-		'slider_magazine' 					=> false,
-		'slider_blog' 						=> false,
-		'slider_category' 					=> 0,
-		'slider_limit' 						=> 8,
-		'slider_animation' 					=> 'slide',
-		'slider_speed' 						=> 7000,
+		'featured_magazine' 				=> false,
+		'featured_blog' 					=> false,
+		'featured_category' 				=> 0,
+		'featured_limit' 					=> 8,
 	);
 	
 	return $default_options;

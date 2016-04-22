@@ -36,7 +36,7 @@ function worldstar_setup() {
 	add_theme_support( 'post-thumbnails' );
 	
 	// Set detfault Post Thumbnail size
-	set_post_thumbnail_size( 820, 410, true );
+	set_post_thumbnail_size( 840, 480, true );
 
 	// Register Navigation Menu
 	register_nav_menu( 'primary', esc_html__( 'Main Navigation', 'worldstar' ) );
@@ -217,9 +217,6 @@ require get_template_directory() . '/inc/template-tags.php';
 
 // Include support functions for Theme Addons
 require get_template_directory() . '/inc/addons.php';
-
-// Include Post Slider Setup
-require get_template_directory() . '/inc/slider.php';
 
 // include Widget Files
 require get_template_directory() . '/inc/widgets/widget-magazine-posts-columns.php';

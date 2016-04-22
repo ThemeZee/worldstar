@@ -1,8 +1,8 @@
 <?php
 /**
- * Template Name: Post Slider
+ * Template Name: Featured Content
  *
- * Description: A custom page template which displays the post slider and page content
+ * Description: A custom page template which displays the featured content area and page content
  *
  * @package Worldstar
  */
@@ -13,7 +13,7 @@ get_header();
 	<section id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 				
-			<?php get_template_part( 'template-parts/post-slider' ); ?>
+			<?php get_template_part( 'template-parts/featured-content' ); ?>
 			
 			<?php while (have_posts()) : the_post();
 

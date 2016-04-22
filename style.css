@@ -38,26 +38,27 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	11.1 - Default Widgets
 	11.2 - Magazine Posts Widgets
 12.0 - Posts and pages
-11.0 - Comments
-12.0 - Footer
-13.0 - Media
-	13.1 - Captions
-	13.2 - Galleries
-14.0 - Media Queries
-	14.1 - Desktop Large ( < 1120px )
-	14.2 - Desktop Medium ( < 1040px )
-	14.3 - Desktop Small ( < 960px )
-	14.4 - Tablet Large ( < 880px )
-	14.5 - Tablet Medium ( < 800px )
-	14.6 - Tablet Small ( < 720px )
-	14.7 - Mobile Extra Large ( < 640px )
-	14.8 - Mobile Large ( < 560px )
-	14.9 - Mobile Medium ( < 480px )
-	14.10 - Mobile Small ( < 320px )
-15.0 - Theme Option Styles
+13.0 - Featured Posts
+14.0 - Comments
+15.0 - Footer
+16.0 - Media
+	16.1 - Captions
+	16.2 - Galleries
+17.0 - Media Queries
+	17.1 - Desktop Large ( < 1120px )
+	17.2 - Desktop Medium ( < 1040px )
+	17.3 - Desktop Small ( < 960px )
+	17.4 - Tablet Large ( < 880px )
+	17.5 - Tablet Medium ( < 800px )
+	17.6 - Tablet Small ( < 720px )
+	17.7 - Mobile Extra Large ( < 640px )
+	17.8 - Mobile Large ( < 560px )
+	17.9 - Mobile Medium ( < 480px )
+	17.10 - Mobile Small ( < 320px )
+18.0 - Theme Option Styles
 	15.1 - Sidebar Left Layout
 	15.2 - Sticky Navigation
-16.0 - Media Query Fixes
+19.0 - Media Query Fixes
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
@@ -287,7 +288,7 @@ button,
 input,
 select,
 textarea {
-	color: #333333;
+	color: #222;
 	font-family: 'Open Sans', Tahoma, Arial;
 	font-size: 15px;
 	font-size: 0.9375rem;
@@ -477,7 +478,7 @@ a:visited {
 a:hover,
 a:focus,
 a:active {
-	color: #333333;
+	color: #222;
 }
 
 a:focus {
@@ -505,13 +506,16 @@ input[type="submit"] {
 	border: none;
 	text-transform: uppercase;
 	text-decoration: none;
+	-webkit-border-radius: 0.3em;
+	-moz-border-radius: 0.3em;
+	border-radius: 0.3em;
 }
 
 button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-	background: #333333;
+	background: #222;
 }
 
 button:focus,
@@ -760,12 +764,7 @@ textarea {
 ## 10.1 - Main Navigation
 --------------------------------------------------------------*/
 .primary-navigation-wrap {
-	background: #0c6b77;
 	background: #222;
-}
-
-.primary-navigation {
-
 }
 
 .main-navigation-toggle {
@@ -1263,14 +1262,14 @@ textarea {
 	font-weight: normal;
 	padding: 0;
 	margin: 0;
-	color: #333333;
+	color: #222;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 }
 
 .entry-title a:link, 
 .entry-title a:visited {
-	color: #333333;
+	color: #222;
 	text-decoration: none;
 	-webkit-transition: all 0.2s ease;
 	-moz-transition: all 0.2s ease;
@@ -1319,7 +1318,7 @@ textarea {
 
 .more-link:hover, 
 .more-link:active {
-	background: #333333;
+	background: #222;
 }
 
 /* Post Columns */
@@ -1442,7 +1441,7 @@ textarea {
 
 .entry-categories .meta-category a:hover, 
 .entry-categories .meta-category a:active {
-	background: #333333;
+	background: #222;
 }
 
 /* Entry Tags & Tagcloud Widget */
@@ -1499,7 +1498,7 @@ textarea {
 .widget_tag_cloud .tagcloud a:active,
 .entry-tags .meta-tags a:hover, 
 .entry-tags .meta-tags a:active {
-	background: #333333;
+	background: #222;
 }
 
 /* Post Navigation */
@@ -1545,7 +1544,7 @@ textarea {
 	font-size: 0.875rem;
 	font-weight: bold;
 	color: #fff;
-	background: #333333;
+	background: #222;
 }
 
 .post-pagination a:link, 
@@ -1582,7 +1581,7 @@ textarea {
 }
 
 .infinite-scroll #infinite-handle span:hover {
-	background-color: #333333;
+	background-color: #222;
 }
 
 /* Archives and Search Heading */
@@ -1653,25 +1652,97 @@ textarea {
 }
 
 /*--------------------------------------------------------------
-# 11.0 - Comments
+# 13.0 - Featured Posts
+--------------------------------------------------------------*/
+.featured-posts-wrap {
+	margin: 0 0 1em;
+}
+
+.featured-posts {
+	display: flex;
+	flex-wrap: wrap;
+	margin-right: -1em;
+}
+
+.featured-posts .grid-post {
+	display: flex;
+	width: 33.333333333333333%;
+	padding-right: 1em;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.featured-posts .grid-post:nth-child(1),
+.featured-posts .grid-post:nth-child(2) {
+	width: 50%;
+}
+
+.featured-posts .grid-post .type-post .featured-image {
+	margin: 0;
+	vertical-align: top;
+}
+
+.featured-posts .grid-post .type-post {
+	position: relative;
+	margin: 0 0 1em;
+}
+
+.featured-posts .grid-post .type-post .post-content {
+	position: absolute;
+	left: 1em;
+	right: 1em;
+	bottom: 1em;
+}
+
+.featured-posts .grid-post .type-post .entry-title {
+	display: inline-block;
+	background: rgba(0,0,0,0.75);
+	padding: 0 0.4em;
+	font-size: 20px;
+	font-size: 1.25rem;
+}
+
+.featured-posts .grid-post:nth-child(1) .type-post .entry-title,
+.featured-posts .grid-post:nth-child(2) .type-post .entry-title {
+	font-size: 24px;
+	font-size: 1.5rem;
+}
+
+
+.featured-posts .grid-post .type-post .entry-title a:link, 
+.featured-posts .grid-post .type-post .entry-title a:visited {
+	color: #fff;
+}
+
+.featured-posts .grid-post .type-post .entry-title a:hover, 
+.featured-posts .grid-post .type-post .entry-title a:active {
+	color: #ddd;
+}
+
+/*--------------------------------------------------------------
+# 14.0 - Comments
 --------------------------------------------------------------*/
 
 /* Comment Header */
 .comments-header,
 .comment-reply-title {
 	margin: 0 0 1.5em 0;
-	background: #333333;
+	padding-bottom: 2px;
+	border-bottom: 1px solid #eee;
 }
 
 .comments-header .comments-title,
 .comment-reply-title span {
-	display: inline-block;
+	display: block;
 	margin: 0;
-	padding: 0.4em 0.8em;
-	font-size: 14px;
-	font-size: 0.875rem;
+	padding: 0.4em 0;
+	font-family: 'Oswald', Tahoma, Arial;
+	font-size: 15px;
+	font-size: 0.9375rem;
+	font-weight: normal;
 	text-transform: uppercase;
-	color: #fff;
+	border-bottom: 1px solid #eee;
 }
 
 /* Comment List */
@@ -1781,10 +1852,10 @@ textarea {
 }
 
 /*--------------------------------------------------------------
-# 12.0 - Footer
+# 15.0 - Footer
 --------------------------------------------------------------*/
 .footer-wrap {
-	background: #333333;
+	background: #222;
 }
 
 .site-footer {
@@ -1810,7 +1881,7 @@ textarea {
 }
 
 /*--------------------------------------------------------------
-# 13.0 - Media
+# 16.0 - Media
 --------------------------------------------------------------*/
 .page-content .wp-smiley,
 .entry-content .wp-smiley,
@@ -1829,7 +1900,7 @@ object {
 }
 
 /*--------------------------------------------------------------
-## 13.1 - Captions
+## 16.1 - Captions
 --------------------------------------------------------------*/
 .wp-caption {
 	margin-bottom: 1.5em;
@@ -1850,7 +1921,7 @@ object {
 }
 
 /*--------------------------------------------------------------
-## 13.2 - Galleries
+## 16.2 - Galleries
 --------------------------------------------------------------*/
 .gallery {
 	margin-bottom: 1.5em;
@@ -1907,11 +1978,11 @@ object {
 }
 
 /*--------------------------------------------------------------
-# 14.0 - Media Queries
+# 17.0 - Media Queries
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
-## 14.2 - Desktop Large ( < 1120px )
+## 17.1 - Desktop Large ( < 1120px )
 --------------------------------------------------------------*/
 @media only screen and (max-width: 70em) {
 	
@@ -1929,7 +2000,7 @@ object {
 }
 
 /*--------------------------------------------------------------
-## 14.2 - Desktop Medium ( < 1040px )
+## 17.2 - Desktop Medium ( < 1040px )
 --------------------------------------------------------------*/
 @media only screen and (max-width: 65em) {
 	
@@ -1938,7 +2009,7 @@ object {
 }
 
 /*--------------------------------------------------------------
-## 14.3 - Desktop Small ( < 960px )
+## 17.3 - Desktop Small ( < 960px )
 --------------------------------------------------------------*/
 @media only screen and (max-width: 60em) {
 	
@@ -1999,7 +2070,7 @@ object {
 		font-size: 15px;
 		font-size: 0.9375rem;
 		padding: 0.75em 1.5em;
-		background: #333333;
+		background: #222;
 		text-align: left;
 	}
 	
@@ -2126,7 +2197,7 @@ object {
 }
 
 /*--------------------------------------------------------------
-## 14.4 - Tablet Large ( < 880px )
+## 17.4 - Tablet Large ( < 880px )
 --------------------------------------------------------------*/
 @media only screen and (max-width: 55em) {
 	
@@ -2152,7 +2223,7 @@ object {
 }
 
 /*--------------------------------------------------------------
-## 14.5 - Tablet Medium ( < 800px )
+## 17.5 - Tablet Medium ( < 800px )
 --------------------------------------------------------------*/
 @media only screen and (max-width: 50em) {
 	
@@ -2165,7 +2236,7 @@ object {
 }
 
 /*--------------------------------------------------------------
-## 14.7 - Mobile Extra Large ( < 640px )
+## 17.7 - Mobile Extra Large ( < 640px )
 --------------------------------------------------------------*/
 @media only screen and (max-width: 40em) {
 	
@@ -2213,7 +2284,7 @@ object {
 }
 
 /*--------------------------------------------------------------
-## 14.8 - Mobile Large ( < 560px )
+## 17.8 - Mobile Large ( < 560px )
 --------------------------------------------------------------*/
 @media only screen and (max-width: 35em) {
 
@@ -2240,7 +2311,7 @@ object {
 }
 
 /*--------------------------------------------------------------
-## 14.9 - Mobile Medium ( < 480px )
+## 17.9 - Mobile Medium ( < 480px )
 --------------------------------------------------------------*/
 @media only screen and (max-width: 30em) {
 	
@@ -2294,7 +2365,7 @@ object {
 }
 
 /*--------------------------------------------------------------
-## 14.9.5 - Mobile Small ( < 320px )
+## 17.9.5 - Mobile Small ( < 320px )
 --------------------------------------------------------------*/
 @media only screen and (max-width: 25em) {
 	
@@ -2306,7 +2377,7 @@ object {
 }
 
 /*--------------------------------------------------------------
-## 14.10 - Mobile Small ( < 320px )
+## 17.10 - Mobile Small ( < 320px )
 --------------------------------------------------------------*/
 @media only screen and (max-width: 20em) {
 	
@@ -2345,11 +2416,11 @@ object {
 
 
 /*--------------------------------------------------------------
-# 15.0 - Theme Option Styles
+# 18.0 - Theme Option Styles
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
-## 15.1 - Boxed Layout
+## 18.1 - Boxed Layout
 --------------------------------------------------------------*/
 .boxed-layout .site {
 	max-width: 1280px;
@@ -2373,7 +2444,7 @@ object {
 }
 
 /*--------------------------------------------------------------
-## 15.2 - Sidebar Left Layout
+## 18.2 - Sidebar Left Layout
 --------------------------------------------------------------*/
 .sidebar-left .content-area {
 	float: right;
@@ -2386,7 +2457,7 @@ object {
 }
 
 /*--------------------------------------------------------------
-# 16.0 - Media Query Fixes
+# 19.0 - Media Query Fixes
 --------------------------------------------------------------*/
 
 /* Ensure navigation is visible on desktop view */

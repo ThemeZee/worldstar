@@ -17,9 +17,7 @@
 #customize-control-worldstar_theme_options-single_posts_headline,
 #customize-control-worldstar_theme_options-postmeta_headline,
 #customize-control-worldstar_theme_options-footermeta_headline,
-#customize-control-worldstar_theme_options-slider_category,
-#customize-control-worldstar_theme_options-slider_limit,
-#customize-control-worldstar_theme_options-slider_animation {
+#customize-control-worldstar_theme_options-featured_category {
 	margin-top: 16px;
 }
 
@@ -28,7 +26,7 @@
 #customize-control-worldstar_theme_options-postmeta_headline,
 #customize-control-worldstar_theme_options-footermeta_headline,
 #customize-control-worldstar_theme_options-post_image_single_header,
-#customize-control-worldstar_theme_options-slider_activate {
+#customize-control-worldstar_theme_options-featured_activate {
 	margin-bottom: 0;
 }
 

@@ -18,9 +18,9 @@ $theme_options = worldstar_theme_options();
 			
 		<?php 
 		// Display Slider
-		if ( true == $theme_options['slider_magazine'] ) :
+		if ( true == $theme_options['featured_magazine'] ) :
 
-			get_template_part( 'template-parts/post-slider' );
+			get_template_part( 'template-parts/featured-content' );
 			
 		endif;
 		

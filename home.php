@@ -11,20 +11,19 @@ get_header();
 
 // Get Theme Options from Database
 $theme_options = worldstar_theme_options();
+
+// Display Slider
+if ( true == $theme_options['featured_blog'] ) :
+
+	get_template_part( 'template-parts/featured-content' );
+	
+endif; 
 ?>
 		
 	<section id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 					
-			<?php
-			// Display Slider
-			if ( true == $theme_options['slider_blog'] ) :
-
-				get_template_part( 'template-parts/post-slider' );
-				
-			endif; 
-
-			// Display Latest Posts Title
+			<?php // Display Latest Posts Title
 			if ( $theme_options['blog_title'] <> '' ) : ?>
 						
 				<header class="page-header">

@@ -28,17 +28,17 @@ function worldstar_control_post_content_callback( $control ) {
 
 
 /**
- * Adds a callback function to retrieve wether slider is activated or not
+ * Adds a callback function to retrieve wether featured is activated or not
  *
  * @param object $control / Instance of the Customizer Control 
  * @return bool
  */
-function worldstar_slider_activated_callback( $control ) {
+function worldstar_featured_activated_callback( $control ) {
 	
-	// Check if Slider is turned on
-	if ( $control->manager->get_setting('worldstar_theme_options[slider_blog]')->value() == 1 ) :
+	// Check if Featured Posts is turned on
+	if ( $control->manager->get_setting('worldstar_theme_options[featured_blog]')->value() == 1 ) :
 		return true;
-	elseif ( $control->manager->get_setting('worldstar_theme_options[slider_magazine]')->value() == 1 ) :
+	elseif ( $control->manager->get_setting('worldstar_theme_options[featured_magazine]')->value() == 1 ) :
 		return true;
 	else :
 		return false;
