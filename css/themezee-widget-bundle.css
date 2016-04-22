@@ -60,7 +60,9 @@
 }
 
 .tzwb-posts-list .tzwb-entry-meta {
-	margin: 0.2em 0 0.6em;
+	margin: 0.3em 0 0.6em;
+	padding: 0;
+	border: none;
 }
 
 /*--------------------------------------------------------------
@@ -82,8 +84,8 @@
 }
 
 .tzwb-comments-list .tzwb-comment-date {
-	margin: 0.2em 0 0.6em;
-	color: #999;
+	margin: 0.3em 0 0.6em;
+	color: #aaa;
 	font-size: 14px;
 	font-size: 0.875rem;
 }
@@ -115,14 +117,17 @@
 
 .tzwb-tabbed-content .tzwb-tabnavi li a {
 	display: block;
-	margin: 0 0.3em 0.3em 0;
-	padding: 0.3em 0.8em;
-	font-size: 13px;
-	font-size: 0.8125rem;
-	font-weight: bold;
+	margin: 0 3px 3px 0;
+	padding: 0.25em 0.75em;
+	font-family: 'Oswald', Tahoma, Arial;
+	font-size: 14px;
+	font-size: 0.875rem;
 	color: #fff;
-	background: #333333;
+	background: #222;
 	text-transform: uppercase;
+	-webkit-border-radius: 0.3em;
+	-moz-border-radius: 0.3em;
+	border-radius: 0.3em;
 }
 
 .tzwb-tabbed-content .tzwb-tabnavi li a:link, 
@@ -183,19 +188,22 @@
 }
 
 .tzwb-social-icons .social-icons-menu li {
-	margin: 0 2px 2px 0;
+	margin: 0 3px 3px 0;
 }
 
 .tzwb-social-icons .social-icons-menu li a {
-	padding: 0.6em;
+	padding: 0.8em;
 	background: #33bbdd;
+	-webkit-border-radius: 0.3em;
+	-moz-border-radius: 0.3em;
+	border-radius: 0.3em;
 }
 
 .tzwb-social-icons .social-icons-menu li a:before {
-	font-size: 20px;
+	font-size: 22px;
 }
 
 .tzwb-social-icons .social-icons-menu li a:hover {
 	text-decoration: none;
-	background: #333333;
+	background: #222;
 }
