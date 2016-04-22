@@ -29,7 +29,7 @@ $theme_options = worldstar_theme_options();
 	
 				if ( 'post' == get_post_type() ) :
 		
-					get_template_part( 'template-parts/content', $theme_options['post_layout'] );
+					get_template_part( 'template-parts/content', $theme_options['post_content'] );
 				
 				else :
 				

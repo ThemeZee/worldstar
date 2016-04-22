@@ -59,7 +59,7 @@ function worldstar_customize_register_post_settings( $wp_customize ) {
         'type'     => 'radio',
 		'priority' => 2,
         'choices'  => array(
-            'full' => esc_html__( 'Show full posts', 'worldstar' ),
+            'index' => esc_html__( 'Show full posts', 'worldstar' ),
             'excerpt' => esc_html__( 'Show post excerpts', 'worldstar' )
 			)
 		)

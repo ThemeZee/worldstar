@@ -36,7 +36,7 @@ function worldstar_body_classes( $classes ) {
 	}
 	
 	// Switch Sidebar Layout to left
-	if ( 'left-sidebar' == $theme_options['layout'] ) {
+	if ( 'left-sidebar' == $theme_options['theme_layout'] ) {
 		$classes[] = 'sidebar-left';
 	}
 	

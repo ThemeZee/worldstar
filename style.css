@@ -744,13 +744,13 @@ textarea {
 
 /* Custom Header Image */
 .header-image {
-	margin: 0 0 2em;
+	margin: 0;
 	text-align: center;
 }
 
 .header-image img {
-	max-width: 1220px;
-	max-height: 400px;
+	max-width: 1280px;
+	max-height: 420px;
 	vertical-align: top;
 	width: 100%;
 	height: auto;
@@ -2449,7 +2449,7 @@ object {
 .sidebar-left .content-area {
 	float: right;
 	padding-right: 0;
-	padding-left: 4em;
+	padding-left: 2em;
 }
 	
 .sidebar-left .sidebar {

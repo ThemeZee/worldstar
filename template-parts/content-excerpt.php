@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying articles in the loop with full content
+ * The template for displaying articles in the loop with post excerpts
  *
  * @package Worldstar
  */
@@ -26,7 +26,8 @@
 
 			<div class="entry-content clearfix">
 				
-				<?php the_content( esc_html__( 'Read more', 'worldstar' ) ); ?>
+				<?php the_excerpt(); ?>
+				<?php worldstar_more_link(); ?>
 				
 			</div><!-- .entry-content -->
 		

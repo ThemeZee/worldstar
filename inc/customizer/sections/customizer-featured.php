@@ -48,7 +48,7 @@ function worldstar_customize_register_featured_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'worldstar_theme_options[featured_magazine]', array(
-        'label'    => esc_html__( 'Show Featured Posts on Magazine Homepage', 'worldstar' ),
+        'label'    => esc_html__( 'Show featured posts on Magazine Homepage', 'worldstar' ),
         'section'  => 'worldstar_section_featured',
         'settings' => 'worldstar_theme_options[featured_magazine]',
         'type'     => 'checkbox',
@@ -63,7 +63,7 @@ function worldstar_customize_register_featured_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'worldstar_theme_options[featured_blog]', array(
-        'label'    => esc_html__( 'Show Featured Posts on posts page', 'worldstar' ),
+        'label'    => esc_html__( 'Show featured posts on posts page', 'worldstar' ),
         'section'  => 'worldstar_section_featured',
         'settings' => 'worldstar_theme_options[featured_blog]',
         'type'     => 'checkbox',
@@ -89,24 +89,6 @@ function worldstar_customize_register_featured_settings( $wp_customize ) {
             )
         )
     );
-	
-	// Add Setting and Control for Number of Posts
-	$wp_customize->add_setting( 'worldstar_theme_options[featured_limit]', array(
-        'default'           => 8,
-		'type'           	=> 'option',
-        'transport'         => 'refresh',
-        'sanitize_callback' => 'absint'
-		)
-	);
-    $wp_customize->add_control( 'worldstar_theme_options[featured_limit]', array(
-        'label'    => esc_html__( 'Number of Posts', 'worldstar' ),
-        'section'  => 'worldstar_section_featured',
-        'settings' => 'worldstar_theme_options[featured_limit]',
-        'type'     => 'text',
-		'active_callback' => 'worldstar_featured_activated_callback',
-		'priority' => 5
-		)
-	);
 	
 }
 add_action( 'customize_register', 'worldstar_customize_register_featured_settings' );

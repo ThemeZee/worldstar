@@ -60,8 +60,8 @@ function worldstar_setup() {
 	// Set up the WordPress core custom header feature.
 	add_theme_support('custom-header', apply_filters( 'worldstar_custom_header_args', array(
 		'header-text' => false,
-		'width'	=> 1230,
-		'height' => 410,
+		'width'	=> 1280,
+		'height' => 420,
 		'flex-height' => true
 	) ) );
 	

@@ -71,8 +71,8 @@
 		
 		</header><!-- #masthead -->
 		
+		<?php worldstar_header_image(); ?>
+		
 		<?php worldstar_breadcrumbs(); ?>
 		
 		<div id="content" class="site-content container clearfix">
-		
-			<?php worldstar_header_image(); ?>

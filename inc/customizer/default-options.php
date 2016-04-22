@@ -59,7 +59,6 @@ function worldstar_default_options() {
 		'featured_magazine' 				=> false,
 		'featured_blog' 					=> false,
 		'featured_category' 				=> 0,
-		'featured_limit' 					=> 8,
 	);
 	
 	return $default_options;
