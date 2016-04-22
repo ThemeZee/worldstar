@@ -15,7 +15,7 @@
 
 	<div id="footer" class="footer-wrap">
 	
-		<footer id="colophon" class="site-footer clearfix" role="contentinfo">
+		<footer id="colophon" class="site-footer container clearfix" role="contentinfo">
 
 			<div id="footer-text" class="site-info">
 				<?php do_action( 'worldstar_footer_text' ); ?>

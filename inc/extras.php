@@ -29,7 +29,12 @@ function worldstar_body_classes( $classes ) {
 	
 	// Get Theme Options from Database
 	$theme_options = worldstar_theme_options();
-		
+	
+	// Switch Theme Width
+	if ( 'boxed-layout' == $theme_options['theme_width'] ) {
+		$classes[] = 'boxed-layout';
+	}
+	
 	// Switch Sidebar Layout to left
 	if ( 'left-sidebar' == $theme_options['layout'] ) {
 		$classes[] = 'sidebar-left';

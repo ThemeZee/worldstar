@@ -23,18 +23,39 @@ function worldstar_customize_register_general_settings( $wp_customize ) {
 		)
 	);
 	
+	// Add Settings and Controls for Theme Width
+	$wp_customize->add_setting( 'worldstar_theme_options[theme_width]', array(
+        'default'           => 'wide-layout',
+		'type'           	=> 'option',
+        'transport'         => 'refresh',
+        'sanitize_callback' => 'worldstar_sanitize_select'
+		)
+	);
+    $wp_customize->add_control( 'worldstar_theme_options[theme_width]', array(
+        'label'    => esc_html__( 'Theme Width', 'worldstar' ),
+        'section'  => 'worldstar_section_general',
+        'settings' => 'worldstar_theme_options[theme_width]',
+        'type'     => 'radio',
+		'priority' => 1,
+        'choices'  => array(
+            'wide-layout' => esc_html__( 'Wide Layout', 'worldstar' ),
+            'boxed-layout' => esc_html__( 'Boxed Layout', 'worldstar' ),
+			)
+		)
+	);
+	
 	// Add Settings and Controls for Layout
-	$wp_customize->add_setting( 'worldstar_theme_options[layout]', array(
+	$wp_customize->add_setting( 'worldstar_theme_options[theme_layout]', array(
         'default'           => 'right-sidebar',
 		'type'           	=> 'option',
         'transport'         => 'refresh',
         'sanitize_callback' => 'worldstar_sanitize_select'
 		)
 	);
-    $wp_customize->add_control( 'worldstar_theme_options[layout]', array(
+    $wp_customize->add_control( 'worldstar_theme_options[theme_layout]', array(
         'label'    => esc_html__( 'Theme Layout', 'worldstar' ),
         'section'  => 'worldstar_section_general',
-        'settings' => 'worldstar_theme_options[layout]',
+        'settings' => 'worldstar_theme_options[theme_layout]',
         'type'     => 'radio',
 		'priority' => 1,
         'choices'  => array(

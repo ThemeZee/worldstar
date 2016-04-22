@@ -323,7 +323,8 @@ address {
 }
 
 pre {
-	background: #eee;
+	background: #fff;
+	border: 1px solid #ddd;
 	font-family: "Courier 10 Pitch", Courier, monospace;
 	font-size: 15px;
 	font-size: 0.9375rem;
@@ -375,16 +376,39 @@ body {
 	background: #f5f5f5; /* Fallback for when there is no custom background color defined. */
 }
 
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-	content: "";
+blockquote {
+	margin: 0 0 1.5em;
+	border-left: 4px solid #353535;
+	padding-left: 1.25em;
+	font-size: 18px;
+	font-size: 1.125rem;
+	font-style: italic;
+	color: #777;
 }
 
-blockquote,
-q {
-	quotes: "" "";
+blockquote cite,
+blockquote small {
+	margin-top: 1em;
+	display: block;
+	font-size: 16px;
+	font-size: 1rem;
+	line-height: 1.75;
+	color: #404040;
+}
+
+blockquote cite:before,
+blockquote small:before {
+	content: "\2014\00a0";
+}
+
+blockquote em,
+blockquote i,
+blockquote cite {
+	font-style: normal;
+}
+
+blockquote > :last-child {
+	margin-bottom: 0.5em;
 }
 
 hr {
@@ -396,7 +420,8 @@ hr {
 
 ul,
 ol {
-	margin: 0 0 1.5em 3em;
+	margin: 0 0 1.5em;
+	padding: 0 0 0 1.25em;
 }
 
 ul {
@@ -418,7 +443,7 @@ dt {
 }
 
 dd {
-	margin: 0 1.5em 1.5em;
+	margin: 0 0 1.5em;
 }
 
 img {
@@ -428,7 +453,15 @@ img {
 
 table {
 	margin: 0 0 1.5em;
+	border: none;
+	table-layout: fixed;
 	width: 100%;
+}
+
+th,
+td {
+	border: 1px solid #ddd;
+	padding: 0.3em 0.6em;
 }
 
 a {
@@ -591,18 +624,17 @@ textarea {
 # 8.0 - Layout Structure
 --------------------------------------------------------------*/
 .site {
-	max-width: 1140px;
-	width: 100%;
-	margin: 0 auto;
-	background: #fff;
+	max-width: 100%;
+	margin: 0;
 }
 
 .container {
-	padding: 0 2em;
+	max-width: 1280px;
+	margin: 0 auto;
 }
 
 .site-content {
-	padding-top: 2em;
+	padding: 2em 2em 0;
 	background: #fff;
 }
 
@@ -630,10 +662,12 @@ textarea {
 /*--------------------------------------------------------------
 # 9.0 - Header
 --------------------------------------------------------------*/
-.header-main {
+.site-header {
 	background: #fff;
-	padding-top: 2em;
-	padding-bottom: 2em;
+}
+
+.header-main {
+	padding: 2em 0;
 }
 
 .site-branding {
@@ -745,6 +779,7 @@ textarea {
 	list-style-type: none;
 	list-style-position: outside;
 	position: relative;	
+	border-left: 1px solid rgba(255,255,255,0.2);
 }
 
 .main-navigation-menu li {
@@ -2314,7 +2349,31 @@ object {
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
-## 15.1 - Sidebar Left Layout
+## 15.1 - Boxed Layout
+--------------------------------------------------------------*/
+.boxed-layout .site {
+	max-width: 1280px;
+	width: 100%;
+	margin: 2em auto;
+	background: #fff;
+	box-shadow: 0 0 5px #ddd;
+}
+
+.boxed-layout .container {
+	margin: 0;
+	max-width: auto;
+}
+
+.boxed-layout .header-main {
+	padding: 2em 1.5em;
+}
+
+.boxed-layout .main-navigation-menu {
+	border-left: none;
+}
+
+/*--------------------------------------------------------------
+## 15.2 - Sidebar Left Layout
 --------------------------------------------------------------*/
 .sidebar-left .content-area {
 	float: right;
