@@ -45,7 +45,9 @@ class Worldstar_Magazine_Posts_Grid_Widget extends WP_Widget {
 			'number'			=> 6,
 			'excerpt'			=> false,
 			'meta_date'			=> true,
-			'meta_author'		=> false,
+			'meta_author'		=> true,
+			'meta_comments'		=> false,
+			'meta_category'		=> true,
 		);
 		
 		return $defaults;
@@ -175,10 +177,12 @@ class Worldstar_Magazine_Posts_Grid_Widget extends WP_Widget {
 				
 						<article id="post-<?php the_ID(); ?>" <?php post_class( 'large-post' ); ?>>
 						
+							<a href="<?php the_permalink() ?>" rel="bookmark"><?php the_post_thumbnail( 'worldstar-thumbnail-large' ); ?></a>
+							
 							<header class="entry-header">
-			
-								<a href="<?php the_permalink() ?>" rel="bookmark"><?php the_post_thumbnail( 'worldstar-thumbnail-large' ); ?></a>
 
+								<?php $this->entry_categories( $settings ); ?>
+								
 								<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 							
 								<?php $this->entry_meta( $settings ); ?>
@@ -255,10 +259,12 @@ class Worldstar_Magazine_Posts_Grid_Widget extends WP_Widget {
 				<?php endif; ?>
 			
 						<article id="post-<?php the_ID(); ?>" <?php post_class( 'medium-post clearfix' ); ?>>
-						
+							
+							<a href="<?php the_permalink() ?>" rel="bookmark"><?php the_post_thumbnail( 'worldstar-thumbnail-medium' ); ?></a>
+
 							<header class="entry-header">
-			
-								<a href="<?php the_permalink() ?>" rel="bookmark"><?php the_post_thumbnail( 'worldstar-thumbnail-medium' ); ?></a>
+							
+								<?php $this->entry_categories( $settings ); ?>
 
 								<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 							
@@ -320,6 +326,12 @@ class Worldstar_Magazine_Posts_Grid_Widget extends WP_Widget {
 			
 		}
 		
+		if( true == $settings['meta_comments'] ) {
+		
+			$postmeta .= worldstar_meta_comments();
+			
+		}
+		
 		if( $postmeta ) {
 		
 			echo '<div class="entry-meta">' . $postmeta . '</div>';
@@ -327,6 +339,28 @@ class Worldstar_Magazine_Posts_Grid_Widget extends WP_Widget {
 		}
 	
 	} // entry_meta()
+	
+	
+	/**
+	 * Displays the category of posts
+	 */	
+	function entry_categories( $settings ) { 
+
+		// Display categories unless user has deactivated it via settings
+		if ( true == $settings ['meta_category'] ) : ?>
+		
+			<div class="entry-categories clearfix">
+				
+				<span class="meta-category">
+					<?php echo get_the_category_list(' '); ?>
+				</span>
+				
+			</div><!-- .entry-categories -->
+			
+		<?php
+		endif;
+		
+	} // entry_categories()
 	
 	
 	/**
@@ -380,6 +414,8 @@ class Worldstar_Magazine_Posts_Grid_Widget extends WP_Widget {
 		$instance['excerpt'] = !empty($new_instance['excerpt']);
 		$instance['meta_date'] = !empty($new_instance['meta_date']);
 		$instance['meta_author'] = !empty($new_instance['meta_author']);
+		$instance['meta_comments'] = !empty($new_instance['meta_comments']);
+		$instance['meta_category'] = !empty($new_instance['meta_category']);
 		
 		$this->delete_widget_cache();
 		
@@ -453,7 +489,23 @@ class Worldstar_Magazine_Posts_Grid_Widget extends WP_Widget {
 				<?php esc_html_e( 'Display post author', 'worldstar' ); ?>
 			</label>
 		</p>
-<?php
+		
+		<p>
+			<label for="<?php echo $this->get_field_id( 'meta_comments' ); ?>">
+				<input class="checkbox" type="checkbox" <?php checked( $settings['meta_comments'] ) ; ?> id="<?php echo $this->get_field_id( 'meta_comments' ); ?>" name="<?php echo $this->get_field_name( 'meta_comments' ); ?>" />
+				<?php esc_html_e( 'Display post comments', 'worldstar' ); ?>
+			</label>
+		</p>
+		
+		<p>
+			<label for="<?php echo $this->get_field_id( 'meta_category' ); ?>">
+				<input class="checkbox" type="checkbox" <?php checked( $settings['meta_category'] ) ; ?> id="<?php echo $this->get_field_id( 'meta_category' ); ?>" name="<?php echo $this->get_field_name( 'meta_category' ); ?>" />
+				<?php esc_html_e( 'Display post categories', 'worldstar' ); ?>
+			</label>
+		</p>
+		
+		<?php
+	
 	} // form()
 	
 	

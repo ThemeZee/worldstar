@@ -190,9 +190,9 @@ function worldstar_add_image_sizes() {
 	add_image_size( 'worldstar-header-image', 1230, 410, true );
 	
 	// Add different thumbnail sizes for widgets and post layouts
-	add_image_size( 'worldstar-thumbnail-small', 100, 80, true );
-	add_image_size( 'worldstar-thumbnail-medium', 350, 230, true );
-	add_image_size( 'worldstar-thumbnail-large', 420, 280, true );
+	add_image_size( 'worldstar-thumbnail-small', 120, 80, true );
+	add_image_size( 'worldstar-thumbnail-medium', 360, 180, true );
+	add_image_size( 'worldstar-thumbnail-large', 420, 240, true );
 	
 }
 add_action( 'after_setup_theme', 'worldstar_add_image_sizes' );

@@ -538,7 +538,10 @@ textarea {
 	max-width: 100%;
 	padding: 0.3em 0.6em;
 	color: #666;
-	border: 1px solid #ddd;
+	border: 2px solid #ddd;
+	-webkit-border-radius: 0.3em;
+	-moz-border-radius: 0.3em;
+	border-radius: 0.3em;
 }
 
 input[type="text"]:focus,
@@ -548,7 +551,7 @@ input[type="password"]:focus,
 input[type="search"]:focus,
 textarea:focus {
 	color: #111;
-	border: 1px solid #ccc;
+	border: 2px solid #ccc;
 }
 
 textarea {
@@ -711,7 +714,7 @@ textarea {
 
 .site-title a:hover,
 .site-title a:active {
-	color: #333;
+	color: #222;
 }
 
 .site-branding .custom-logo {
@@ -1031,12 +1034,12 @@ textarea {
 
 .widget-title a:link, 
 .widget-title a:visited  {
-	color: #fff;
+	color: #222;
 }
 
 .widget-title a:hover, 
 .widget-title a:active  {
-	color: #fff;
+	color: #222;
 	text-decoration: underline;
 }
 
@@ -1067,7 +1070,7 @@ textarea {
 	display: inline-block;
 	margin: 0;
 	width: 100%;
-	padding: 0.3em 3em 0.3em 0.6em;
+	padding: 0.55em 3em 0.55em 1em;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
@@ -1081,16 +1084,16 @@ textarea {
 	font-size: 16px;
 	font-size: 1rem;
 	border: none;
-	padding: 0.4em 0.6em;
+	padding: 0.6em 0.75em;
 	cursor: pointer;
 }
 
 .search-form .search-submit .genericon-search {
 	display: inline-block;
-	margin-top: -0.3em;
+	margin-top: -0.1em;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	font-size: 20px;
+	font-size: 24px;
 	line-height: 1;
 	font-family: 'Genericons';
 	text-decoration: inherit;
@@ -1136,8 +1139,8 @@ textarea {
 }
 
 .widget-magazine-posts .large-post .entry-title {
-	font-size: 20px;
-	font-size: 1.25rem;
+	font-size: 22px;
+	font-size: 1.375rem;
 }
 
 .widget-magazine-posts .medium-post {
@@ -1151,9 +1154,8 @@ textarea {
 }
 
 .widget-magazine-posts .medium-post .entry-title {
-	font-family: 'Open Sans', Tahoma, Arial;
-	font-size: 15px;
-	font-size: 0.9375rem;
+	font-size: 17px;
+	font-size: 1.0625rem;
 }
 
 .widget-magazine-posts .medium-post .entry-content {
@@ -1178,14 +1180,20 @@ textarea {
 
 .widget-magazine-posts .small-post .entry-title {
 	font-family: 'Open Sans', Tahoma, Arial;
-	font-size: 14px;
-	font-size: 0.875rem;
+	font-size: 15px;
+	font-size: 0.9375rem;
+	font-weight: bold;
 }
 
 .widget-magazine-posts .medium-post .entry-meta,
 .widget-magazine-posts .small-post .entry-meta {
 	font-size: 12px;
 	font-size: 0.75rem;
+}
+
+.widget-magazine-posts .small-post .entry-meta {
+	padding: 0;
+	border: none;
 }
 
 /* Magazine Posts Grid Widget */
@@ -1545,6 +1553,9 @@ textarea {
 	font-weight: bold;
 	color: #fff;
 	background: #222;
+	-webkit-border-radius: 0.3em;
+	-moz-border-radius: 0.3em;
+	border-radius: 0.3em;
 }
 
 .post-pagination a:link, 
@@ -1578,6 +1589,9 @@ textarea {
 	background: #33bbdd;
 	text-transform: uppercase;
 	text-decoration: none;
+	-webkit-border-radius: 0.3em;
+	-moz-border-radius: 0.3em;
+	border-radius: 0.3em;
 }
 
 .infinite-scroll #infinite-handle span:hover {
@@ -1755,7 +1769,7 @@ textarea {
 .comment {
 	margin: 0 0 1.5em;
 	padding: 0.5em 1em 1.5em;
-	border-bottom: 1px solid #ddd;
+	border-bottom: 1px solid #eee;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 }
@@ -1803,7 +1817,7 @@ textarea {
 	margin-top: 1.5em;
 	padding-top: 1em;
 	list-style: none;
-	border-top: 1px solid #ddd;
+	border-top: 1px solid #eee;
 }
 
 .comment .comment-respond {
@@ -1814,8 +1828,8 @@ textarea {
 .comment-navigation {
 	margin: 0 0 1.5em;
 	padding: 0.5em 0;
-	border-top: 1px solid #ddd;
-	border-bottom: 1px solid #ddd;
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee;
 	font-size: 14px;
 	font-size: 0.875rem;
 }

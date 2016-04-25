@@ -11,7 +11,7 @@ add_action( 'after_setup_theme', 'worldstar_theme_addons_setup' );
 
 function worldstar_theme_addons_setup() {
 
-	// Add Theme Support for Anderson Pro Plugin
+	// Add Theme Support for Worldstar Pro Plugin
 	add_theme_support( 'worldstar-pro' );
 	
 	// Add Theme Support for ThemeZee Plugins
@@ -64,10 +64,10 @@ add_action( 'after_setup_theme', 'worldstar_theme_addons_image_sizes' );
 function worldstar_theme_addons_image_sizes() {
 
 	// Add Widget Bundle Thumbnail
-	add_image_size( 'tzwb-thumbnail', 80, 64, true );
+	add_image_size( 'tzwb-thumbnail', 90, 60, true );
 	
 	// Add Related Posts Thumbnail
-	add_image_size( 'themezee-related-posts', 420, 300, true );
+	add_image_size( 'themezee-related-posts', 420, 240, true );
 
 }
 
