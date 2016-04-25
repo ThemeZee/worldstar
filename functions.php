@@ -187,12 +187,10 @@ function worldstar_google_fonts_url() {
 function worldstar_add_image_sizes() {
 	
 	// Add Custom Header Image Size
-	add_image_size( 'worldstar-header-image', 1230, 410, true );
+	add_image_size( 'worldstar-header-image', 1280, 420, true );
 	
-	// Add different thumbnail sizes for widgets and post layouts
+	// Add different thumbnail sizes for magazine widgets
 	add_image_size( 'worldstar-thumbnail-small', 120, 80, true );
-	add_image_size( 'worldstar-thumbnail-medium', 360, 180, true );
-	add_image_size( 'worldstar-thumbnail-large', 420, 240, true );
 	
 }
 add_action( 'after_setup_theme', 'worldstar_add_image_sizes' );

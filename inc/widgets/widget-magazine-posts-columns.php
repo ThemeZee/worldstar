@@ -195,7 +195,7 @@ class Worldstar_Magazine_Posts_Columns_Widget extends WP_Widget {
 
 					<article id="post-<?php the_ID(); ?>" <?php post_class( 'large-post clearfix' ); ?>>
 
-						<a href="<?php the_permalink() ?>" rel="bookmark"><?php the_post_thumbnail( 'worldstar-thumbnail-large' ); ?></a>
+						<a href="<?php the_permalink() ?>" rel="bookmark"><?php the_post_thumbnail(); ?></a>
 						
 						<header class="entry-header">
 			
