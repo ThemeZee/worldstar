@@ -16,25 +16,31 @@ $theme_options = worldstar_theme_options();
 	<section id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 		
-		<?php if ( have_posts() ) : ?>
-		
 			<header class="page-header">
 				<?php the_archive_title( '<h1 class="archive-title">', '</h1>' ); ?>
 			</header><!-- .page-header -->
 			
 			<?php the_archive_description( '<div class="archive-description">', '</div>' ); ?>
-
-			<?php /* Start the Loop */ 
-			while ( have_posts() ) : the_post();
-
-				get_template_part( 'template-parts/content', $theme_options['post_content'] );
-
-			endwhile;
 			
-			// Display Pagination	
-			worldstar_pagination();
+			<?php 
+			if ( have_posts() ) : ?>
+			
+				<div id="archive-posts" class="post-wrapper clearfix">
+						
+					<?php while( have_posts() ) : the_post();
+				
+						get_template_part( 'template-parts/content', $theme_options['post_content'] );
+				
+					endwhile; ?>
 
-		endif; ?>
+				</div>
+			
+				<?php 
+				
+				// Display Pagination	
+				worldstar_pagination();
+			
+			endif; ?>
 			
 		</main><!-- #main -->
 	</section><!-- #primary -->

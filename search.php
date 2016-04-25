@@ -22,26 +22,32 @@ $theme_options = worldstar_theme_options();
 				
 			</header><!-- .page-header -->
 			
-		<?php 
-		if (have_posts()) : 
-		
-			while (have_posts()) : the_post();
-	
-				if ( 'post' == get_post_type() ) :
-		
-					get_template_part( 'template-parts/content', $theme_options['post_content'] );
-				
-				else :
-				
-					get_template_part( 'template-parts/content', 'search' );
+		<?php // Post Loop
+		if ( have_posts() ) : ?>
+			
+			<div id="search-posts" class="post-wrapper clearfix">
 					
-				endif;
-		
-			endwhile;
+				<?php while( have_posts() ) : the_post();
+			
+					if ( 'post' == get_post_type() ) :
+	
+						get_template_part( 'template-parts/content', $theme_options['post_content'] );
+					
+					else :
+					
+						get_template_part( 'template-parts/content', 'search' );
+						
+					endif;
+			
+				endwhile; ?>
 
+			</div>
+		
+			<?php 
+			
 			// Display Pagination	
 			worldstar_pagination();
-
+		
 		else : ?>
 
 			<div class="no-matches type-page">

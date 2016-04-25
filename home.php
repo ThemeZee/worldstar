@@ -34,19 +34,24 @@ endif;
 		
 			<?php endif; ?>
 			
-			<div id="homepage-posts" class="post-wrapper clearfix">
-					
-				<?php if (have_posts()) : while (have_posts()) : the_post();
+			<?php if ( have_posts() ) : ?>
 			
-					get_template_part( 'template-parts/content', $theme_options['post_content'] );
-			
-					endwhile;
+				<div id="homepage-posts" class="post-wrapper clearfix">
+						
+					<?php while( have_posts() ) : the_post();
+				
+						get_template_part( 'template-parts/content', $theme_options['post_content'] );
+				
+					endwhile; ?>
 
-				endif; ?>
+				</div>
 			
-			</div>
+				<?php 
+				
+				// Display Pagination	
+				worldstar_pagination();
 			
-			<?php worldstar_pagination(); ?>
+			endif; ?>
 			
 		</main><!-- #main -->
 	</section><!-- #primary -->
