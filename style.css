@@ -2006,7 +2006,17 @@ object {
 --------------------------------------------------------------*/
 @media only screen and (max-width: 70em) {
 	
+	/* Featured Posts */
+	.featured-posts .grid-post .type-post .entry-title {
+		font-size: 18px;
+		font-size: 1.125rem;
+	}
 
+	.featured-posts .grid-post:nth-child(1) .type-post .entry-title,
+	.featured-posts .grid-post:nth-child(2) .type-post .entry-title {
+		font-size: 22px;
+		font-size: 1.375rem;
+	}
 	
 }
 
@@ -2075,6 +2085,18 @@ object {
 	
 	.header-widget:nth-child(1) {
 		display: block;
+	}
+	
+	/* Featured Posts */
+	.featured-posts .grid-post .type-post .entry-title {
+		font-size: 16px;
+		font-size: 1rem;
+	}
+
+	.featured-posts .grid-post:nth-child(1) .type-post .entry-title,
+	.featured-posts .grid-post:nth-child(2) .type-post .entry-title {
+		font-size: 20px;
+		font-size: 1.25rem;
 	}
 	
 	/*** Mobile Main Navigation ***/
@@ -2278,6 +2300,26 @@ object {
 --------------------------------------------------------------*/
 @media only screen and (max-width: 50em) {
 	
+	/* Featured Posts */
+	.featured-posts .grid-post,
+	.featured-posts .grid-post:nth-child(2) {
+		width: 50%;
+	}
+
+	.featured-posts .grid-post:nth-child(1) {
+		width: 100%;
+	}
+	
+	.featured-posts .grid-post .type-post .entry-title,
+	.featured-posts .grid-post:nth-child(2) .type-post .entry-title {
+		font-size: 18px;
+		font-size: 1.125rem;
+	}
+
+	.featured-posts .grid-post:nth-child(1) .type-post .entry-title {
+		font-size: 24px;
+		font-size: 1.5rem;
+	}
 	
 }
 
@@ -2301,7 +2343,7 @@ object {
 		font-size: 24px;
 		font-size: 1.5rem;
 	}
-	
+
 	/* 2 Column Post Layout */
 	.post-layout-columns .post-wrapper {
 		display: block;
@@ -2315,6 +2357,28 @@ object {
 		padding-right: 0;
 	}
 	
+	/* Featured Posts */
+	.featured-posts {
+		margin-right: -0.5em;
+	}
+
+	.featured-posts .grid-post {
+		padding-right: 0.5em;
+	}
+	
+	.featured-posts .grid-post .type-post {
+		margin: 0 0 0.5em;
+	}
+
+	.featured-posts .grid-post .type-post .entry-title,
+	.featured-posts .grid-post:nth-child(2) .type-post .entry-title {
+		font-size: 16px;
+		font-size: 1rem;
+	}
+	
+	.featured-posts .grid-post:nth-child(n+2) .type-post .entry-categories {
+		display: none;
+	}
 	
 	/* Magazine Post Widgets */
 	.widget-magazine-posts-grid .magazine-posts-grid-row {
@@ -2371,7 +2435,8 @@ object {
 @media only screen and (max-width: 30em) {
 	
 	.page-title,
-	.entry-title {
+	.entry-title,
+	.featured-posts .grid-post:nth-child(1) .type-post .entry-title {
 		font-size: 22px;
 		font-size: 1.375rem;
 	}
@@ -2381,6 +2446,28 @@ object {
 		margin: 1em 0;
 	}
 	
+	/* Featured Post */
+	.featured-posts .grid-post:nth-child(n+2) .type-post .post-content {
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
+
+	.featured-posts .grid-post .type-post .entry-title,
+	.featured-posts .grid-post:nth-child(2) .type-post .entry-title {
+		font-size: 14px;
+		font-size: 0.875rem;
+	}
+
+	.featured-posts .grid-post:nth-child(1) .type-post .entry-title {
+		font-size: 22px;
+		font-size: 1.375rem;
+	}
+	
+	.featured-posts .grid-post:nth-child(1) .type-post .entry-categories {
+		display: none;
+	}
+	
 }
 
 /*--------------------------------------------------------------
@@ -2388,7 +2475,10 @@ object {
 --------------------------------------------------------------*/
 @media only screen and (max-width: 25em) {
 	
-
+	.featured-posts .grid-post:nth-child(1) .type-post .entry-title {
+		font-size: 20px;
+		font-size: 1.25rem;
+	}
 	
 }
 
@@ -2415,6 +2505,16 @@ object {
 	.entry-meta .meta-category {
 		display: block;
 	}
+	
+	/* Featured Post */
+	.featured-posts .grid-post:nth-child(1) .type-post .entry-title {
+		font-size: 18px;
+		font-size: 1.125rem;
+	}
+	
+	.featured-posts .grid-post:nth-child(n+2) .type-post .post-content {
+		display: none;
+	}
 
 }
 
@@ -2439,12 +2539,24 @@ object {
 	max-width: auto;
 }
 
-.boxed-layout .header-main {
-	padding: 2em 1.5em;
-}
-
 .boxed-layout .main-navigation-menu {
 	border-left: none;
+}
+
+@media only screen and (max-width: 84em) {
+	
+	.boxed-layout .site {
+		margin: 0 auto;
+	}
+	
+}
+
+@media only screen and (min-width: 82em) {
+	
+	.boxed-layout .header-main {
+		padding: 2em;
+	}
+	
 }
 
 /*--------------------------------------------------------------
@@ -2458,6 +2570,16 @@ object {
 	
 .sidebar-left .sidebar {
 	float: left;
+}
+
+@media only screen and (max-width: 55em) {
+	
+	.sidebar-left .content-area {
+		float: none;
+		width: 100%;
+		padding: 0;
+	}
+	
 }
 
 /*--------------------------------------------------------------
