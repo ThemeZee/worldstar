@@ -1,11 +1,11 @@
-Worldstar WordPress Theme, Copyright 2015 ThemeZee.com
-Worldstar is distributed under the terms of the GNU GPL
+WorldStar WordPress Theme, Copyright 2015 ThemeZee.com
+WorldStar is distributed under the terms of the GNU GPL
 
 ===================================
-Thanks for Downloading Worldstar
+Thanks for Downloading WorldStar
 ===================================
 
-Thank you for downloading the Worldstar WordPress theme.
+Thank you for downloading the WorldStar WordPress theme.
 
 If you have any questions that are beyond the scope of this help file, 
 please visit themezee.com. Thanks so much!
@@ -51,7 +51,7 @@ To find out more about installing WordPress themes please also see https://theme
 C) Theme Options
 ===================================
 
-Worldstar supports the awesome Theme Customizer for all theme settings. 
+WorldStar supports the awesome Theme Customizer for all theme settings. 
 Go to WP-Admin > Appearance > Customize to open the Customizer.
 
 ===================================
@@ -59,13 +59,13 @@ D) Theme Documentation
 ===================================
 
 Need any help to setup and configure this theme? We got you covered with an extensive theme documentation on our website.
-https://themezee.com/docs/Worldstar-documentation/
+https://themezee.com/docs/WorldStar-documentation/
 
 ===================================
 E) Theme License
 ===================================
 
-Worldstar is released under the GNU general public license. 
+WorldStar is released under the GNU general public license. 
 That means you can use this theme on all of your websites - for personal or commercial purposes!
 
 ===================================

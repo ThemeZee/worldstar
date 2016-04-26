@@ -4,7 +4,7 @@
  *
  * Description: A custom page template which displays the featured content area and page content
  *
- * @package Worldstar
+ * @package WorldStar
  */
 
 get_header(); 

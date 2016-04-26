@@ -2,7 +2,7 @@
 /**
  * Implement theme options in the Customizer
  *
- * @package Worldstar
+ * @package WorldStar
  */
 
  

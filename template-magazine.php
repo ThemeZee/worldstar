@@ -4,7 +4,7 @@
  *
  * Description: A custom page template for displaying the magazine homepage widgets.
  *
- * @package Worldstar
+ * @package WorldStar
  */
  
 get_header(); 

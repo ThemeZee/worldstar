@@ -3,7 +3,7 @@
  *
  * Add Theme Page, Theme Documentation and Rate this theme quick links to theme options panel in customizer
  *
- * @package Worldstar
+ * @package WorldStar
  */
 
 ( function( $ ) {

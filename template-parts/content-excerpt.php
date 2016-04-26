@@ -2,7 +2,7 @@
 /**
  * The template for displaying articles in the loop with post excerpts
  *
- * @package Worldstar
+ * @package WorldStar
  */
 ?>
 

@@ -4,7 +4,7 @@
  *
  * Register Featured Posts section, settings and controls for Theme Customizer
  *
- * @package Worldstar
+ * @package WorldStar
  */
 
 
@@ -31,7 +31,7 @@ function worldstar_customize_register_featured_settings( $wp_customize ) {
         'sanitize_callback' => 'esc_attr'
         )
     );
-    $wp_customize->add_control( new Worldstar_Customize_Header_Control(
+    $wp_customize->add_control( new WorldStar_Customize_Header_Control(
         $wp_customize, 'worldstar_theme_options[featured_activate]', array(
             'label' => esc_html__( 'Activate Featured Posts', 'worldstar' ),
             'section' => 'worldstar_section_featured',
@@ -79,7 +79,7 @@ function worldstar_customize_register_featured_settings( $wp_customize ) {
         'sanitize_callback' => 'absint'
         )
     );
-    $wp_customize->add_control( new Worldstar_Customize_Category_Dropdown_Control(
+    $wp_customize->add_control( new WorldStar_Customize_Category_Dropdown_Control(
         $wp_customize, 'worldstar_theme_options[featured_category]', array(
             'label' => esc_html__( 'Featured Posts Category', 'worldstar' ),
             'section' => 'worldstar_section_featured',

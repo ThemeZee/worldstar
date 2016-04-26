@@ -5,7 +5,7 @@
  * Used to determine whether an option setting is displayed or not. 
  * Called via the active_callback parameter of the add_control() function
  *
- * @package Worldstar
+ * @package WorldStar
  */
 
  

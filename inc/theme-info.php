@@ -4,7 +4,7 @@
  *
  * Adds a simple Theme Info page to the Appearance section of the WordPress Dashboard. 
  *
- * @package Worldstar
+ * @package WorldStar
  */
 
 
@@ -72,7 +72,7 @@ function worldstar_theme_info_page() {
 						</p>
 						<p>
 							<a href="<?php echo esc_url( __( 'https://themezee.com/docs/worldstar-documentation/', 'worldstar' ) . '?utm_source=theme-info&utm_medium=button&utm_campaign=worldstar&utm_content=documentation' ); ?>" target="_blank" class="button button-secondary">
-								<?php printf( esc_html__( 'View %s Documentation', 'worldstar' ), 'Worldstar' ); ?>
+								<?php printf( esc_html__( 'View %s Documentation', 'worldstar' ), 'WorldStar' ); ?>
 							</a>
 						</p>
 					</div>
@@ -114,11 +114,11 @@ function worldstar_theme_info_page() {
 						<h4><?php esc_html_e( 'Pro Version', 'worldstar' ); ?></h4>
 						
 						<p class="about">
-							<?php printf( esc_html__( 'Purchase the Pro Version of %s to get additional features and advanced customization options.', 'worldstar' ), 'Worldstar'); ?>
+							<?php printf( esc_html__( 'Purchase the Pro Version of %s to get additional features and advanced customization options.', 'worldstar' ), 'WorldStar'); ?>
 						</p>
 						<p>
 							<a href="<?php echo esc_url( __( 'https://themezee.com/addons/worldstar-pro/', 'worldstar' ) . '?utm_source=theme-info&utm_medium=button&utm_campaign=worldstar&utm_content=pro-version' ); ?>" target="_blank" class="button button-secondary">
-								<?php printf( esc_html__( 'Learn more about %s Pro', 'worldstar' ), 'Worldstar'); ?>
+								<?php printf( esc_html__( 'Learn more about %s Pro', 'worldstar' ), 'WorldStar'); ?>
 							</a>
 						</p>
 					</div>
@@ -156,7 +156,7 @@ function worldstar_theme_info_page() {
 			<p><?php printf( esc_html__( '%1$s is proudly brought to you by %2$s. If you like this theme, %3$s :)', 'worldstar' ), 
 				$theme->get( 'Name' ),
 				'<a target="_blank" href="' . __( 'https://themezee.com/', 'worldstar' ) . '?utm_source=theme-info&utm_medium=footer&utm_campaign=worldstar" title="ThemeZee">ThemeZee</a>',
-				'<a target="_blank" href="http://wordpress.org/support/view/theme-reviews/worldstar?filter=5" title="Worldstar Review">' . esc_html__( 'rate it', 'worldstar' ) . '</a>'); ?>
+				'<a target="_blank" href="http://wordpress.org/support/view/theme-reviews/worldstar?filter=5" title="WorldStar Review">' . esc_html__( 'rate it', 'worldstar' ) . '</a>'); ?>
 			</p>
 		
 		</div>

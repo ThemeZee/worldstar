@@ -2,7 +2,7 @@
 /**
  * The template for displaying all single posts.
  *
- * @package Worldstar
+ * @package WorldStar
  */
 
 get_header(); ?>

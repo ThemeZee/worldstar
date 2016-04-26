@@ -2,7 +2,7 @@
 /**
  * The template for displaying articles in the search loop
  *
- * @package Worldstar
+ * @package WorldStar
  */
 ?>
 

@@ -2,7 +2,7 @@
 /**
  * Custom Controls for the Customizer
  *
- * @package Worldstar
+ * @package WorldStar
  */
 
 
@@ -15,7 +15,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 	 * Displays a bold label text. Used to create headlines for radio buttons and description sections.
 	 *
 	 */
-	class Worldstar_Customize_Header_Control extends WP_Customize_Control {
+	class WorldStar_Customize_Header_Control extends WP_Customize_Control {
 
 		public function render_content() {  ?>
 			
@@ -31,7 +31,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 	 * Displays a description text in gray italic font
 	 *
 	 */
-	class Worldstar_Customize_Description_Control extends WP_Customize_Control {
+	class WorldStar_Customize_Description_Control extends WP_Customize_Control {
 
 		public function render_content() {  ?>
 			
@@ -45,7 +45,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 	 * Creates a category dropdown control for the Customizer
 	 *
 	 */
-	class Worldstar_Customize_Category_Dropdown_Control extends WP_Customize_Control {
+	class WorldStar_Customize_Category_Dropdown_Control extends WP_Customize_Control {
 		
 		public function render_content() {
 				
@@ -85,7 +85,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 	 * Displays the upgrade teasers in thhe Pro Version / More Features section.
 	 *
 	 */
-	class Worldstar_Customize_Upgrade_Control extends WP_Customize_Control {
+	class WorldStar_Customize_Upgrade_Control extends WP_Customize_Control {
 	
 		public function render_content() {  ?>
 			
@@ -94,12 +94,12 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 				<span class="customize-control-title"><?php esc_html_e( 'Pro Version', 'worldstar' ); ?></span>
 				
 				<span class="textfield">
-					<?php printf( esc_html__( 'Purchase the Pro Version of %s to get additional features and advanced customization options.', 'worldstar' ), 'Worldstar'); ?>
+					<?php printf( esc_html__( 'Purchase the Pro Version of %s to get additional features and advanced customization options.', 'worldstar' ), 'WorldStar'); ?>
 				</span>
 				
 				<p>
 					<a href="<?php echo esc_url( __( 'https://themezee.com/addons/worldstar-pro/', 'worldstar' ) ); ?>?utm_source=customizer&utm_medium=button&utm_campaign=worldstar&utm_content=pro-version" target="_blank" class="button button-secondary">
-						<?php printf( esc_html__( 'Learn more about %s Pro', 'worldstar' ), 'Worldstar'); ?>
+						<?php printf( esc_html__( 'Learn more about %s Pro', 'worldstar' ), 'WorldStar'); ?>
 					</a>
 				</p>
 				

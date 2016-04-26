@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Themes + Pro Versions + Add-ons package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Worldstar\n"
+"Project-Id-Version: WorldStar\n"
 "Report-Msgid-Bugs-To: https://themezee.com/\n"
 "POT-Creation-Date: 2016-04-13 15:32+0100\n"
 "PO-Revision-Date: 2016-04-13 15:33+0100\n"
@@ -152,10 +152,10 @@ msgstr ""
 #: inc/back-compat.php:49 inc/back-compat.php:61
 #, php-format
 msgid ""
-"Worldstar requires at least WordPress version 4.2. You are running version "
+"WorldStar requires at least WordPress version 4.2. You are running version "
 "%s. Please upgrade and try again."
 msgstr ""
-"Worldstar benötigt mindestens WordPress Version 4.2. Du verwendest Version "
+"WorldStar benötigt mindestens WordPress Version 4.2. Du verwendest Version "
 "%s. Bitte führe ein Update durch und versuche es erneut."
 
 #: inc/template-tags.php:121 inc/template-tags.php:273

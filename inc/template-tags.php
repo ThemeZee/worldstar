@@ -5,7 +5,7 @@
  * This file contains several template functions which are used to print out specific HTML markup
  * in the theme. You can override these template functions within your child theme.
  *
- * @package Worldstar
+ * @package WorldStar
  */
 
  
@@ -409,7 +409,7 @@ function worldstar_footer_text() { ?>
 	<span class="credit-link">
 		<?php printf( esc_html__( 'Powered by %1$s and %2$s.', 'worldstar' ), 
 			'<a href="http://wordpress.org" title="WordPress">WordPress</a>',
-			'<a href="https://themezee.com/themes/worldstar/" title="Worldstar WordPress Theme">Worldstar</a>'
+			'<a href="https://themezee.com/themes/worldstar/" title="WorldStar WordPress Theme">WorldStar</a>'
 		); ?>
 	</span>
 

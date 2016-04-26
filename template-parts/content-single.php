@@ -2,7 +2,7 @@
 /**
  * The template for displaying single posts
  *
- * @package Worldstar
+ * @package WorldStar
  */
 ?>
 

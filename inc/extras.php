@@ -2,7 +2,7 @@
 /**
  * Custom functions that are not template related
  *
- * @package Worldstar
+ * @package WorldStar
  */
 
  

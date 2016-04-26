@@ -5,10 +5,10 @@
  * Display the latest posts from a selected category in a grid layout. 
  * Intented to be used in the Magazine Homepage widget area to built a magazine layouted page.
  *
- * @package Worldstar
+ * @package WorldStar
  */
 
-class Worldstar_Magazine_Posts_Grid_Widget extends WP_Widget {
+class WorldStar_Magazine_Posts_Grid_Widget extends WP_Widget {
 	
 	/**
 	 * Widget Constructor
@@ -525,6 +525,6 @@ add_action( 'widgets_init', 'worldstar_register_magazine_posts_grid_widget' );
 
 function worldstar_register_magazine_posts_grid_widget() {
 
-	register_widget( 'Worldstar_Magazine_Posts_Grid_Widget' );
+	register_widget( 'WorldStar_Magazine_Posts_Grid_Widget' );
 	
 }

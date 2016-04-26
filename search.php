@@ -4,7 +4,7 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package Worldstar
+ * @package WorldStar
  */
  
 get_header(); 

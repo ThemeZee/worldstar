@@ -5,7 +5,7 @@
  * Used to validate the user input of the theme settings
  * Based on https://github.com/WPTRT/code-examples/blob/master/customizer/sanitization-callbacks.php
  *
- * @package Worldstar
+ * @package WorldStar
  */
 
 

@@ -1,5 +1,5 @@
 ===================================
-Worldstar Changelog
+WorldStar Changelog
 ===================================
 
 Version 1.0

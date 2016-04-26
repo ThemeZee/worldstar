@@ -4,7 +4,7 @@
  *
  * Contains all content after the main content area and sidebar
  *
- * @package Worldstar
+ * @package WorldStar
  */
  
 ?>

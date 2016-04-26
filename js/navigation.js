@@ -8,7 +8,7 @@
  *
  * Author: Thomas Weichselbaumer (themezee.com)
  *
- * @package Worldstar
+ * @package WorldStar
  */
 
 (function($) {

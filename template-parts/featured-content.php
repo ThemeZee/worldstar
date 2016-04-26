@@ -4,7 +4,7 @@
  *
  * Queries posts by selected featured posts category and displays featured content area
  *
- * @package Worldstar
+ * @package WorldStar
  */
 
 // Get Theme Options from Database

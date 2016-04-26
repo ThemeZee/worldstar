@@ -1,12 +1,12 @@
 <?php
 /**
- * Worldstar back compat functionality
+ * WorldStar back compat functionality
  *
- * Prevents Worldstar from running on WordPress versions prior to 4.2,
+ * Prevents WorldStar from running on WordPress versions prior to 4.2,
  * since this theme is not meant to be backward compatible beyond that and
  * relies on many newer functions and markup changes introduced in 4.2.
  *
- * @package Worldstar
+ * @package WorldStar
  *
  * Original Code: Twenty Fifteen http://wordpress.org/themes/twentyfifteen
  * Original Copyright: the WordPress team and contributors.
@@ -18,7 +18,7 @@
 
  
 /**
- * Prevent switching to Worldstar on old versions of WordPress. Switches to the default theme.
+ * Prevent switching to WorldStar on old versions of WordPress. Switches to the default theme.
  *
  */
 function worldstar_compat_switch_theme() {
@@ -33,11 +33,11 @@ add_action( 'after_switch_theme', 'worldstar_compat_switch_theme' );
  * Add message for unsuccessful theme switch.
  *
  * Prints an update nag after an unsuccessful attempt to switch to
- * Worldstar on WordPress versions prior to 4.2.
+ * WorldStar on WordPress versions prior to 4.2.
  *
  */
 function worldstar_compat_upgrade_notice() {
-	$message = sprintf( esc_html__( '%$1s requires at least WordPress version 4.2. You are running version %$2s. Please upgrade and try again.', 'worldstar' ), 'Worldstar', $GLOBALS['wp_version'] );
+	$message = sprintf( esc_html__( '%$1s requires at least WordPress version 4.2. You are running version %$2s. Please upgrade and try again.', 'worldstar' ), 'WorldStar', $GLOBALS['wp_version'] );
 	printf( '<div class="error"><p>%s</p></div>', $message );
 }
 
@@ -46,7 +46,7 @@ function worldstar_compat_upgrade_notice() {
  * Prevent the Customizer from being loaded on WordPress versions prior to 4.2.
  */
 function worldstar_compat_customize() {
-	wp_die( sprintf( esc_html__( 'Worldstar requires at least WordPress version 4.2. You are running version %s. Please upgrade and try again.', 'worldstar' ), $GLOBALS['wp_version'] ), '', array(
+	wp_die( sprintf( esc_html__( 'WorldStar requires at least WordPress version 4.2. You are running version %s. Please upgrade and try again.', 'worldstar' ), $GLOBALS['wp_version'] ), '', array(
 		'back_link' => true,
 	) );
 }
@@ -58,7 +58,7 @@ add_action( 'load-customize.php', 'worldstar_compat_customize' );
  */
 function worldstar_compat_preview() {
 	if ( isset( $_GET['preview'] ) ) {
-		wp_die( sprintf( esc_html__( 'Worldstar requires at least WordPress version 4.2. You are running version %s. Please upgrade and try again.', 'worldstar' ), $GLOBALS['wp_version'] ) );
+		wp_die( sprintf( esc_html__( 'WorldStar requires at least WordPress version 4.2. You are running version %s. Please upgrade and try again.', 'worldstar' ), $GLOBALS['wp_version'] ) );
 	}
 }
 add_action( 'template_redirect', 'worldstar_compat_preview' );

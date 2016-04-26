@@ -4,7 +4,7 @@
  *
  * Register Post Settings section, settings and controls for Theme Customizer
  *
- * @package Worldstar
+ * @package WorldStar
  */
 
 

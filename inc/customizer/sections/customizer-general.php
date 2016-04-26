@@ -4,7 +4,7 @@
  *
  * Register General section, settings and controls for Theme Customizer
  *
- * @package Worldstar
+ * @package WorldStar
  */
 
 

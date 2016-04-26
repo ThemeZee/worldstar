@@ -1,12 +1,12 @@
 <?php
 /**
- * Worldstar functions and definitions
+ * WorldStar functions and definitions
  *
- * @package Worldstar
+ * @package WorldStar
  */
 
 /**
- * Worldstar only works in WordPress 4.2 or later.
+ * WorldStar only works in WordPress 4.2 or later.
  */
 if ( version_compare( $GLOBALS['wp_version'], '4.2', '<' ) ) :
 	require get_template_directory() . '/inc/back-compat.php';

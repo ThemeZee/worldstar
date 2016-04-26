@@ -4,7 +4,7 @@
  *
  * Registers Upgrade Section for the Pro Version of the theme
  *
- * @package Worldstar
+ * @package WorldStar
  */
 
 
@@ -31,7 +31,7 @@ function worldstar_customize_register_upgrade_settings( $wp_customize ) {
         'sanitize_callback' => 'esc_attr'
         )
     );
-    $wp_customize->add_control( new Worldstar_Customize_Upgrade_Control(
+    $wp_customize->add_control( new WorldStar_Customize_Upgrade_Control(
         $wp_customize, 'worldstar_theme_options[upgrade]', array(
             'section' => 'worldstar_section_upgrade',
             'settings' => 'worldstar_theme_options[upgrade]',

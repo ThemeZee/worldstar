@@ -2,7 +2,7 @@
 /**
  * Add Support for Theme Addons
  *
- * @package Worldstar
+ * @package WorldStar
  */
 
 
@@ -11,7 +11,7 @@ add_action( 'after_setup_theme', 'worldstar_theme_addons_setup' );
 
 function worldstar_theme_addons_setup() {
 
-	// Add Theme Support for Worldstar Pro Plugin
+	// Add Theme Support for WorldStar Pro Plugin
 	add_theme_support( 'worldstar-pro' );
 	
 	// Add Theme Support for ThemeZee Plugins
