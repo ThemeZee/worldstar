@@ -21,7 +21,8 @@ class WorldStar_Magazine_Posts_Columns_Widget extends WP_Widget {
 			sprintf( esc_html__( 'Magazine Posts: 2 Columns (%s)', 'worldstar' ), wp_get_theme()->Name ), // Name
 			array( 
 				'classname' => 'worldstar_magazine_posts_columns', 
-				'description' => esc_html__( 'Displays your posts from two selected categories. Please use this widget ONLY in the Magazine Homepage widget area.', 'worldstar' ) 
+				'description' => esc_html__( 'Displays your posts from two selected categories. Please use this widget ONLY in the Magazine Homepage widget area.', 'worldstar' ),
+				'customize_selective_refresh' => true, 
 			) // Args
 		);
 
