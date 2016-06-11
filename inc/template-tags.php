@@ -70,28 +70,13 @@ function worldstar_header_image() {
 		</div>
 	
 	<?php // Display default header image set on Appearance > Header
-	elseif( get_header_image() ) : 
-
-		// Hide header image on front page
-		if ( true == $theme_options['custom_header_hide'] and is_front_page() ) {
-			return;
-		}
-		?>
+	elseif( get_header_image() ) : ?>
 		
 		<div id="headimg" class="header-image">
 			
-			<?php // Check if custom header image is linked
-			if( $theme_options['custom_header_link'] <> '' ) : ?>
-			
-				<a href="<?php echo esc_url( $theme_options['custom_header_link'] ); ?>">
-					<img src="<?php echo get_header_image(); ?>" />
-				</a>
-				
-			<?php else : ?>
-			
-				<img src="<?php echo get_header_image(); ?>" />
-				
-			<?php endif; ?>
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+				<img src="<?php header_image(); ?>" srcset="<?php echo esc_attr( wp_get_attachment_image_srcset( get_custom_header()->attachment_id ) ); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
+			</a>
 			
 		</div>
 	
