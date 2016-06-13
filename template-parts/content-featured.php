@@ -4,39 +4,40 @@
  *
  * @package WorldStar
  */
+
 ?>
 
-	<div class="grid-post clearfix">
-	
-		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-			
-			<a href="<?php esc_url( the_permalink() ); ?>" class="featured-image-link">
-			
-				<?php // Display Post Thumbnail or default thumbnail
-				if( has_post_thumbnail() ) :
+<div class="grid-post clearfix">
 
-					the_post_thumbnail( 'post-thumbnail', array( 'class' => 'featured-image' ) );
+	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-				else: ?>
+		<a href="<?php esc_url( the_permalink() ); ?>" class="featured-image-link">
 
-					<img src="<?php echo get_template_directory_uri(); ?>/images/default-featured-image.png" class="featured-image default-featured-image wp-post-image" />
+			<?php // Display Post Thumbnail or default thumbnail.
+			if ( has_post_thumbnail() ) :
 
-				<?php endif;?>
-				
-			</a>
-		
-			<div class="post-content clearfix">
-			
-				<header class="entry-header">
-					
-					<?php worldstar_entry_categories(); ?>
-					
-					<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+				the_post_thumbnail( 'post-thumbnail', array( 'class' => 'featured-image' ) );
 
-				</header><!-- .entry-header -->
-							
-			</div>
-			
-		</article>
+			else : ?>
 
-	</div>
+				<img src="<?php echo get_template_directory_uri(); ?>/images/default-featured-image.png" class="featured-image default-featured-image wp-post-image" />
+
+			<?php endif;?>
+
+		</a>
+
+		<div class="post-content clearfix">
+
+			<header class="entry-header">
+
+				<?php worldstar_entry_categories(); ?>
+
+				<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+
+			</header><!-- .entry-header -->
+
+		</div>
+
+	</article>
+
+</div>
