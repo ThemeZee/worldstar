@@ -5,16 +5,14 @@
  * @package WorldStar
  */
 
- 
 if ( ! function_exists( 'worldstar_default_menu' ) ) :
 /**
  * Display default page as navigation if no custom menu was set
- *
  */
 function worldstar_default_menu() {
-	
-	echo '<ul id="menu-main-navigation" class="main-navigation-menu menu">'. wp_list_pages('title_li=&echo=0') .'</ul>';
-	
+
+	echo '<ul id="menu-main-navigation" class="main-navigation-menu menu">'. wp_list_pages( 'title_li=&echo=0' ) .'</ul>';
+
 }
 endif;
 
@@ -26,25 +24,25 @@ endif;
  * @return array
  */
 function worldstar_body_classes( $classes ) {
-	
-	// Get Theme Options from Database
+
+	// Get theme options from database.
 	$theme_options = worldstar_theme_options();
-	
-	// Switch Theme Width
+
+	// Switch theme width.
 	if ( 'boxed-layout' == $theme_options['theme_width'] ) {
 		$classes[] = 'boxed-layout';
 	}
-	
-	// Switch Sidebar Layout to left
+
+	// Switch sidebar layout to left.
 	if ( 'left-sidebar' == $theme_options['theme_layout'] ) {
 		$classes[] = 'sidebar-left';
 	}
-	
-	// Add Post Columns classes
+
+	// Add post columns classes.
 	if ( 'two-columns' == $theme_options['post_layout'] ) {
 		$classes[] = 'post-layout-columns';
 	}
-	
+
 	return $classes;
 }
 add_filter( 'body_class', 'worldstar_body_classes' );
@@ -53,19 +51,19 @@ add_filter( 'body_class', 'worldstar_body_classes' );
 /**
  * Change excerpt length for default posts
  *
- * @param int $length Length of excerpt in number of words
+ * @param int $length Length of excerpt in number of words.
  * @return int
  */
-function worldstar_excerpt_length($length) {
-	
-	// Get Theme Options from Database
+function worldstar_excerpt_length( $length ) {
+
+	// Get theme options from database.
 	$theme_options = worldstar_theme_options();
 
-	// Return Excerpt Text
-	if ( isset($theme_options['excerpt_length']) and $theme_options['excerpt_length'] >= 0 ) :
+	// Return excerpt text.
+	if ( isset( $theme_options['excerpt_length'] ) and $theme_options['excerpt_length'] >= 0 ) :
 		return absint( $theme_options['excerpt_length'] );
 	else :
-		return 30; // number of words
+		return 30; // Number of words.
 	endif;
 }
 add_filter( 'excerpt_length', 'worldstar_excerpt_length' );
@@ -74,21 +72,21 @@ add_filter( 'excerpt_length', 'worldstar_excerpt_length' );
 /**
  * Function to change excerpt length for posts in category posts widgets
  *
- * @param int $length Length of excerpt in number of words
+ * @param int $length Length of excerpt in number of words.
  * @return int
  */
-function worldstar_magazine_posts_excerpt_length($length) {
-    return 15;
+function worldstar_magazine_posts_excerpt_length( $length ) {
+	return 15;
 }
 
 /**
  * Change excerpt more text for posts
  *
- * @param string $more_text Excerpt More Text
+ * @param String $more_text Excerpt More Text.
  * @return string
  */
 function worldstar_excerpt_more( $more_text ) {
-	
+
 	return '';
 
 }
@@ -96,7 +94,6 @@ add_filter( 'excerpt_more', 'worldstar_excerpt_more' );
 
 /**
  * Set wrapper start for wooCommerce
- *
  */
 function worldstar_wrapper_start() {
 	echo '<section id="primary" class="content-area">';
@@ -108,7 +105,6 @@ add_action( 'woocommerce_before_main_content', 'worldstar_wrapper_start', 10 );
 
 /**
  * Set wrapper end for wooCommerce
- *
  */
 function worldstar_wrapper_end() {
 	echo '</main><!-- #main -->';
