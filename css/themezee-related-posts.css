@@ -96,7 +96,7 @@ ul.related-posts-list {
 	font-size: 20px;
 	font-size: 1.25rem;
 }
-	
+
 .related-posts-three-columns .related-post-column .entry-title {
 	font-size: 16px;
 	font-size: 1rem;
@@ -124,13 +124,13 @@ ul.related-posts-list {
 ---------------------------------------------------------------- */
 
 @media only screen and (max-width: 60em) {
-	
+
 	/* Columns */
 	.related-posts-two-columns .related-post-column .entry-title {
 		font-size: 22px;
 		font-size: 1.375rem;
 	}
-	
+
 	.related-posts-three-columns .related-post-column .entry-title {
 		font-size: 18px;
 		font-size: 1.125rem;
@@ -140,35 +140,35 @@ ul.related-posts-list {
 		font-size: 16px;
 		font-size: 1rem;
 	}
-	
+
 }
 
 @media only screen and (max-width: 50em) {
-	
+
 	/* Columns */
 	.related-posts-four-columns .related-post-column {
 		width: 50%;
 	}
-	
+
 	.related-posts-four-columns .related-post-column:nth-child(2n + 1) {
 		clear: left;
 	}
-	
+
 	.related-posts-two-columns .related-post-column .entry-title,
 	.related-posts-four-columns .related-post-column .entry-title {
 		font-size: 20px;
 		font-size: 1.25rem;
 	}
-	
+
 	/* List */
 	.related-posts-list li .wp-post-image {
 		max-width: 25%;
 	}
-	
+
 	.related-posts-list li .entry-header {
 		margin-top: 0;
 	}
-	
+
 	.related-posts-list li .entry-title {
 		font-size: 18px;
 		font-size: 1.125rem;
@@ -181,13 +181,13 @@ ul.related-posts-list {
 	.related-posts-three-columns {
 		margin: 0;
 	}
-	
+
 	.related-posts-three-columns .related-post-column {
 		float: none;
 		width: 100%;
 		padding-right: 0;
 	}
-	
+
 	.related-posts-three-columns .related-post-column .entry-title {
 		font-size: 20px;
 		font-size: 1.25rem;
@@ -208,20 +208,20 @@ ul.related-posts-list {
 	.related-posts-four-columns {
 		margin: 0;
 	}
-	
+
 	.related-posts-two-columns .related-post-column,
 	.related-posts-four-columns .related-post-column {
 		float: none;
 		width: 100%;
 		padding-right: 0;
 	}
-	
+
 	.related-posts-three-columns .related-post-column .entry-title {
 		font-size: 18px;
 		font-size: 1.125rem;
 	}
 
-	
+
 	/* List */
 	.related-posts-list li .wp-post-image {
 		float: none;
