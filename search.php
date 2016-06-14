@@ -18,18 +18,18 @@ $theme_options = worldstar_theme_options();
 
 			<header class="page-header">
 
-				<h1 class="archive-title"><?php printf( esc_html__( 'Search Results for: %s', 'worldstar' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+				<h1 class="archive-title"><?php printf( esc_html__( 'Search Results for: %s', 'worldstar' ), '<span>' . esc_html( get_search_query() ) . '</span>' ); ?></h1>
 
 			</header><!-- .page-header -->
 
 			<?php
 			if ( have_posts() ) : ?>
 
-				<div id="search-posts" class="post-wrapper clearfix">
+				<div id="post-wrapper" class="post-wrapper clearfix">
 
 					<?php while ( have_posts() ) : the_post();
 
-						if ( 'post' == get_post_type() ) :
+						if ( 'post' === get_post_type() ) :
 
 							get_template_part( 'template-parts/content', $theme_options['post_content'] );
 
@@ -43,8 +43,8 @@ $theme_options = worldstar_theme_options();
 
 				</div>
 
-			<?php
-			worldstar_pagination();
+				<?php
+				worldstar_pagination();
 
 			else : ?>
 

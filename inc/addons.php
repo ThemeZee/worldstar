@@ -20,9 +20,11 @@ function worldstar_theme_addons_setup() {
 
 	// Add theme support for Infinite Scroll.
 	add_theme_support( 'infinite-scroll', array(
-		'type' 		=> 'click',
-		'container' => 'main',
-		'render'    => 'worldstar_infinite_scroll_render',
+		'container'      => 'post-wrapper',
+		'footer_widgets' => 'footer',
+		'wrapper'        => false,
+		'render'         => 'worldstar_infinite_scroll_render',
+		'posts_per_page' => 6,
 	) );
 
 }
@@ -84,7 +86,7 @@ function worldstar_infinite_scroll_render() {
 
 	while ( have_posts() ) {
 		the_post();
-		get_template_part( 'template-parts/content', $theme_options['post_layout'] );
+		get_template_part( 'template-parts/content', $theme_options['post_content'] );
 	}
 
 }

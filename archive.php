@@ -25,7 +25,7 @@ $theme_options = worldstar_theme_options();
 			<?php
 			if ( have_posts() ) : ?>
 
-				<div id="archive-posts" class="post-wrapper clearfix">
+				<div id="post-wrapper" class="post-wrapper clearfix">
 
 					<?php while ( have_posts() ) : the_post();
 

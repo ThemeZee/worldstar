@@ -36,7 +36,7 @@ endif;
 
 			<?php if ( have_posts() ) : ?>
 
-				<div id="homepage-posts" class="post-wrapper clearfix">
+				<div id="post-wrapper" class="post-wrapper clearfix">
 
 					<?php while ( have_posts() ) : the_post();
 
