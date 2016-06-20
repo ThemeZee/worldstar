@@ -506,8 +506,6 @@ input[type="submit"] {
 	border: none;
 	text-transform: uppercase;
 	text-decoration: none;
-	-webkit-border-radius: 0.3em;
-	-moz-border-radius: 0.3em;
 	border-radius: 0.3em;
 }
 
@@ -539,8 +537,6 @@ textarea {
 	padding: 0.3em 0.6em;
 	color: #666;
 	border: 2px solid #ddd;
-	-webkit-border-radius: 0.3em;
-	-moz-border-radius: 0.3em;
 	border-radius: 0.3em;
 }
 
@@ -655,8 +651,6 @@ textarea {
 	float: left;
 	width: 72%;
 	padding-right: 2em;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
@@ -712,9 +706,6 @@ textarea {
 .site-title a:visited {
 	color: #33bbdd;
 	-webkit-transition: all 0.2s ease;
-	-moz-transition: all 0.2s ease;
-	-ms-transition: all 0.2s ease;
-	-o-transition: all 0.2s ease;
 	transition: all 0.2s ease;
 }
 
@@ -806,9 +797,6 @@ textarea {
 	text-transform: uppercase;
 	text-decoration: none;
 	-webkit-transition: all 0.2s ease;
-	-moz-transition: all 0.2s ease;
-	-ms-transition: all 0.2s ease;
-	-o-transition: all 0.2s ease;
 	transition: all 0.2s ease;
 }
 
@@ -861,9 +849,6 @@ textarea {
 	font-size: 0.8125rem;
 	border-bottom: 1px solid rgba(255,255,255,0.1);
 	-webkit-transition: none;
-	-moz-transition: none;
-	-ms-transition: none;
-	-o-transition: none;
 	transition: none;
 }
 
@@ -1077,8 +1062,6 @@ textarea {
 	margin: 0;
 	width: 100%;
 	padding: 0.55em 3em 0.55em 1em;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	-webkit-appearance: none;
 }
@@ -1154,8 +1137,6 @@ textarea {
 	display: block;
 	width: 33.33333333%;
 	padding-right: 2em;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
@@ -1173,8 +1154,6 @@ textarea {
 	float: left;
 	display: block;
 	width: 100%;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
@@ -1209,8 +1188,6 @@ textarea {
 	float: left;
 	width: 50%;
 	padding-right: 2em;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
@@ -1222,8 +1199,6 @@ textarea {
 .widget-magazine-posts-columns .magazine-posts-columns .magazine-posts-columns-content .magazine-posts-columns-post-list {
 	float: left;
 	width: 100%;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
@@ -1236,8 +1211,6 @@ textarea {
 	float: left;
 	width: 50%;
 	padding-right: 1em;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
@@ -1245,8 +1218,6 @@ textarea {
 	margin-left: 50%;
 	width: 50%;
 	padding-left: 1em;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
@@ -1284,9 +1255,6 @@ textarea {
 	color: #222;
 	text-decoration: none;
 	-webkit-transition: all 0.2s ease;
-	-moz-transition: all 0.2s ease;
-	-ms-transition: all 0.2s ease;
-	-o-transition: all 0.2s ease;
 	transition: all 0.2s ease;
 }
 
@@ -1318,8 +1286,6 @@ textarea {
 	background: #33bbdd;
 	text-transform: uppercase;
 	text-decoration: none;
-	-webkit-border-radius: 0.3em;
-	-moz-border-radius: 0.3em;
 	border-radius: 0.3em;
 }
 
@@ -1335,17 +1301,17 @@ textarea {
 
 /* Post Columns */
 .post-layout-columns .post-wrapper {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
 	margin-right: -2em;
 }
 
 .post-layout-columns .post-wrapper .post-column {
-	display: flex;
 	width: 50%;
 	padding-right: 2em;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
@@ -1358,18 +1324,13 @@ textarea {
 	margin-bottom: 0;
 }
 
-/* Post Columns Fixes for IE 10 and IE 11 */
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-
-	.post-layout-columns .post-wrapper .post-column {
-		float: left;
-		display: block;
+/* Fix Render Bug for Safari */
+@media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0) {
+	@media {
+		.post-layout-columns .post-wrapper .post-column {
+			margin-right: -1px;
+		}
 	}
-
-	.post-layout-columns .post-wrapper .post-column:nth-child(2n + 1) {
-		clear: left;
-	}
-
 }
 
 /* Page Links | wp_link_pages() */
@@ -1441,8 +1402,6 @@ textarea {
 	background: #33bbdd;
 	font-size: 12px;
 	font-size: 0.75rem;
-	-webkit-border-radius: 0.3em;
-	-moz-border-radius: 0.3em;
 	border-radius: 0.3em;
 }
 
@@ -1494,8 +1453,6 @@ textarea {
 	font-size: 12px !important;
 	font-size: 0.75rem !important;
 	font-weight: normal;
-	-webkit-border-radius: 0.3em;
-	-moz-border-radius: 0.3em;
 	border-radius: 0.3em;
 }
 
@@ -1557,8 +1514,6 @@ textarea {
 	font-weight: bold;
 	color: #fff;
 	background: #222;
-	-webkit-border-radius: 0.3em;
-	-moz-border-radius: 0.3em;
 	border-radius: 0.3em;
 }
 
@@ -1566,9 +1521,6 @@ textarea {
 .post-pagination a:visited {
 	color: #fff;
 	-webkit-transition: all 0.2s ease;
-	-moz-transition: all 0.2s ease;
-	-ms-transition: all 0.2s ease;
-	-o-transition: all 0.2s ease;
 	transition: all 0.2s ease;
 }
 
@@ -1605,8 +1557,6 @@ textarea {
 	background: #33bbdd;
 	text-transform: uppercase;
 	text-decoration: none;
-	-webkit-border-radius: 0.3em;
-	-moz-border-radius: 0.3em;
 	border-radius: 0.3em;
 }
 
@@ -1689,17 +1639,17 @@ textarea {
 }
 
 .featured-posts {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
 	margin-right: -1em;
 }
 
 .featured-posts .grid-post {
-	display: flex;
 	width: 33.333333333333333%;
 	padding-right: 1em;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
@@ -1739,7 +1689,6 @@ textarea {
 	font-size: 1.5rem;
 }
 
-
 .featured-posts .grid-post .type-post .entry-title a:link,
 .featured-posts .grid-post .type-post .entry-title a:visited {
 	color: #fff;
@@ -1748,6 +1697,15 @@ textarea {
 .featured-posts .grid-post .type-post .entry-title a:hover,
 .featured-posts .grid-post .type-post .entry-title a:active {
 	color: #ddd;
+}
+
+/* Fix Render Bug for Safari */
+@media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0) {
+	@media {
+		.featured-posts .grid-post {
+			margin-right: -1px;
+		}
+	}
 }
 
 /*--------------------------------------------------------------
@@ -1974,8 +1932,6 @@ object {
 	text-align: center;
 	vertical-align: top;
 	width: 100%;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
@@ -2176,8 +2132,6 @@ object {
 		padding: 0.75em 1.25em;
 		background: #222;
 		text-align: left;
-		-webkit-border-radius: 0;
-		-moz-border-radius: 0;
 		border-radius: 0;
 	}
 
