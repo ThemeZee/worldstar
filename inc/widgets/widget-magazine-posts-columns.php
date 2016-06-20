@@ -202,7 +202,7 @@ class WorldStar_Magazine_Posts_Columns_Widget extends WP_Widget {
 
 					<article id="post-<?php the_ID(); ?>" <?php post_class( 'large-post clearfix' ); ?>>
 
-						<a href="<?php the_permalink() ?>" rel="bookmark"><?php the_post_thumbnail(); ?></a>
+						<?php worldstar_post_image(); ?>
 
 						<header class="entry-header">
 
@@ -225,9 +225,7 @@ class WorldStar_Magazine_Posts_Columns_Widget extends WP_Widget {
 
 					<article id="post-<?php the_ID(); ?>" <?php post_class( 'small-post clearfix' ); ?>>
 
-						<?php if ( has_post_thumbnail() ) : ?>
-							<a href="<?php the_permalink() ?>" rel="bookmark"><?php the_post_thumbnail( 'worldstar-thumbnail-small' ); ?></a>
-						<?php endif; ?>
+						<?php worldstar_post_image( 'worldstar-thumbnail-small' ); ?>
 
 						<div class="small-post-content">
 
