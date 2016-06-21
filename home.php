@@ -23,18 +23,19 @@ endif;
 	<section id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-			<?php // Display Latest Posts Title.
-			if ( '' !== $theme_options['blog_title'] ) : ?>
+			<?php
+			if ( have_posts() ) : ?>
 
-				<header class="page-header">
+				<?php // Display Latest Posts Title.
+				if ( '' !== $theme_options['blog_title'] ) : ?>
 
-					<h1 class="archive-title"><?php echo wp_kses_post( $theme_options['blog_title'] ); ?></h1>
+					<header class="page-header">
 
-				</header><!-- .page-header -->
+						<h1 class="archive-title"><?php echo wp_kses_post( $theme_options['blog_title'] ); ?></h1>
 
-			<?php endif; ?>
+					</header><!-- .page-header -->
 
-			<?php if ( have_posts() ) : ?>
+				<?php endif; ?>
 
 				<div id="post-wrapper" class="post-wrapper clearfix">
 
@@ -48,6 +49,10 @@ endif;
 
 				<?php
 				worldstar_pagination();
+
+			else :
+
+				get_template_part( 'template-parts/content', 'none' );
 
 			endif; ?>
 
