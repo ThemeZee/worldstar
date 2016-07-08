@@ -17,7 +17,7 @@
 function worldstar_control_post_content_callback( $control ) {
 
 	// Check if excerpt mode is selected.
-	if ( $control->manager->get_setting( 'worldstar_theme_options[post_content]' )->value() == 'excerpt' ) :
+	if ( 'excerpt' === $control->manager->get_setting( 'worldstar_theme_options[post_content]' )->value() ) :
 		return true;
 	else :
 		return false;
@@ -35,9 +35,9 @@ function worldstar_control_post_content_callback( $control ) {
 function worldstar_featured_activated_callback( $control ) {
 
 	// Check if Featured Posts is turned on.
-	if ( $control->manager->get_setting( 'worldstar_theme_options[featured_blog]' )->value() == 1 ) :
+	if ( true === $control->manager->get_setting( 'worldstar_theme_options[featured_blog]' )->value() ) :
 		return true;
-	elseif ( $control->manager->get_setting( 'worldstar_theme_options[featured_magazine]' )->value() == 1 ) :
+	elseif ( true === $control->manager->get_setting( 'worldstar_theme_options[featured_magazine]' )->value() ) :
 		return true;
 	else :
 		return false;
