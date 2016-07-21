@@ -45,7 +45,6 @@ function worldstar_theme_info_page() {
 		<div class="important-links clearfix">
 			<p><strong><?php esc_html_e( 'Theme Links', 'worldstar' ); ?>:</strong>
 				<a href="<?php echo esc_url( __( 'https://themezee.com/themes/worldstar/', 'worldstar' ) . '?utm_source=theme-info&utm_medium=textlink&utm_campaign=worldstar&utm_content=theme-page' ); ?>" target="_blank"><?php esc_html_e( 'Theme Page', 'worldstar' ); ?></a>
-				<a href="<?php echo get_template_directory_uri(); ?>/changelog.txt" target="_blank"><?php esc_html_e( 'Changelog', 'worldstar' ); ?></a>
 				<a href="<?php echo esc_url( 'http://preview.themezee.com/worldstar/?utm_source=theme-info&utm_medium=textlink&utm_campaign=worldstar&utm_content=demo' ); ?>" target="_blank"><?php esc_html_e( 'Theme Demo', 'worldstar' ); ?></a>
 				<a href="<?php echo esc_url( __( 'https://themezee.com/docs/worldstar-documentation/', 'worldstar' ) . '?utm_source=theme-info&utm_medium=textlink&utm_campaign=worldstar&utm_content=documentation' ); ?>" target="_blank"><?php esc_html_e( 'Theme Documentation', 'worldstar' ); ?></a>
 				<a href="<?php echo esc_url( 'http://wordpress.org/support/view/theme-reviews/worldstar?filter=5' ); ?>" target="_blank"><?php esc_html_e( 'Rate this theme', 'worldstar' ); ?></a>
