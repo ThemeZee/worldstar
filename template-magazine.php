@@ -12,7 +12,7 @@ get_header();
 // Get Theme Options from Database.
 $theme_options = worldstar_theme_options();
 
-// Display Slider.
+// Display Featured Content.
 if ( true === $theme_options['featured_magazine'] ) :
 
 	get_template_part( 'template-parts/featured-content' );
