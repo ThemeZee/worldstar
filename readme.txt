@@ -26,6 +26,12 @@ For more information about WorldStar please go to https://themezee.com/themes/wo
 
 == Changelog ==
 
+= 1.0.1 =
+* added Right-to-Left language support
+* improved code formatting
+* added content-none.php template file
+* improved styling and accessibility of navigation menus
+
 = 1.0 =
 Initial Release
 

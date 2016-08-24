@@ -42,9 +42,9 @@ ul.related-posts-list {
 	float: left;
 	margin: 0 1em 0 0;
 	padding: 0;
-	border: none;
 	max-width: 20%;
 	height: auto;
+	border: none;
 }
 
 
@@ -61,9 +61,9 @@ ul.related-posts-list {
 
 .related-posts-columns .related-post-column {
 	float: left;
+	box-sizing: border-box;
 	margin-bottom: 1em;
 	padding-right: 1em;
-	box-sizing: border-box;
 }
 
 .related-posts-two-columns .related-post-column {
@@ -122,7 +122,6 @@ ul.related-posts-list {
 ---------------------------------------------------------------- */
 
 @media only screen and (max-width: 60em) {
-
 	/* Columns */
 	.related-posts-two-columns .related-post-column .entry-title {
 		font-size: 22px;
@@ -142,7 +141,6 @@ ul.related-posts-list {
 }
 
 @media only screen and (max-width: 50em) {
-
 	/* Columns */
 	.related-posts-four-columns .related-post-column {
 		width: 50%;
@@ -174,7 +172,6 @@ ul.related-posts-list {
 }
 
 @media only screen and (max-width: 35em) {
-
 	/* Columns */
 	.related-posts-three-columns {
 		margin: 0;
@@ -182,8 +179,8 @@ ul.related-posts-list {
 
 	.related-posts-three-columns .related-post-column {
 		float: none;
-		width: 100%;
 		padding-right: 0;
+		width: 100%;
 	}
 
 	.related-posts-three-columns .related-post-column .entry-title {
@@ -200,7 +197,6 @@ ul.related-posts-list {
 }
 
 @media only screen and (max-width: 25em) {
-
 	/* Columns */
 	.related-posts-two-columns,
 	.related-posts-four-columns {
@@ -210,8 +206,8 @@ ul.related-posts-list {
 	.related-posts-two-columns .related-post-column,
 	.related-posts-four-columns .related-post-column {
 		float: none;
-		width: 100%;
 		padding-right: 0;
+		width: 100%;
 	}
 
 	.related-posts-three-columns .related-post-column .entry-title {
@@ -230,7 +226,6 @@ ul.related-posts-list {
 }
 
 @media only screen and (max-width: 20em) {
-
 	.related-posts .entry-meta .meta-date,
 	.related-posts .entry-meta .meta-author  {
 		display: block;
