@@ -357,8 +357,16 @@ li > ol {
 		margin: 0 0 0 0.75em;
 	}
 
+	.primary-navigation {
+		padding: 0;
+	}
+
 	.main-navigation-menu {
 		float: right;
+	}
+
+	.main-navigation-menu li {
+		width: 100%;
 	}
 
 	.main-navigation-menu a {
