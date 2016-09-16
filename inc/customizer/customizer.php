@@ -29,7 +29,7 @@ function worldstar_customize_register_options( $wp_customize ) {
 		'capability'     => 'edit_theme_options',
 		'theme_supports' => '',
 		'title'          => esc_html__( 'Theme Options', 'worldstar' ),
-		'description'    => '',
+		'description'    => worldstar_customize_theme_links(),
 	) );
 
 	// Add postMessage support for site title and description.
@@ -71,32 +71,54 @@ add_action( 'customize_preview_init', 'worldstar_customize_preview_js' );
 
 
 /**
- * Embed JS file for Customizer Controls
- */
-function worldstar_customize_controls_js() {
-
-	wp_enqueue_script( 'worldstar-customizer-controls', get_template_directory_uri() . '/js/customizer-controls.js', array(), '20151202', true );
-
-	// Localize the script.
-	wp_localize_script( 'worldstar-customizer-controls', 'worldstar_theme_links', array(
-		'title'	=> esc_html__( 'Theme Links', 'worldstar' ),
-		'themeURL'	=> esc_url( __( 'https://themezee.com/themes/worldstar/', 'worldstar' ) . '?utm_source=customizer&utm_medium=textlink&utm_campaign=worldstar&utm_content=theme-page' ),
-		'themeLabel'	=> esc_html__( 'Theme Page', 'worldstar' ),
-		'docuURL'	=> esc_url( __( 'https://themezee.com/docs/worldstar-documentation/', 'worldstar' ) . '?utm_source=customizer&utm_medium=textlink&utm_campaign=worldstar&utm_content=documentation' ),
-		'docuLabel'	=> esc_html__( 'Theme Documentation', 'worldstar' ),
-		'rateURL'	=> esc_url( 'http://wordpress.org/support/view/theme-reviews/worldstar?filter=5' ),
-		'rateLabel'	=> esc_html__( 'Rate this theme', 'worldstar' ),
-		)
-	);
-
-}
-add_action( 'customize_controls_enqueue_scripts', 'worldstar_customize_controls_js' );
-
-
-/**
  * Embed CSS styles for the theme options in the Customizer
  */
 function worldstar_customize_preview_css() {
-	wp_enqueue_style( 'worldstar-customizer-css', get_template_directory_uri() . '/css/customizer.css', array(), '20151202' );
+	wp_enqueue_style( 'worldstar-customizer-css', get_template_directory_uri() . '/css/customizer.css', array(), '20160915' );
 }
 add_action( 'customize_controls_print_styles', 'worldstar_customize_preview_css' );
+
+/**
+ * Returns Theme Links
+ */
+function worldstar_customize_theme_links() {
+
+	ob_start();
+	?>
+
+		<div class="theme-links">
+
+			<span class="customize-control-title"><?php esc_html_e( 'Theme Links', 'worldstar' ); ?></span>
+
+			<p>
+				<a href="<?php echo esc_url( __( 'https://themezee.com/themes/worldstar/', 'worldstar' ) ); ?>?utm_source=customizer&utm_medium=textlink&utm_campaign=worldstar&utm_content=theme-page" target="_blank">
+					<?php esc_html_e( 'Theme Page', 'worldstar' ); ?>
+				</a>
+			</p>
+
+			<p>
+				<a href="http://preview.themezee.com/worldstar/?utm_source=theme-info&utm_medium=textlink&utm_campaign=worldstar&utm_content=demo" target="_blank">
+					<?php esc_html_e( 'Theme Demo', 'worldstar' ); ?>
+				</a>
+			</p>
+
+			<p>
+				<a href="<?php echo esc_url( __( 'https://themezee.com/docs/worldstar-documentation/', 'worldstar' ) ); ?>?utm_source=customizer&utm_medium=textlink&utm_campaign=worldstar&utm_content=documentation" target="_blank">
+					<?php esc_html_e( 'Theme Documentation', 'worldstar' ); ?>
+				</a>
+			</p>
+
+			<p>
+				<a href="<?php echo esc_url( __( 'https://wordpress.org/support/theme/worldstar/reviews/?filter=5', 'worldstar' ) ); ?>" target="_blank">
+					<?php esc_html_e( 'Rate this theme', 'worldstar' ); ?>
+				</a>
+			</p>
+
+		</div>
+
+	<?php
+	$theme_links = ob_get_contents();
+	ob_end_clean();
+
+	return $theme_links;
+}

@@ -45,9 +45,9 @@ function worldstar_theme_info_page() {
 		<div class="important-links clearfix">
 			<p><strong><?php esc_html_e( 'Theme Links', 'worldstar' ); ?>:</strong>
 				<a href="<?php echo esc_url( __( 'https://themezee.com/themes/worldstar/', 'worldstar' ) . '?utm_source=theme-info&utm_medium=textlink&utm_campaign=worldstar&utm_content=theme-page' ); ?>" target="_blank"><?php esc_html_e( 'Theme Page', 'worldstar' ); ?></a>
-				<a href="<?php echo esc_url( 'http://preview.themezee.com/worldstar/?utm_source=theme-info&utm_medium=textlink&utm_campaign=worldstar&utm_content=demo' ); ?>" target="_blank"><?php esc_html_e( 'Theme Demo', 'worldstar' ); ?></a>
+				<a href="http://preview.themezee.com/worldstar/?utm_source=theme-info&utm_medium=textlink&utm_campaign=worldstar&utm_content=demo" target="_blank"><?php esc_html_e( 'Theme Demo', 'worldstar' ); ?></a>
 				<a href="<?php echo esc_url( __( 'https://themezee.com/docs/worldstar-documentation/', 'worldstar' ) . '?utm_source=theme-info&utm_medium=textlink&utm_campaign=worldstar&utm_content=documentation' ); ?>" target="_blank"><?php esc_html_e( 'Theme Documentation', 'worldstar' ); ?></a>
-				<a href="<?php echo esc_url( 'http://wordpress.org/support/view/theme-reviews/worldstar?filter=5' ); ?>" target="_blank"><?php esc_html_e( 'Rate this theme', 'worldstar' ); ?></a>
+				<a href="<?php echo esc_url( __( 'https://wordpress.org/support/theme/worldstar/reviews/?filter=5', 'worldstar' ) ); ?>" target="_blank"><?php esc_html_e( 'Rate this theme', 'worldstar' ); ?></a>
 			</p>
 		</div>
 		<hr>
@@ -107,10 +107,10 @@ function worldstar_theme_info_page() {
 				<div class="column column-half clearfix">
 
 					<div class="section">
-						<h4><?php esc_html_e( 'Pro Version', 'worldstar' ); ?></h4>
+						<h4><?php esc_html_e( 'Pro Version Add-on', 'worldstar' ); ?></h4>
 
 						<p class="about">
-							<?php printf( esc_html__( 'Purchase the Pro Version of %s to get additional features and advanced customization options.', 'worldstar' ), 'WorldStar' ); ?>
+							<?php printf( esc_html__( 'Purchase the %s Pro Add-on and get additional features and advanced customization options.', 'worldstar' ), 'WorldStar' ); ?>
 						</p>
 						<p>
 							<a href="<?php echo esc_url( __( 'https://themezee.com/addons/worldstar-pro/', 'worldstar' ) . '?utm_source=theme-info&utm_medium=button&utm_campaign=worldstar&utm_content=pro-version' ); ?>" target="_blank" class="button button-secondary">
@@ -124,17 +124,14 @@ function worldstar_theme_info_page() {
 				<div class="column column-half clearfix">
 
 					<div class="section">
-						<h4><?php esc_html_e( 'ThemeZee Plugins', 'worldstar' ); ?></h4>
+						<h4><?php esc_html_e( 'Recommended Plugins', 'worldstar' ); ?></h4>
 
 						<p class="about">
-							<?php esc_html_e( 'Extend the functionality of your WordPress website with our customized plugins.', 'worldstar' ); ?>
+							<?php esc_html_e( 'Extend the functionality of your WordPress website with our free and easy to use plugins.', 'worldstar' ); ?>
 						</p>
 						<p>
-							<a href="<?php echo esc_url( __( 'https://themezee.com/plugins/', 'worldstar' ) . '?utm_source=theme-info&utm_medium=button&utm_campaign=worldstar&utm_content=plugins' ); ?>" target="_blank" class="button button-secondary">
-								<?php esc_html_e( 'Browse Plugins', 'worldstar' ); ?>
-							</a>
-							<a href="<?php echo admin_url( 'plugin-install.php?tab=search&type=author&s=themezee' ); ?>" class="button button-primary">
-								<?php esc_html_e( 'Install now', 'worldstar' ); ?>
+							<a href="<?php echo admin_url( 'plugin-install.php?tab=search&type=author&s=themezee' ); ?>" class="button button-secondary">
+								<?php esc_html_e( 'Install Plugins', 'worldstar' ); ?>
 							</a>
 						</p>
 					</div>
@@ -152,7 +149,7 @@ function worldstar_theme_info_page() {
 			<p><?php printf( esc_html__( '%1$s is proudly brought to you by %2$s. If you like this theme, %3$s :)', 'worldstar' ),
 				$theme->get( 'Name' ),
 				'<a target="_blank" href="' . __( 'https://themezee.com/', 'worldstar' ) . '?utm_source=theme-info&utm_medium=footer&utm_campaign=worldstar" title="ThemeZee">ThemeZee</a>',
-			'<a target="_blank" href="http://wordpress.org/support/view/theme-reviews/worldstar?filter=5" title="WorldStar Review">' . esc_html__( 'rate it', 'worldstar' ) . '</a>'); ?>
+				'<a target="_blank" href="' . __( 'https://wordpress.org/support/theme/worldstar/reviews/?filter=5', 'worldstar' ) . '" title="' . esc_attr__( 'Review WorldStar', 'worldstar' ) . '">' . esc_html__( 'rate it', 'worldstar' ) . '</a>'); ?>
 			</p>
 
 		</div>
