@@ -4,11 +4,11 @@ Theme URI: https://themezee.com/themes/worldstar/
 Author: ThemeZee
 Author URI: https://themezee.com
 Description: WorldStar is a clean and modern WordPress theme with a stunning featured content area to highlight your posts. The theme can be customized easily and supports a Magazine Homepage template, header widgets, several layout settings and custom logos. WorldStar is perfectly suited for simple blogs, online magazines or news related websites.
-Version: 1.0.1
+Version: 1.0.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: worldstar
-Tags: two-columns, light, purple, custom-background, custom-header, custom-menu,  editor-style, rtl-language-support, grid-layout, blog, entertainment, news, holiday, featured-image-header, featured-images, flexible-header, custom-colors, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, fluid-layout, responsive-layout, one-column, left-sidebar, right-sidebar, three-columns, black, red, blue, silver, white, green, gray
+Tags: two-columns, custom-background, custom-header, custom-menu, editor-style, rtl-language-support, grid-layout, blog, entertainment, news, featured-images, flexible-header, custom-colors, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, one-column, left-sidebar, right-sidebar, three-columns
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -1535,13 +1535,13 @@ textarea {
 }
 
 /* Theme Pagination */
-.post-pagination {
+.pagination {
 	display: block;
 	margin: 0 0 2em;
 }
 
-.post-pagination a,
-.post-pagination .current {
+.pagination a,
+.pagination .current {
 	display: inline-block;
 	margin: 0;
 	padding: 0.5em 1em;
@@ -1555,20 +1555,20 @@ textarea {
 	font-size: 0.875rem;
 }
 
-.post-pagination a:link,
-.post-pagination a:visited {
+.pagination a:link,
+.pagination a:visited {
 	color: #fff;
 	-webkit-transition: all 0.2s ease;
 	transition: all 0.2s ease;
 }
 
-.post-pagination a:hover,
-.post-pagination .current {
+.pagination a:hover,
+.pagination .current {
 	background: #33bbdd;
 }
 
 /* Infinite Scroll Pagination */
-.infinite-scroll .post-pagination {
+.infinite-scroll .pagination {
 	display: none;
 }
 
@@ -2073,7 +2073,7 @@ object {
 	.type-post,
 	.type-page,
 	.type-attachment,
-	.post-pagination,
+	.pagination,
 	.infinite-scroll #infinite-handle span {
 		margin: 0 0 1.5em;
 	}

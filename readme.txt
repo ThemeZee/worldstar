@@ -26,6 +26,11 @@ For more information about WorldStar please go to https://themezee.com/themes/wo
 
 == Changelog ==
 
+= 1.0.2 =
+* fixed mobile menus on RTL language sites
+* moved Theme Links to Theme Options panel dropdown
+* updated pagination template function
+
 = 1.0.1 =
 * added Right-to-Left language support
 * improved code formatting
