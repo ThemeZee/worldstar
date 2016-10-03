@@ -14,7 +14,7 @@
 			dynamic_sidebar( 'sidebar' );
 
 			// Show hint where to add widgets.
-		else : ?>
+		elseif ( current_user_can( 'edit_theme_options' ) ) : ?>
 
 			<aside class="widget clearfix">
 				<div class="widget-header"><h3 class="widget-title"><?php esc_html_e( 'Sidebar', 'worldstar' ); ?></h3></div>

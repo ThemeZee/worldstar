@@ -67,9 +67,6 @@ add_action( 'wp_enqueue_scripts', 'worldstar_theme_addons_scripts' );
  */
 function worldstar_theme_addons_image_sizes() {
 
-	// Add Widget Bundle thumbnail.
-	add_image_size( 'tzwb-thumbnail', 90, 60, true );
-
 	// Add Related Posts thumbnail.
 	add_image_size( 'themezee-related-posts', 420, 240, true );
 

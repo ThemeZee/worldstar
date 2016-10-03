@@ -2,7 +2,7 @@
 Author URI: https://themezee.com
 Theme URI: https://themezee.com/themes/worldstar/
 Contributors: themezee
-Tags: two-columns, light, purple, custom-background, custom-header, custom-menu, editor-style, blog, entertainment, news, featured-image-header, featured-images, flexible-header, custom-colors, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, fluid-layout, responsive-layout, one-column, left-sidebar, right-sidebar, three-columns, black, red, blue, silver, white, green, gray
+Tags: two-columns, custom-background, custom-header, custom-menu, editor-style, rtl-language-support, grid-layout, blog, entertainment, news, featured-images, flexible-header, custom-colors, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, one-column, left-sidebar, right-sidebar, three-columns
 Requires at least: 4.4
 Tested up to: 4.6
 License: GPLv2 or later
@@ -25,6 +25,11 @@ For more information about WorldStar please go to https://themezee.com/themes/wo
 5. Navigate to Appearance > Customize in your admin panel and customize to taste.
 
 == Changelog ==
+
+= 1.0.3 =
+* removed image size for Widget Bundle plugin
+* improved missing widgets message in sidebar.php
+* updated tags in readme.txt
 
 = 1.0.2 =
 * fixed mobile menus on RTL language sites
