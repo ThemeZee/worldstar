@@ -305,6 +305,45 @@ function worldstar_entry_tags() {
 endif;
 
 
+if ( ! function_exists( 'worldstar_magazine_widgets_entry_meta' ) ) :
+	/**
+	 * Displays the date, author and comments of a post
+	 */
+	function worldstar_magazine_widgets_entry_meta() {
+
+		// Get theme options from database.
+		$theme_options = worldstar_theme_options();
+
+		$postmeta = '';
+
+		// Display date or author as fallback on small Magazine Widget posts.
+		if ( true === $theme_options['meta_date'] ) {
+
+			$postmeta .= worldstar_meta_date();
+
+		} elseif ( true === $theme_options['meta_author'] ) {
+
+			$postmeta .= worldstar_meta_author();
+
+		}
+
+		// Display comments unless user has deactivated it via settings.
+		if ( true === $theme_options['meta_comments'] ) {
+
+			$postmeta .= worldstar_meta_comments();
+
+		}
+
+		if ( $postmeta ) {
+
+			echo '<div class="entry-meta">' . $postmeta . '</div>';
+
+		}
+
+	} // worldstar_magazine_widgets_entry_meta()
+endif;
+
+
 if ( ! function_exists( 'worldstar_more_link' ) ) :
 /**
  * Displays the more link on posts
