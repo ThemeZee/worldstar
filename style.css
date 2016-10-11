@@ -1902,7 +1902,7 @@ textarea {
 
 .site-footer .site-info {
 	float: left;
-	padding: 1em 2em;
+	padding: 1em 0;
 }
 
 .site-footer a:link,
@@ -2020,6 +2020,9 @@ object {
 		padding: 2em;
 	}
 
+	.site-footer {
+		padding: 0 1.5em;
+	}
 }
 
 /*--------------------------------------------------------------
@@ -2076,6 +2079,11 @@ object {
 	.pagination,
 	.infinite-scroll #infinite-handle span {
 		margin: 0 0 1.5em;
+	}
+
+	.site-footer .site-info {
+		float: none;
+		text-align: center;
 	}
 
 	.widget-magazine-posts .medium-post,
