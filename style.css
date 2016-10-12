@@ -639,7 +639,7 @@ textarea {
 
 .container {
 	margin: 0 auto;
-	max-width: 1280px;
+	max-width: 1260px;
 }
 
 .site-content {
@@ -1170,6 +1170,16 @@ textarea {
 	font-size: 1.375rem;
 }
 
+.widget-magazine-posts .large-post.has-post-thumbnail .entry-categories {
+	padding: 0.6em;
+}
+
+.widget-magazine-posts .large-post .entry-categories .meta-category a {
+	padding: 0.15em 0.45em;
+	font-size: 13px;
+	font-size: 0.8125rem;
+}
+
 .widget-magazine-posts .medium-post {
 	display: block;
 	float: left;
@@ -1301,8 +1311,15 @@ textarea {
 	color: #33bbdd;
 }
 
-.type-post .wp-post-image {
-	margin: 0 0 0.5em;
+.type-post .post-image {
+	position: relative;
+	margin: 0 0 0.75em;
+}
+
+.type-post .post-image .wp-post-image {
+	position: relative;
+	margin: 0;
+	vertical-align: top;
 }
 
 .entry-content {
@@ -1335,40 +1352,6 @@ textarea {
 .more-link:hover,
 .more-link:active {
 	background: #222;
-}
-
-/* Post Columns */
-.post-layout-columns .post-wrapper {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-ms-flex-wrap: wrap;
-	flex-wrap: wrap;
-	margin-right: -2em;
-}
-
-.post-layout-columns .post-wrapper .post-column {
-	box-sizing: border-box;
-	padding-right: 2em;
-	width: 50%;
-}
-
-.post-layout-columns .post-wrapper .post-column  .type-post .entry-title {
-	font-size: 22px;
-	font-size: 1.375rem;
-}
-
-.post-layout-columns .post-wrapper .post-column  .type-post .entry-meta {
-	margin-bottom: 0;
-}
-
-/* Fix Render Bug for Safari */
-@media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0) {
-	@media {
-		.post-layout-columns .post-wrapper .post-column {
-			margin-right: -1px;
-		}
-	}
 }
 
 /* Page Links | wp_link_pages() */
@@ -1426,21 +1409,29 @@ textarea {
 }
 
 /* Entry Categories */
-.entry-categories {
-	margin: 0 0 0.3em;
+.has-post-thumbnail .entry-categories {
+	position: absolute;
+	display: block;
+	bottom: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.5);
+	margin: 0;
+	padding: 0.8em;
+	width: 100%;
+	box-sizing: border-box;
 }
 
 .entry-categories .meta-category a {
 	display: inline-block;
 	float: left;
-	margin: 0 3px 3px 0;
-	padding: 0.05em 0.6em;
+	margin: 2px 4px;
+	padding: 0.2em 0.6em;
 	border-radius: 0.3em;
 	background: #33bbdd;
 	color: #fff;
 	text-decoration: none;
-	font-size: 12px;
-	font-size: 0.75rem;
+	font-size: 14px;
+	font-size: 0.875rem;
 }
 
 .entry-categories .meta-category a:link,
@@ -1506,6 +1497,50 @@ textarea {
 .entry-tags .meta-tags a:hover,
 .entry-tags .meta-tags a:active {
 	background: #222;
+}
+
+/* Post Columns */
+.post-layout-columns .post-wrapper {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	margin-right: -2em;
+}
+
+.post-layout-columns .post-wrapper .post-column {
+	box-sizing: border-box;
+	padding-right: 2em;
+	width: 50%;
+}
+
+.post-layout-columns .post-wrapper .post-column .type-post .entry-title {
+	font-size: 22px;
+	font-size: 1.375rem;
+}
+
+.post-layout-columns .post-wrapper .post-column .type-post .entry-meta {
+	margin-bottom: 0;
+}
+
+.post-layout-columns .post-wrapper .post-column .has-post-thumbnail .entry-categories {
+	padding: 0.6em;
+}
+
+.post-layout-columns .post-wrapper .post-column .entry-categories .meta-category a {
+	padding: 0.15em 0.45em;
+	font-size: 13px;
+	font-size: 0.8125rem;
+}
+
+/* Fix Render Bug for Safari */
+@media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0) {
+	@media {
+		.post-layout-columns .post-wrapper .post-column {
+			margin-right: -1px;
+		}
+	}
 }
 
 /* Post Navigation */
@@ -1715,7 +1750,8 @@ textarea {
 
 .featured-posts .grid-post .type-post .entry-title {
 	display: inline-block;
-	padding: 0 0.4em;
+	margin: 0;
+	padding: 0.2em 0.6em;
 	background: rgba(0,0,0,0.75);
 	font-size: 20px;
 	font-size: 1.25rem;
@@ -1735,6 +1771,30 @@ textarea {
 .featured-posts .grid-post .type-post .entry-title a:hover,
 .featured-posts .grid-post .type-post .entry-title a:active {
 	color: #ddd;
+}
+
+.featured-posts .grid-post .type-post .entry-categories {
+	position: static;
+	display: inline-block;
+	bottom: auto;
+	left: auto;
+	margin: 0;
+	padding: 0;
+	width: auto;
+	background: none;
+}
+
+.featured-posts .grid-post .type-post .entry-categories .meta-category a {
+	padding: 0.1em 0.3em;
+	font-size: 12px;
+	font-size: 0.75rem;
+}
+
+.featured-posts .grid-post:nth-child(1) .type-post .entry-categories .meta-category a,
+.featured-posts .grid-post:nth-child(2) .type-post .entry-categories .meta-category a {
+	padding: 0.15em 0.45em;
+	font-size: 13px;
+	font-size: 0.8125rem;
 }
 
 /* Fix Render Bug for Safari */
@@ -2029,6 +2089,17 @@ object {
 ## 17.1 - Desktop Large ( < 1120px )
 --------------------------------------------------------------*/
 @media only screen and (max-width: 70em) {
+
+	.has-post-thumbnail .entry-categories {
+		padding: 0.6em;
+	}
+
+	.entry-categories .meta-category a {
+		padding: 0.15em 0.45em;
+		font-size: 13px;
+		font-size: 0.8125rem;
+	}
+
 	/* Featured Posts */
 	.featured-posts .grid-post .type-post .entry-title {
 		font-size: 18px;
@@ -2040,7 +2111,6 @@ object {
 		font-size: 22px;
 		font-size: 1.375rem;
 	}
-
 }
 
 /*--------------------------------------------------------------
@@ -2334,6 +2404,7 @@ object {
 ## 17.5 - Tablet Medium ( < 800px )
 --------------------------------------------------------------*/
 @media only screen and (max-width: 50em) {
+
 	/* Featured Posts */
 	.featured-posts .grid-post,
 	.featured-posts .grid-post:nth-child(2) {
@@ -2353,6 +2424,12 @@ object {
 	.featured-posts .grid-post:nth-child(1) .type-post .entry-title {
 		font-size: 24px;
 		font-size: 1.5rem;
+	}
+
+	.featured-posts .grid-post:nth-child(2) .type-post .entry-categories .meta-category a {
+		padding: 0.1em 0.3em;
+		font-size: 12px;
+		font-size: 0.75rem;
 	}
 
 }
@@ -2511,6 +2588,22 @@ object {
 ## 17.9.5 - Mobile Small ( < 320px )
 --------------------------------------------------------------*/
 @media only screen and (max-width: 25em) {
+
+	/* Entry Categories */
+	.has-post-thumbnail .entry-categories,
+	.post-layout-columns .post-wrapper .post-column .has-post-thumbnail .entry-categories,
+	.widget-magazine-posts .large-post.has-post-thumbnail .entry-categories {
+		padding: 0.4em;
+	}
+
+	.entry-categories .meta-category a,
+	.post-layout-columns .post-wrapper .post-column .entry-categories .meta-category a,
+	.widget-magazine-posts .large-post .entry-categories .meta-category a {
+		padding: 0.1em 0.3em;
+		font-size: 12px;
+		font-size: 0.75rem;
+	}
+
 	.featured-posts .grid-post:nth-child(1) .type-post .entry-title {
 		font-size: 20px;
 		font-size: 1.25rem;

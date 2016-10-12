@@ -9,11 +9,15 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<?php worldstar_post_image_single(); ?>
+	<div class="post-image">
 
-	<header class="entry-header">
+		<?php worldstar_post_image_single(); ?>
 
 		<?php worldstar_entry_categories(); ?>
+
+	</div>
+
+	<header class="entry-header">
 
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 

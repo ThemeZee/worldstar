@@ -179,11 +179,15 @@ class WorldStar_Magazine_Posts_Grid_Widget extends WP_Widget {
 
 						<article id="post-<?php the_ID(); ?>" <?php post_class( 'large-post' ); ?>>
 
-							<?php worldstar_post_image(); ?>
+							<div class="post-image">
 
-							<header class="entry-header">
+								<?php worldstar_post_image(); ?>
 
 								<?php worldstar_entry_categories(); ?>
+
+							</div>
+
+							<header class="entry-header">
 
 								<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
