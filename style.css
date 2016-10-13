@@ -4,7 +4,7 @@ Theme URI: https://themezee.com/themes/worldstar/
 Author: ThemeZee
 Author URI: https://themezee.com
 Description: WorldStar is a clean and modern WordPress theme with a stunning featured content area to highlight your posts. The theme can be customized easily and supports a Magazine Homepage template, header widgets, several layout settings and custom logos. WorldStar is perfectly suited for simple blogs, online magazines or news related websites.
-Version: 1.0.3
+Version: 1.0.4
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: worldstar
@@ -694,7 +694,7 @@ textarea {
 	display: inline-block;
 	margin: 0 0.3em;
 	padding: 0;
-	color: #33bbdd;
+	color: #222;
 	text-decoration: none;
 	font-weight: normal;
 	font-size: 32px;
@@ -704,14 +704,14 @@ textarea {
 
 .site-title a:link,
 .site-title a:visited {
-	color: #33bbdd;
+	color: #222;
 	-webkit-transition: all 0.2s ease;
 	transition: all 0.2s ease;
 }
 
 .site-title a:hover,
 .site-title a:active {
-	color: #222;
+	color: #33bbdd;
 }
 
 .site-branding .custom-logo {
@@ -1634,7 +1634,7 @@ textarea {
 }
 
 .infinite-scroll #infinite-handle span:hover {
-	background-color: #222;
+	background: #222;
 }
 
 /* Archives and Search Heading */
@@ -2244,10 +2244,13 @@ object {
 	}
 
 	.main-navigation-toggle:hover,
-	.main-navigation-toggle:focus,
 	.main-navigation-toggle:active {
 		background: #33bbdd;
 		cursor: pointer;
+	}
+
+	.main-navigation-toggle:focus {
+		background: rgba(255,255,255,0.15);
 	}
 
 	.main-navigation-toggle:after {
@@ -2495,7 +2498,8 @@ object {
 		margin-right: 0;
 	}
 
-	.widget-magazine-posts-grid .magazine-posts-grid-row .type-post,
+	.widget-magazine-posts .medium-post,
+	.widget-magazine-posts-grid .magazine-posts-grid-row .large-post,
 	.widget-magazine-posts-columns .magazine-posts-column-left {
 		float: none;
 		padding: 0;
@@ -2604,6 +2608,11 @@ object {
 		font-size: 0.75rem;
 	}
 
+	.widget-magazine-posts .medium-post .entry-meta .meta-comments,
+	.widget-magazine-posts .small-post .entry-meta .meta-comments {
+		display: none;
+	}
+
 	.featured-posts .grid-post:nth-child(1) .type-post .entry-title {
 		font-size: 20px;
 		font-size: 1.25rem;
@@ -2656,7 +2665,7 @@ object {
 --------------------------------------------------------------*/
 .boxed-layout .site {
 	margin: 2em auto;
-	max-width: 1280px;
+	max-width: 1260px;
 	width: 100%;
 	background: #fff;
 	box-shadow: 0 0 5px #ddd;
@@ -2669,6 +2678,10 @@ object {
 
 .boxed-layout .main-navigation-menu {
 	border-left: none;
+}
+
+.boxed-layout .site-footer {
+	padding: 0 1.5em;
 }
 
 @media only screen and (max-width: 84em) {

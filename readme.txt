@@ -26,6 +26,11 @@ For more information about WorldStar please go to https://themezee.com/themes/wo
 
 == Changelog ==
 
+= 1.0.4 =
+* improved styling of post categories
+* fixed footer styling
+* simplified Magazine Post Widgets
+
 = 1.0.3 =
 * removed image size for Widget Bundle plugin
 * improved missing widgets message in sidebar.php

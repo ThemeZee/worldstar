@@ -76,7 +76,7 @@ add_filter( 'excerpt_length', 'worldstar_excerpt_length' );
  * @return int
  */
 function worldstar_magazine_posts_excerpt_length( $length ) {
-	return 15;
+	return 20;
 }
 
 /**

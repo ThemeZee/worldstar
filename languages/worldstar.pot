@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WorldStar\n"
 "Report-Msgid-Bugs-To: https://themezee.com/\n"
-"POT-Creation-Date: 2016-09-16 10:58+0100\n"
-"PO-Revision-Date: 2016-09-16 10:59+0100\n"
+"POT-Creation-Date: 2016-10-13 12:55+0100\n"
+"PO-Revision-Date: 2016-10-13 12:56+0100\n"
 "Last-Translator: \n"
 "Language-Team: ThemeZee <support@themezee.com>\n"
 "Language: en_US\n"
@@ -124,8 +124,8 @@ msgid ""
 "Please upgrade and try again."
 msgstr ""
 
-#: inc/template-tags.php:105 inc/template-tags.php:315
-#: template-parts/content.php:28
+#: inc/template-tags.php:105 inc/template-tags.php:354
+#: template-parts/content.php:32
 msgid "Read more"
 msgstr ""
 
@@ -134,27 +134,27 @@ msgstr ""
 msgid "View all posts by %s"
 msgstr ""
 
-#: inc/template-tags.php:334
+#: inc/template-tags.php:373
 msgctxt "post navigation"
 msgid "Previous Post:"
 msgstr ""
 
-#: inc/template-tags.php:335
+#: inc/template-tags.php:374
 msgctxt "post navigation"
 msgid "Next Post:"
 msgstr ""
 
-#: inc/template-tags.php:396
-msgctxt "pagination"
-msgid "Next Posts"
-msgstr ""
-
-#: inc/template-tags.php:397
+#: inc/template-tags.php:428
 msgctxt "pagination"
 msgid "Previous Posts"
 msgstr ""
 
-#: inc/template-tags.php:422
+#: inc/template-tags.php:429
+msgctxt "pagination"
+msgid "Next Posts"
+msgstr ""
+
+#: inc/template-tags.php:443
 #, php-format
 msgid "Powered by %1$s and %2$s."
 msgstr ""
@@ -303,9 +303,9 @@ msgid "Latest Posts"
 msgstr ""
 
 #: inc/customizer/functions/custom-controls.php:65
-#: inc/widgets/widget-magazine-posts-columns.php:428
-#: inc/widgets/widget-magazine-posts-columns.php:449
-#: inc/widgets/widget-magazine-posts-grid.php:460
+#: inc/widgets/widget-magazine-posts-columns.php:339
+#: inc/widgets/widget-magazine-posts-columns.php:360
+#: inc/widgets/widget-magazine-posts-grid.php:393
 msgid "All Categories"
 msgstr ""
 
@@ -408,55 +408,35 @@ msgid ""
 "ONLY in the Magazine Homepage widget area."
 msgstr ""
 
-#: inc/widgets/widget-magazine-posts-columns.php:360
-#: inc/widgets/widget-magazine-posts-grid.php:393
+#: inc/widgets/widget-magazine-posts-columns.php:275
+#: inc/widgets/widget-magazine-posts-grid.php:330
 #, php-format
 msgid "View all posts from category %s"
 msgstr ""
 
-#: inc/widgets/widget-magazine-posts-columns.php:419
+#: inc/widgets/widget-magazine-posts-columns.php:330
 msgid "Left Category Title:"
 msgstr ""
 
-#: inc/widgets/widget-magazine-posts-columns.php:425
+#: inc/widgets/widget-magazine-posts-columns.php:336
 msgid "Left Category:"
 msgstr ""
 
-#: inc/widgets/widget-magazine-posts-columns.php:440
+#: inc/widgets/widget-magazine-posts-columns.php:351
 msgid "Right Category Title:"
 msgstr ""
 
-#: inc/widgets/widget-magazine-posts-columns.php:446
+#: inc/widgets/widget-magazine-posts-columns.php:357
 msgid "Right Category:"
 msgstr ""
 
-#: inc/widgets/widget-magazine-posts-columns.php:461
-#: inc/widgets/widget-magazine-posts-grid.php:480
+#: inc/widgets/widget-magazine-posts-columns.php:372
+#: inc/widgets/widget-magazine-posts-grid.php:413
 msgid "Number of posts:"
 msgstr ""
 
-#: inc/widgets/widget-magazine-posts-columns.php:469
+#: inc/widgets/widget-magazine-posts-columns.php:380
 msgid "Highlight first post (big image + excerpt)"
-msgstr ""
-
-#: inc/widgets/widget-magazine-posts-columns.php:476
-#: inc/widgets/widget-magazine-posts-grid.php:495
-msgid "Display post date"
-msgstr ""
-
-#: inc/widgets/widget-magazine-posts-columns.php:483
-#: inc/widgets/widget-magazine-posts-grid.php:502
-msgid "Display post author"
-msgstr ""
-
-#: inc/widgets/widget-magazine-posts-columns.php:490
-#: inc/widgets/widget-magazine-posts-grid.php:509
-msgid "Display post comments"
-msgstr ""
-
-#: inc/widgets/widget-magazine-posts-columns.php:497
-#: inc/widgets/widget-magazine-posts-grid.php:516
-msgid "Display post categories"
 msgstr ""
 
 #: inc/widgets/widget-magazine-posts-grid.php:24
@@ -470,27 +450,27 @@ msgid ""
 "this widget ONLY in the Magazine Homepage widget area."
 msgstr ""
 
-#: inc/widgets/widget-magazine-posts-grid.php:451
+#: inc/widgets/widget-magazine-posts-grid.php:384
 msgid "Title:"
 msgstr ""
 
-#: inc/widgets/widget-magazine-posts-grid.php:457
+#: inc/widgets/widget-magazine-posts-grid.php:390
 msgid "Category:"
 msgstr ""
 
-#: inc/widgets/widget-magazine-posts-grid.php:472
+#: inc/widgets/widget-magazine-posts-grid.php:405
 msgid "Grid Layout:"
 msgstr ""
 
-#: inc/widgets/widget-magazine-posts-grid.php:474
+#: inc/widgets/widget-magazine-posts-grid.php:407
 msgid "Two Columns Grid"
 msgstr ""
 
-#: inc/widgets/widget-magazine-posts-grid.php:475
+#: inc/widgets/widget-magazine-posts-grid.php:408
 msgid "Three Columns Grid"
 msgstr ""
 
-#: inc/widgets/widget-magazine-posts-grid.php:488
+#: inc/widgets/widget-magazine-posts-grid.php:421
 msgid "Display post excerpt"
 msgstr ""
 
@@ -516,6 +496,6 @@ msgid ""
 "searching can help."
 msgstr ""
 
-#: template-parts/content-page.php:23 template-parts/content-single.php:29
+#: template-parts/content-page.php:23 template-parts/content-single.php:33
 msgid "Pages:"
 msgstr ""
