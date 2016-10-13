@@ -64,7 +64,7 @@ function worldstar_setup() {
 	// Set up the WordPress core custom header feature.
 	add_theme_support('custom-header', apply_filters( 'worldstar_custom_header_args', array(
 		'header-text' => false,
-		'width'	=> 1280,
+		'width'	=> 1260,
 		'height' => 420,
 		'flex-height' => true,
 	) ) );
@@ -90,7 +90,7 @@ add_action( 'after_setup_theme', 'worldstar_setup' );
  * @global int $content_width
  */
 function worldstar_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'worldstar_content_width', 810 );
+	$GLOBALS['content_width'] = apply_filters( 'worldstar_content_width', 840 );
 }
 add_action( 'after_setup_theme', 'worldstar_content_width', 0 );
 
@@ -197,7 +197,7 @@ function worldstar_google_fonts_url() {
 function worldstar_add_image_sizes() {
 
 	// Add Custom Header Image Size.
-	add_image_size( 'worldstar-header-image', 1280, 420, true );
+	add_image_size( 'worldstar-header-image', 1260, 420, true );
 
 	// Add different thumbnail sizes for magazine widgets.
 	add_image_size( 'worldstar-thumbnail-small', 120, 80, true );

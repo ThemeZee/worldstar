@@ -749,8 +749,7 @@ textarea {
 }
 
 .header-image img {
-	max-width: 1280px;
-	max-height: 420px;
+	max-width: 1260px;
 	width: 100%;
 	height: auto;
 	vertical-align: top;
