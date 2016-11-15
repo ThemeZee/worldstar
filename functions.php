@@ -14,71 +14,70 @@ if ( version_compare( $GLOBALS['wp_version'], '4.4-alpha', '<' ) ) {
 
 
 if ( ! function_exists( 'worldstar_setup' ) ) :
-/**
- * Sets up theme defaults and registers support for various WordPress features.
- *
- * Note that this function is hooked into the after_setup_theme hook, which
- * runs before the init hook. The init hook is too late for some features, such
- * as indicating support for post thumbnails.
- */
-function worldstar_setup() {
+	/**
+	 * Sets up theme defaults and registers support for various WordPress features.
+	 *
+	 * Note that this function is hooked into the after_setup_theme hook, which
+	 * runs before the init hook. The init hook is too late for some features, such
+	 * as indicating support for post thumbnails.
+	 */
+	function worldstar_setup() {
 
-	// Make theme available for translation. Translations can be filed in the /languages/ directory.
-	load_theme_textdomain( 'worldstar', get_template_directory() . '/languages' );
+		// Make theme available for translation. Translations can be filed in the /languages/ directory.
+		load_theme_textdomain( 'worldstar', get_template_directory() . '/languages' );
 
-	// Add default posts and comments RSS feed links to head.
-	add_theme_support( 'automatic-feed-links' );
+		// Add default posts and comments RSS feed links to head.
+		add_theme_support( 'automatic-feed-links' );
 
-	// Let WordPress manage the document title.
-	add_theme_support( 'title-tag' );
+		// Let WordPress manage the document title.
+		add_theme_support( 'title-tag' );
 
-	// Enable support for Post Thumbnails on posts and pages.
-	add_theme_support( 'post-thumbnails' );
+		// Enable support for Post Thumbnails on posts and pages.
+		add_theme_support( 'post-thumbnails' );
 
-	// Set detfault Post Thumbnail size.
-	set_post_thumbnail_size( 840, 480, true );
+		// Set detfault Post Thumbnail size.
+		set_post_thumbnail_size( 840, 480, true );
 
-	// Register Navigation Menu.
-	register_nav_menu( 'primary', esc_html__( 'Main Navigation', 'worldstar' ) );
+		// Register Navigation Menu.
+		register_nav_menu( 'primary', esc_html__( 'Main Navigation', 'worldstar' ) );
 
-	// Switch default core markup for search form, comment form, and comments to output valid HTML5.
-	add_theme_support( 'html5', array(
-		'search-form',
-		'comment-form',
-		'comment-list',
-		'gallery',
-		'caption',
-	) );
+		// Switch default core markup for search form, comment form, and comments to output valid HTML5.
+		add_theme_support( 'html5', array(
+			'comment-form',
+			'comment-list',
+			'gallery',
+			'caption',
+		) );
 
-	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'worldstar_custom_background_args', array( 'default-color' => 'efefef' ) ) );
+		// Set up the WordPress core custom background feature.
+		add_theme_support( 'custom-background', apply_filters( 'worldstar_custom_background_args', array( 'default-color' => 'efefef' ) ) );
 
-	// Set up the WordPress core custom logo feature.
-	add_theme_support( 'custom-logo', apply_filters( 'worldstar_custom_logo_args', array(
-		'height' => 40,
-		'width' => 250,
-		'flex-height' => true,
-		'flex-width' => true,
-	) ) );
+		// Set up the WordPress core custom logo feature.
+		add_theme_support( 'custom-logo', apply_filters( 'worldstar_custom_logo_args', array(
+			'height' => 40,
+			'width' => 250,
+			'flex-height' => true,
+			'flex-width' => true,
+		) ) );
 
-	// Set up the WordPress core custom header feature.
-	add_theme_support('custom-header', apply_filters( 'worldstar_custom_header_args', array(
-		'header-text' => false,
-		'width'	=> 1260,
-		'height' => 420,
-		'flex-height' => true,
-	) ) );
+		// Set up the WordPress core custom header feature.
+		add_theme_support('custom-header', apply_filters( 'worldstar_custom_header_args', array(
+			'header-text' => false,
+			'width'	=> 1260,
+			'height' => 420,
+			'flex-height' => true,
+		) ) );
 
-	// Add Theme Support for wooCommerce.
-	add_theme_support( 'woocommerce' );
+		// Add Theme Support for wooCommerce.
+		add_theme_support( 'woocommerce' );
 
-	// Add extra theme styling to the visual editor.
-	add_editor_style( array( 'css/editor-style.css', worldstar_google_fonts_url() ) );
+		// Add extra theme styling to the visual editor.
+		add_editor_style( array( 'css/editor-style.css', worldstar_google_fonts_url() ) );
 
-	// Add Theme Support for Selective Refresh in Customizer.
-	add_theme_support( 'customize-selective-refresh-widgets' );
+		// Add Theme Support for Selective Refresh in Customizer.
+		add_theme_support( 'customize-selective-refresh-widgets' );
 
-}
+	}
 endif;
 add_action( 'after_setup_theme', 'worldstar_setup' );
 
@@ -110,7 +109,7 @@ function worldstar_widgets_init() {
 		'after_widget' => '</aside>',
 		'before_title' => '<div class="widget-header"><h3 class="widget-title">',
 		'after_title' => '</h3></div>',
-	));
+	) );
 
 	register_sidebar( array(
 		'name' => esc_html__( 'Header', 'worldstar' ),
@@ -120,7 +119,7 @@ function worldstar_widgets_init() {
 		'after_widget' => '</aside>',
 		'before_title' => '<h4 class="header-widget-title">',
 		'after_title' => '</h4>',
-	));
+	) );
 
 	register_sidebar( array(
 		'name' => esc_html__( 'Magazine Homepage', 'worldstar' ),
@@ -130,7 +129,7 @@ function worldstar_widgets_init() {
 		'after_widget' => '</div>',
 		'before_title' => '<div class="widget-header"><h3 class="widget-title">',
 		'after_title' => '</h3></div>',
-	));
+	) );
 
 }
 add_action( 'widgets_init', 'worldstar_widgets_init' );

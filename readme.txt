@@ -26,6 +26,11 @@ For more information about WorldStar please go to https://themezee.com/themes/wo
 
 == Changelog ==
 
+= 1.0.5 =
+* added proper escaping functions for widget settings
+* improved escaping of search template and search form
+* updated screenshot
+
 = 1.0.4 =
 * improved styling of post categories
 * fixed footer styling
@@ -103,26 +108,30 @@ Image 3: https://pixabay.com/en/sports-skate-sport-teens-together-1260307/
 License: Distributed under the terms of the CC0 License (https://creativecommons.org/publicdomain/zero/1.0/)
 Copyright: 2014 FlorVegana (https://pixabay.com/en/users/FlorVegana-2142832/)
 
-Image 4: https://pixabay.com/en/ice-hockey-goal-sport-team-helmet-659838/
+Image 4: https://pixabay.com/en/vitamin-b-effervescent-tablet-871135/
+License: Distributed under the terms of the CC0 License (https://creativecommons.org/publicdomain/zero/1.0/)
+Copyright: 2015 Steve Buissinne (https://pixabay.com/en/users/stevepb-282134/)
+
+Image 5: https://pixabay.com/en/ice-hockey-goal-sport-team-helmet-659838/
 License: Distributed under the terms of the CC0 License (https://creativecommons.org/publicdomain/zero/1.0/)
 Copyright: 2008 skeeze (https://pixabay.com/en/users/skeeze-272447/)
 
-Image 5: https://pixabay.com/en/american-football-sport-competition-63109/
+Image 6: https://pixabay.com/en/american-football-sport-competition-63109/
 License: Distributed under the terms of the CC0 License (https://creativecommons.org/publicdomain/zero/1.0/)
 Copyright: 2014 WikiImages(https://pixabay.com/en/users/WikiImages-1897/)
 
-Image 6: https://pixabay.com/en/football-american-college-game-888015/
+Image 7: https://pixabay.com/en/football-american-college-game-888015/
 License: Distributed under the terms of the CC0 License (https://creativecommons.org/publicdomain/zero/1.0/)
 Copyright: 2013 skeeze (https://pixabay.com/en/users/skeeze-272447/)
 
-Image 7: https://pixabay.com/en/ice-hockey-goalie-goal-sport-team-583676/
+Image 8: https://pixabay.com/en/ice-hockey-goalie-goal-sport-team-583676/
 License: Distributed under the terms of the CC0 License (https://creativecommons.org/publicdomain/zero/1.0/)
 Copyright: 2010 skeeze (https://pixabay.com/en/users/skeeze-272447/)
 
-Image 8: https://pixabay.com/en/football-american-game-runner-ball-1160946/
+Image 9: https://pixabay.com/en/football-american-game-runner-ball-1160946/
 License: Distributed under the terms of the CC0 License (https://creativecommons.org/publicdomain/zero/1.0/)
 Copyright: 2010 skeeze (https://pixabay.com/en/users/skeeze-272447/)
 
-Image 9: https://pixabay.com/en/ice-hockey-goalie-goal-sport-team-557578/
+Image 10: https://pixabay.com/en/ice-hockey-goalie-goal-sport-team-557578/
 License: Distributed under the terms of the CC0 License (https://creativecommons.org/publicdomain/zero/1.0/)
 Copyright: 2010 skeeze (https://pixabay.com/en/users/skeeze-272447/)
