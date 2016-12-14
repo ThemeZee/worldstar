@@ -32,6 +32,7 @@ function worldstar_default_options() {
 
 	$default_options = array(
 		'site_title'						=> true,
+		'site_description'					=> false,
 		'theme_width' 						=> 'wide-layout',
 		'theme_layout' 						=> 'right-sidebar',
 		'blog_title'						=> esc_html__( 'Latest Posts', 'worldstar' ),

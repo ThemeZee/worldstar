@@ -35,6 +35,7 @@
 
 					<?php worldstar_site_logo(); ?>
 					<?php worldstar_site_title(); ?>
+					<?php worldstar_site_description(); ?>
 
 				</div><!-- .site-branding -->
 
