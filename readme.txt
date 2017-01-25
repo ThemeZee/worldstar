@@ -26,6 +26,9 @@ For more information about WorldStar please go to https://themezee.com/themes/wo
 
 == Changelog ==
 
+= 1.0.7 =
+* added centered layout in case no widgets were added to the sidebar
+
 = 1.0.6 =
 * added new theme setting to display tagline
 * added editor shortcuts and instant live preview for site title and tagline in Customizer

@@ -33,8 +33,10 @@ function worldstar_body_classes( $classes ) {
 		$classes[] = 'boxed-layout';
 	}
 
-	// Switch sidebar layout to left.
-	if ( 'left-sidebar' == $theme_options['theme_layout'] ) {
+	// Check if sidebar widget area is empty or switch sidebar layout to left.
+	if ( ! is_active_sidebar( 'sidebar' ) ) {
+		$classes[] = 'no-sidebar';
+	} elseif ( 'left-sidebar' == $theme_options['layout'] ) {
 		$classes[] = 'sidebar-left';
 	}
 
