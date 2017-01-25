@@ -28,6 +28,8 @@ For more information about WorldStar please go to https://themezee.com/themes/wo
 
 = 1.0.7 =
 * added centered layout in case no widgets were added to the sidebar
+* added fullwidth page template for blog posts
+* added centered page template for posts and static pages
 
 = 1.0.6 =
 * added new theme setting to display tagline
