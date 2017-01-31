@@ -27,6 +27,7 @@ For more information about WorldStar please go to https://themezee.com/themes/wo
 == Changelog ==
 
 = 1.0.7 =
+* added Magazine Homepage widgets to blog index
 * added centered layout in case no widgets were added to the sidebar
 * added fullwidth page template for blog posts
 * added centered page template for posts and static pages
