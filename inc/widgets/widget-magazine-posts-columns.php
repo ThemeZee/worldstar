@@ -1,8 +1,8 @@
 <?php
 /**
- * Magazine Posts Columns Widget
+ * Magazine Columns Widget
  *
- * Display the latest posts from two categories in a 2-column layout.
+ * Display the latest posts from two categories in a two column layout.
  * Intented to be used in the Magazine Homepage widget area to built a magazine layouted page.
  *
  * @package WorldStar
@@ -21,21 +21,14 @@ class WorldStar_Magazine_Posts_Columns_Widget extends WP_Widget {
 		// Setup Widget.
 		parent::__construct(
 			'worldstar-magazine-posts-columns', // ID.
-			sprintf( esc_html__( 'Magazine Posts: 2 Columns (%s)', 'worldstar' ), wp_get_theme()->Name ), // Name.
+			esc_html__( 'Magazine (Columns)', 'worldstar' ), // Name.
 			array(
-				'classname' => 'worldstar_magazine_posts_columns',
+				'classname' => 'worldstar-magazine-columns-widget',
 				'description' => esc_html__( 'Displays your posts from two selected categories. Please use this widget ONLY in the Magazine Homepage widget area.', 'worldstar' ),
 				'customize_selective_refresh' => true,
 			) // Args.
 		);
-
-		// Delete Widget Cache on certain actions.
-		add_action( 'save_post', array( $this, 'delete_widget_cache' ) );
-		add_action( 'deleted_post', array( $this, 'delete_widget_cache' ) );
-		add_action( 'switch_theme', array( $this, 'delete_widget_cache' ) );
-
 	}
-
 
 	/**
 	 * Set default settings of the widget
@@ -52,9 +45,7 @@ class WorldStar_Magazine_Posts_Columns_Widget extends WP_Widget {
 		);
 
 		return $defaults;
-
 	}
-
 
 	/**
 	 * Main Function to display the widget
@@ -65,22 +56,6 @@ class WorldStar_Magazine_Posts_Columns_Widget extends WP_Widget {
 	 * @param array $instance / Settings for this widget instance.
 	 */
 	function widget( $args, $instance ) {
-
-		$cache = array();
-
-		// Get Widget Object Cache.
-		if ( ! $this->is_preview() ) {
-			$cache = wp_cache_get( 'widget_worldstar_magazine_posts_columns', 'widget' );
-		}
-		if ( ! is_array( $cache ) ) {
-			$cache = array();
-		}
-
-		// Display Widget from Cache if exists.
-		if ( isset( $cache[ $this->id ] ) ) {
-			echo $cache[ $this->id ];
-			return;
-		}
 
 		// Start Output Buffering.
 		ob_start();
@@ -105,16 +80,9 @@ class WorldStar_Magazine_Posts_Columns_Widget extends WP_Widget {
 		<?php
 		echo $args['after_widget'];
 
-		// Set Cache.
-		if ( ! $this->is_preview() ) {
-			$cache[ $this->id ] = ob_get_flush();
-			wp_cache_set( 'widget_worldstar_magazine_posts_columns', $cache, 'widget' );
-		} else {
-			ob_end_flush();
-		}
-
-	} // widget()
-
+		// End Output Buffering.
+		ob_end_flush();
+	}
 
 	/**
 	 * Renders the Widget Content
@@ -128,7 +96,11 @@ class WorldStar_Magazine_Posts_Columns_Widget extends WP_Widget {
 	 * @param array $settings / Settings for this widget instance.
 	 */
 	function render( $args, $settings ) {
-	?>
+
+		// Get cached post ids.
+		$post_ids_category_one = worldstar_get_magazine_post_ids( $this->id . '-left-category', $settings['category_one'], $settings['number'] );
+		$post_ids_category_two = worldstar_get_magazine_post_ids( $this->id . '-right-category', $settings['category_two'], $settings['number'] );
+		?>
 
 		<div class="magazine-posts-column-left magazine-posts-columns clearfix">
 
@@ -138,7 +110,7 @@ class WorldStar_Magazine_Posts_Columns_Widget extends WP_Widget {
 					$this->category_title( $args, $settings, $settings['category_one'], $settings['category_one_title'] ); ?>
 
 				<div class="magazine-posts-columns-post-list clearfix">
-					<?php $this->magazine_posts( $settings, $settings['category_one'] ); ?>
+					<?php $this->magazine_posts( $settings, $post_ids_category_one ); ?>
 				</div>
 
 			</div>
@@ -153,16 +125,15 @@ class WorldStar_Magazine_Posts_Columns_Widget extends WP_Widget {
 					$this->category_title( $args, $settings, $settings['category_two'], $settings['category_two_title'] ); ?>
 
 				<div class="magazine-posts-columns-post-list clearfix">
-					<?php $this->magazine_posts( $settings, $settings['category_two'] ); ?>
+					<?php $this->magazine_posts( $settings, $post_ids_category_two ); ?>
 				</div>
 
 			</div>
 
 		</div>
 
-	<?php
-	} // render()
-
+		<?php
+	}
 
 	/**
 	 * Display Magazine Posts Loop
@@ -170,15 +141,14 @@ class WorldStar_Magazine_Posts_Columns_Widget extends WP_Widget {
 	 * @used-by this->render()
 	 *
 	 * @param array $settings / Settings for this widget instance.
-	 * @param int   $category_id / ID of the selected category.
+	 * @param array $post_ids / Array with post ids.
 	 */
-	function magazine_posts( $settings, $category_id ) {
+	function magazine_posts( $settings, $post_ids ) {
 
-		// Get latest posts from database.
+		// Fetch posts from database.
 		$query_arguments = array(
-			'posts_per_page' => (int) $settings['number'],
-			'ignore_sticky_posts' => true,
-			'cat' => (int) $category_id,
+			'post__in'            => $post_ids,
+			'no_found_rows'       => true,
 		);
 		$posts_query = new WP_Query( $query_arguments );
 		$i = 0;
@@ -194,52 +164,15 @@ class WorldStar_Magazine_Posts_Columns_Widget extends WP_Widget {
 
 				$posts_query->the_post();
 
-				if ( true === $settings['highlight_post'] and ( isset( $i ) and 0 === $i  ) ) : ?>
+				if ( true === $settings['highlight_post'] and 0 === $i ) :
 
-					<article id="post-<?php the_ID(); ?>" <?php post_class( 'large-post clearfix' ); ?>>
+					get_template_part( 'template-parts/widgets/magazine-content', 'large-post' );
 
-						<div class="post-image">
+				else :
 
-							<?php worldstar_post_image(); ?>
+					get_template_part( 'template-parts/widgets/magazine-content', 'small-post' );
 
-							<?php worldstar_entry_categories(); ?>
-
-						</div>
-
-						<header class="entry-header">
-
-							<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-
-							<?php worldstar_entry_meta(); ?>
-
-						</header><!-- .entry-header -->
-
-						<div class="entry-content">
-							<?php the_excerpt(); ?>
-							<?php worldstar_more_link(); ?>
-						</div><!-- .entry-content -->
-
-					</article>
-
-				<?php else : ?>
-
-					<article id="post-<?php the_ID(); ?>" <?php post_class( 'small-post clearfix' ); ?>>
-
-						<?php worldstar_post_image( 'worldstar-thumbnail-small' ); ?>
-
-						<div class="small-post-content">
-
-							<?php the_title( sprintf( '<h3 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' ); ?>
-
-							<?php worldstar_magazine_widgets_entry_meta(); ?>
-
-						</div>
-
-					</article>
-
-				<?php
-				endif;
-				$i++;
+				endif; $i++;
 
 			endwhile;
 
@@ -250,8 +183,7 @@ class WorldStar_Magazine_Posts_Columns_Widget extends WP_Widget {
 
 		// Reset Postdata.
 		wp_reset_postdata();
-
-	} // magazine_posts()
+	}
 
 	/**
 	 * Displays Category Widget Title
@@ -288,9 +220,7 @@ class WorldStar_Magazine_Posts_Columns_Widget extends WP_Widget {
 			endif;
 
 		endif;
-
-	} // category_title()
-
+	}
 
 	/**
 	 * Update Widget Settings
@@ -309,11 +239,10 @@ class WorldStar_Magazine_Posts_Columns_Widget extends WP_Widget {
 		$instance['number'] = (int) $new_instance['number'];
 		$instance['highlight_post'] = ! empty( $new_instance['highlight_post'] );
 
-		$this->delete_widget_cache();
+		worldstar_flush_magazine_post_ids();
 
 		return $instance;
 	}
-
 
 	/**
 	 * Displays Widget Settings Form in the Backend
@@ -347,7 +276,7 @@ class WorldStar_Magazine_Posts_Columns_Widget extends WP_Widget {
 			?>
 		</p>
 
-		<p>
+				<p>
 			<label for="<?php echo $this->get_field_id( 'category_two_title' ); ?>"><?php esc_html_e( 'Right Category Title:', 'worldstar' ); ?>
 				<input class="widefat" id="<?php echo $this->get_field_id( 'category_two_title' ); ?>" name="<?php echo $this->get_field_name( 'category_two_title' ); ?>" type="text" value="<?php echo esc_attr( $settings['category_two_title'] ); ?>" />
 			</label>
@@ -381,17 +310,7 @@ class WorldStar_Magazine_Posts_Columns_Widget extends WP_Widget {
 			</label>
 		</p>
 
-<?php
-	} // form()
-
-
-	/**
-	 * Delete Widget Cache
-	 */
-	public function delete_widget_cache() {
-
-		wp_cache_delete( 'widget_worldstar_magazine_posts_columns', 'widget' );
-
+		<?php
 	}
 }
 

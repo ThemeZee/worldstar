@@ -206,6 +206,16 @@ if ( ! function_exists( 'worldstar_entry_meta' ) ) :
 endif;
 
 
+if ( ! function_exists( 'worldstar_magazine_entry_date' ) ) :
+	/**
+	 * Displays the date of magazine posts
+	 */
+	function worldstar_magazine_entry_date() {
+		echo '<div class="entry-meta">' . worldstar_meta_date() . '</div>';
+	}
+endif;
+
+
 if ( ! function_exists( 'worldstar_meta_date' ) ) :
 	/**
 	 * Displays the post date

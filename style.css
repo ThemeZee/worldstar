@@ -4,7 +4,7 @@ Theme URI: https://themezee.com/themes/worldstar/
 Author: ThemeZee
 Author URI: https://themezee.com
 Description: WorldStar is a clean and modern WordPress theme with a stunning featured content area to highlight your posts. The theme can be customized easily and supports a Magazine Homepage template, header widgets, several layout settings and custom logos. WorldStar is perfectly suited for simple blogs, online magazines or news related websites.
-Version: 1.0.7
+Version: 1.0.8
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: worldstar
@@ -1245,15 +1245,20 @@ textarea {
 }
 
 /* Magazine Posts Grid Widget */
-.widget-magazine-posts-grid .magazine-posts-grid-row {
+.widget-magazine-posts .magazine-grid {
 	margin-right: -2em;
 }
 
-.widget-magazine-posts-grid .magazine-posts-grid-row .large-post {
+.widget-magazine-posts .magazine-grid .large-post {
 	float: left;
 	box-sizing: border-box;
 	padding-right: 2em;
 	width: 50%;
+}
+
+.widget-magazine-posts .magazine-grid .post-column:nth-child(3n) .large-post,
+.widget-magazine-posts .magazine-grid .post-column:nth-child(4n) .medium-post {
+    clear: left;
 }
 
 /* Magazine Posts Columns Widget */
@@ -2174,12 +2179,12 @@ object {
 	}
 
 	.widget-magazine-posts .medium-post,
-	.widget-magazine-posts-grid .magazine-posts-grid-row .large-post,
+	.widget-magazine-posts .magazine-grid .large-post,
 	.post-layout-columns .post-wrapper .post-column {
 		padding-right: 1.5em;
 	}
 
-	.widget-magazine-posts-grid .magazine-posts-grid-row,
+	.widget-magazine-posts .magazine-grid,
 	.post-layout-columns .post-wrapper {
 		margin-right: -1.5em;
 	}
@@ -2511,12 +2516,12 @@ object {
 	}
 
 	/* Magazine Post Widgets */
-	.widget-magazine-posts-grid .magazine-posts-grid-row {
+	.widget-magazine-posts .magazine-grid {
 		margin-right: 0;
 	}
 
 	.widget-magazine-posts .medium-post,
-	.widget-magazine-posts-grid .magazine-posts-grid-row .large-post,
+	.widget-magazine-posts .magazine-grid .large-post,
 	.widget-magazine-posts-columns .magazine-posts-column-left {
 		float: none;
 		padding: 0;
