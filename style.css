@@ -1466,6 +1466,23 @@ textarea {
 	background: #222;
 }
 
+/* Hide post meta if they are deactivated in settings */
+body.date-hidden .entry-meta .meta-date,
+body.author-hidden .entry-meta .meta-author,
+body.comments-hidden .entry-meta .meta-comments {
+	 position: absolute;
+	 clip: rect(1px, 1px, 1px, 1px);
+}
+
+body.date-hidden.author-hidden.comments-hidden .content-area .entry-meta {
+	display: none;
+}
+
+body.date-hidden .widget-magazine-posts .medium-post .entry-meta,
+body.date-hidden .widget-magazine-posts .small-post .entry-meta {
+	display: none;
+}
+
 /* Entry Tags & Tagcloud Widget */
 .entry-tags {
 	clear: both;
