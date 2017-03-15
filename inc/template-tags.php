@@ -179,16 +179,6 @@ if ( ! function_exists( 'worldstar_entry_meta' ) ) :
 endif;
 
 
-if ( ! function_exists( 'worldstar_magazine_entry_date' ) ) :
-	/**
-	 * Displays the date of magazine posts
-	 */
-	function worldstar_magazine_entry_date() {
-		echo '<div class="entry-meta">' . worldstar_meta_date() . '</div>';
-	}
-endif;
-
-
 if ( ! function_exists( 'worldstar_meta_date' ) ) :
 	/**
 	 * Displays the post date
@@ -286,21 +276,6 @@ if ( ! function_exists( 'worldstar_entry_tags' ) ) :
 		<?php
 		endif;
 
-	}
-endif;
-
-
-if ( ! function_exists( 'worldstar_magazine_widgets_entry_meta' ) ) :
-	/**
-	 * Displays the date, author and comments of a post
-	 */
-	function worldstar_magazine_widgets_entry_meta() {
-
-		$postmeta = worldstar_meta_date();
-		$postmeta .= worldstar_meta_author();
-		$postmeta .= worldstar_meta_comments();
-
-		echo '<div class="entry-meta">' . $postmeta . '</div>';
 	}
 endif;
 
