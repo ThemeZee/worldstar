@@ -26,6 +26,12 @@ For more information about WorldStar please go to https://themezee.com/themes/wo
 
 == Changelog ==
 
+= 1.2 =
+* added template files for Magazine widgets to improve child theme compatibility
+* added transient caching for Magazine widgets to increase performance
+* added pluggable template functions for Magazine widgets
+* improved implementation of post meta settings for instant live preview in Customizer
+
 = 1.0.8 =
 * added template files for Magazine widgets to improve child theme compatibility
 * improved transient caching of Magazine widgets for increased performance
