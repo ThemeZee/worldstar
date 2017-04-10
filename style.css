@@ -4,7 +4,7 @@ Theme URI: https://themezee.com/themes/worldstar/
 Author: ThemeZee
 Author URI: https://themezee.com
 Description: WorldStar is a clean and modern WordPress theme with a stunning featured content area to highlight your posts. The theme can be customized easily and supports a Magazine Homepage template, header widgets, several layout settings and custom logos. WorldStar is perfectly suited for simple blogs, online magazines or news related websites.
-Version: 1.2.2
+Version: 1.2.3
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: worldstar
@@ -1577,15 +1577,6 @@ body.date-hidden .widget-magazine-posts .small-post .entry-meta {
 	font-size: 0.8125rem;
 }
 
-/* Fix Render Bug for Safari */
-@media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0) {
-	@media {
-		.post-layout-columns .post-wrapper .post-column {
-			margin-right: -1px;
-		}
-	}
-}
-
 /* Post Navigation */
 .post-navigation {
 	margin: 1em 0 0;
@@ -1838,15 +1829,6 @@ body.date-hidden .widget-magazine-posts .small-post .entry-meta {
 	padding: 0.15em 0.45em;
 	font-size: 13px;
 	font-size: 0.8125rem;
-}
-
-/* Fix Render Bug for Safari */
-@media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0) {
-	@media {
-		.featured-posts .grid-post {
-			margin-right: -1px;
-		}
-	}
 }
 
 /*--------------------------------------------------------------
@@ -2772,5 +2754,28 @@ object {
 	.main-navigation-menu {
 		display: block !important;
 	}
+}
 
+/*--------------------------------------------------------------
+# 20.0 - CSS Hacks for Safari
+--------------------------------------------------------------*/
+
+/* Fix Flexbox issues for Safari 6.1-10.0 */
+@media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0) {
+	@media {
+		.post-layout-columns .post-wrapper .post-column,
+		.featured-posts .grid-post {
+			margin-right: -1px;
+		}
+	}
+}
+
+/* Fix Flexbox issues for Safari 10.1+ */
+@media not all and (min-resolution:.001dpcm) {
+	@media {
+		.post-layout-columns .post-wrapper .post-column,
+		.featured-posts .grid-post {
+			margin-right: -1px;
+		}
+	}
 }
