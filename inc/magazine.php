@@ -116,4 +116,5 @@ function worldstar_flush_magazine_post_ids() {
 }
 add_action( 'save_post', 'worldstar_flush_magazine_post_ids' );
 add_action( 'deleted_post', 'worldstar_flush_magazine_post_ids' );
+add_action( 'customize_save_after', 'worldstar_flush_magazine_post_ids' );
 add_action( 'switch_theme', 'worldstar_flush_magazine_post_ids' );
