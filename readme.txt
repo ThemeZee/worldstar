@@ -26,6 +26,11 @@ For more information about WorldStar please go to https://themezee.com/themes/wo
 
 == Changelog ==
 
+= 1.2.4 =
+* fixed alignment of site logo and site title when used together
+* fixed small live preview issue in Customizer for site title and tagline options
+* use localized theme name and description on theme info page
+
 = 1.2.3 =
 * fixed flexbox layout issues appearing with the latest Safari 10.1 version
 * fixed horizontal scrolling issue on mobile devices when elements are hidden in theme options

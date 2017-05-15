@@ -83,7 +83,7 @@ function worldstar_get_magazine_post_ids( $cache_id, $category, $number_of_posts
 	$cache_id = sanitize_key( $cache_id );
 	$post_ids = get_transient( 'worldstar_magazine_post_ids' );
 
-	if ( ! isset( $post_ids[ $cache_id ] ) ) {
+	if ( ! isset( $post_ids[ $cache_id ] ) || is_customize_preview() ) {
 
 		// Get Posts from Database.
 		$query_arguments = array(
