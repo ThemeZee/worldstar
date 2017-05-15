@@ -14,10 +14,18 @@ function worldstar_theme_addons_setup() {
 	add_theme_support( 'worldstar-pro' );
 
 	// Add theme support for ThemeZee Plugins.
-	add_theme_support( 'themezee-widget-bundle' );
 	add_theme_support( 'themezee-breadcrumbs' );
-	add_theme_support( 'themezee-related-posts' );
 	add_theme_support( 'themezee-mega-menu', array( 'primary', 'secondary' ) );
+
+	// Add theme support for Widget Bundle.
+	add_theme_support( 'themezee-widget-bundle', array(
+		'thumbnail_size' => array( 80, 80 ),
+	) );
+
+	// Add theme support for Related Posts.
+	add_theme_support( 'themezee-related-posts', array(
+		'thumbnail_size' => array( 420, 240 ),
+	) );
 
 	// Add theme support for Infinite Scroll.
 	add_theme_support( 'infinite-scroll', array(
@@ -60,18 +68,6 @@ function worldstar_theme_addons_scripts() {
 
 }
 add_action( 'wp_enqueue_scripts', 'worldstar_theme_addons_scripts' );
-
-
-/**
- * Add custom image sizes for theme addons
- */
-function worldstar_theme_addons_image_sizes() {
-
-	// Add Related Posts thumbnail.
-	add_image_size( 'themezee-related-posts', 420, 240, true );
-
-}
-add_action( 'after_setup_theme', 'worldstar_theme_addons_image_sizes' );
 
 
 /**
