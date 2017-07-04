@@ -24,7 +24,7 @@ class WorldStar_Magazine_Posts_Grid_Widget extends WP_Widget {
 			esc_html__( 'Magazine (Grid)', 'worldstar' ), // Name.
 			array(
 				'classname' => 'worldstar-magazine-grid-widget',
-				'description' => esc_html__( 'Displays your posts from a selected category in a grid layout. Please use this widget ONLY in the Magazine Homepage widget area.', 'worldstar' ),
+				'description' => esc_html__( 'Displays your posts from a selected category in a grid layout.', 'worldstar' ),
 				'customize_selective_refresh' => true,
 			) // Args.
 		);
@@ -36,10 +36,10 @@ class WorldStar_Magazine_Posts_Grid_Widget extends WP_Widget {
 	private function default_settings() {
 
 		$defaults = array(
-			'title'				=> '',
-			'category'			=> 0,
-			'layout'			=> 'three-columns',
-			'number'			=> 6,
+			'title'    => esc_html__( 'Magazine (Grid)', 'worldstar' ),
+			'category' => 0,
+			'layout'   => 'three-columns',
+			'number'   => 6,
 		);
 
 		return $defaults;

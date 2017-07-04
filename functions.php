@@ -124,7 +124,7 @@ function worldstar_widgets_init() {
 	register_sidebar( array(
 		'name' => esc_html__( 'Magazine Homepage', 'worldstar' ),
 		'id' => 'magazine-homepage',
-		'description' => esc_html__( 'Appears on Magazine Homepage template only. You can use the Magazine Posts widgets here.', 'worldstar' ),
+		'description' => esc_html__( 'Appears on blog index and Magazine Homepage template. You can use the Magazine widgets here.', 'worldstar' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<div class="widget-header"><h3 class="widget-title">',
