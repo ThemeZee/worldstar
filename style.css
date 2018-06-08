@@ -4,7 +4,7 @@ Theme URI: https://themezee.com/themes/worldstar/
 Author: ThemeZee
 Author URI: https://themezee.com
 Description: WorldStar is a clean and modern WordPress theme with a stunning featured content area to highlight your posts. The theme can be customized easily and supports a Magazine Homepage template, header widgets, several layout settings and custom logos. WorldStar is perfectly suited for simple blogs, online magazines or news related websites.
-Version: 1.4
+Version: 1.4.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: worldstar
@@ -1958,6 +1958,11 @@ body.date-hidden .widget-magazine-posts .small-post .entry-meta {
 
 .comment-form textarea {
 	margin-top: 0.4em;
+}
+
+.comment-form input[type="checkbox"] + label {
+	display: inline;
+	padding-left: 8px;
 }
 
 .comment-reply-title small a {
