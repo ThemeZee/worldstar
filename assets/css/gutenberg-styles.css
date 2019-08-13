@@ -262,3 +262,118 @@ body.block-editor-page .edit-post-visual-editor .editor-block-list__block {
 .has-black-background-color {
 	background-color: #222222;
 }
+
+/*--------------------------------------------------------------
+# 6.0 - Magazine Blocks
+--------------------------------------------------------------*/
+:root {
+	--tz-column-gap: 2em;
+}
+
+.edit-post-visual-editor .tz-magazine-block .tz-entry-image {
+    margin-bottom: 0.5em;
+}
+
+.edit-post-visual-editor .tz-magazine-block .tz-entry-title {
+	font-family: 'Oswald', Tahoma, Arial;
+	line-height: 1.4;
+    font-size: 22px;
+	font-size: 1.375rem;
+	font-weight: normal;
+}
+
+.edit-post-visual-editor .tz-magazine-block .tz-entry-title a:link,
+.edit-post-visual-editor .tz-magazine-block .tz-entry-title a:visited {
+	color: #222;
+	text-decoration: none;
+	transition: all 0.2s ease;
+}
+
+.edit-post-visual-editor .tz-magazine-block .tz-entry-title a:hover,
+.edit-post-visual-editor .tz-magazine-block .tz-entry-title a:active {
+	color: #33bbdd;
+}
+
+.edit-post-visual-editor .tz-magazine-block .tz-magazine-grid-columns-3 .tz-entry-title {
+    font-size: 15px;
+    font-size: 0.9375rem;
+}
+
+.edit-post-visual-editor .tz-magazine-block .tz-magazine-grid-columns-4 .tz-entry-title,
+.edit-post-visual-editor .tz-magazine-block .tz-magazine-thumbnail-list .tz-entry-title {
+    font-size: 14px;
+    font-size: 0.875rem;
+}
+
+.edit-post-visual-editor .tz-magazine-block .tz-entry-meta {
+	margin: 0.75em 0;
+	padding: 0.5em;
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+	color: #aaa;
+    font-size: 14px;
+    font-size: 0.875rem;
+	text-decoration: none;
+}
+
+.edit-post-visual-editor .tz-magazine-block .tz-magazine-grid-columns-3 .tz-entry-meta,
+.edit-post-visual-editor .tz-magazine-block .tz-magazine-grid-columns-4 .tz-entry-meta,
+.edit-post-visual-editor .tz-magazine-block .tz-magazine-thumbnail-list .tz-entry-meta {
+	margin: 0.25em 0;
+	padding: 0;
+	border: none;
+	font-size: 12px;
+    font-size: 0.75rem;
+}
+
+.edit-post-visual-editor .tz-magazine-block .tz-entry-meta a:link,
+.edit-post-visual-editor .tz-magazine-block .tz-entry-meta a:visited {
+	color: #aaa;
+}
+
+.edit-post-visual-editor .tz-magazine-block .tz-entry-meta a:hover,
+.edit-post-visual-editor .tz-magazine-block .tz-entry-meta a:active {
+	color: #666;
+}
+
+.edit-post-visual-editor .tz-magazine-block .tz-meta-field {
+	margin-right: 1em;
+}
+
+.edit-post-visual-editor .tz-magazine-block .tz-meta-field a {
+	text-decoration: none;
+}
+
+.edit-post-visual-editor .tz-magazine-block .tz-entry-content {
+	margin-top: 1em;
+	font-size: 16px;
+	font-size: 1rem;
+}
+
+.edit-post-visual-editor .tz-magazine-block .tz-read-more {
+	margin: 1em 0 0;
+}
+
+.edit-post-visual-editor .tz-magazine-block .tz-more-link {
+	display: inline-block;
+	margin: 0;
+	padding: 0.25em 0.75em;
+	border-radius: 0.3em;
+	background: #33bbdd;
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-family: 'Oswald', Tahoma, Arial;
+}
+
+.edit-post-visual-editor .tz-magazine-block .tz-more-link:link,
+.edit-post-visual-editor .tz-magazine-block .tz-more-link:visited  {
+	color: #fff;
+}
+
+.edit-post-visual-editor .tz-magazine-block .tz-more-link:hover,
+.edit-post-visual-editor .tz-magazine-block .tz-more-link:active {
+	background: #222;
+}
