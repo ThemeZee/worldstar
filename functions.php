@@ -232,6 +232,18 @@ add_action( 'after_setup_theme', 'worldstar_add_image_sizes' );
 
 
 /**
+ * Make custom image sizes available in Gutenberg.
+ */
+function worldstar_add_image_size_names( $sizes ) {
+	return array_merge( $sizes, array(
+		'post-thumbnail'            => esc_html__( 'WorldStar Single Post', 'worldstar' ),
+		'worldstar-thumbnail-small' => esc_html__( 'WorldStar Thumbnail', 'worldstar' ),
+	) );
+}
+add_filter( 'image_size_names_choose', 'worldstar_add_image_size_names' );
+
+
+/**
  * Include Files
  */
 
