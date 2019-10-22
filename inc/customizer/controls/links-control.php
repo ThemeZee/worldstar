@@ -43,13 +43,13 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 				</p>
 
 				<p>
-					<a href="<?php echo esc_url( __( 'https://wordpress.org/support/theme/worldstar/', 'worldstar' ) ); ?>" target="_blank">
-						<?php esc_html_e( 'Support Forum', 'worldstar' ); ?>
+					<a href="<?php echo esc_url( __( 'https://themezee.com/changelogs/?action=themezee-changelog&type=theme&slug=worldstar/', 'worldstar' ) ); ?>" target="_blank">
+						<?php esc_html_e( 'Theme Changelog', 'worldstar' ); ?>
 					</a>
 				</p>
 
 				<p>
-					<a href="<?php echo esc_url( __( 'https://wordpress.org/support/theme/worldstar/reviews/?filter=5', 'worldstar' ) ); ?>" target="_blank">
+					<a href="<?php echo esc_url( __( 'https://wordpress.org/support/theme/worldstar/reviews/', 'worldstar' ) ); ?>" target="_blank">
 						<?php esc_html_e( 'Rate this theme', 'worldstar' ); ?>
 					</a>
 				</p>
