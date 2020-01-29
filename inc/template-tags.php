@@ -222,6 +222,11 @@ if ( ! function_exists( 'worldstar_meta_comments' ) ) :
 	 */
 	function worldstar_meta_comments() {
 
+		// Check if comments are open or we have at least one comment.
+		if ( ! ( comments_open() || get_comments_number() ) ) {
+			return;
+		}
+
 		ob_start();
 		comments_popup_link( '0', '1', '%' );
 		$comments_string = ob_get_contents();
