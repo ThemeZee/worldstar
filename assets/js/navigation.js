@@ -143,7 +143,7 @@
 		$( '#main-navigation' ).responsiveMenu( {
 			menuClass: 'main-navigation-menu',
 			toggleClass: 'main-navigation-toggle',
-			toggleText: worldstar_menu_title,
+			toggleText: worldstar_menu_title.text,
 			maxWidth: '60em'
 		} );
 
