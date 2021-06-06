@@ -26,6 +26,9 @@ For more information about WorldStar please go to https://themezee.com/themes/wo
 
 == Changelog ==
 
+= 1.6.6 - 2021-06-06 =
+* fixed styling of Social Icons widget from Widget Bundle plugin
+
 = 1.6.5 - 2021-03-24 =
 * fixed PHP warning in wp_localize_script
 

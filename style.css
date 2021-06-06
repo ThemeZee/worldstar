@@ -4,7 +4,7 @@ Theme URI: https://themezee.com/themes/worldstar/
 Author: ThemeZee
 Author URI: https://themezee.com
 Description: WorldStar is a clean and modern WordPress theme with a stunning featured content area to highlight your posts. The theme can be customized easily and supports a Magazine Homepage template, header widgets, several layout settings and custom logos. WorldStar is perfectly suited for simple blogs, online magazines or news related websites.
-Version: 1.6.5
+Version: 1.6.6
 Requires at least: 5.2
 Tested up to: 5.7
 Requires PHP: 5.6
@@ -996,7 +996,8 @@ textarea {
 	text-decoration: none;
 }
 
-.social-icons-menu li a .screen-reader-text {
+.social-icons-menu li a .screen-reader-text,
+.social-icons-menu li a .icon {
 	display: none;
 }
 
